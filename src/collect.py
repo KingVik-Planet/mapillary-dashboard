@@ -76,14 +76,15 @@ HISTORY_DIR = os.path.join(DATA_DIR, "history")
 MASTER_PATH = os.path.join(DATA_DIR, "images_master.jsonl")
 
 
-def _iso_to_ms(date_str, end_of_day=False):
-    """Convert a YYYY-MM-DD string to epoch milliseconds for the API filters."""
+def _iso_to_api_datetime(date_str, end_of_day=False):
+    """Convert a YYYY-MM-DD string to the ISO 8601 'Z' format the Mapillary
+    API expects for start_captured_at/end_captured_at, e.g. '2022-08-16T16:42:46Z'."""
     if not date_str:
         return None
     dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     if end_of_day:
-        dt = dt.replace(hour=23, minute=59, second=59, microsecond=999000)
-    return int(dt.timestamp() * 1000)
+        dt = dt.replace(hour=23, minute=59, second=59)
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=500):
@@ -99,12 +100,12 @@ def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=5
         "fields": FIELDS,
         "limit": page_limit,
     }
-    start_ms = _iso_to_ms(start_date)
-    end_ms = _iso_to_ms(end_date, end_of_day=True)
-    if start_ms:
-        params["start_captured_at"] = start_ms
-    if end_ms:
-        params["end_captured_at"] = end_ms
+    start_iso = _iso_to_api_datetime(start_date)
+    end_iso = _iso_to_api_datetime(end_date, end_of_day=True)
+    if start_iso:
+        params["start_captured_at"] = start_iso
+    if end_iso:
+        params["end_captured_at"] = end_iso
 
     url = f"{API_ROOT}/images"
     all_records = []

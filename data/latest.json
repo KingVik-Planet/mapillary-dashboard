@@ -1,0 +1,192 @@
+{
+  "organization_id": "333719471505834",
+  "generated_at": "2026-08-12T17:28:50.523616+00:00",
+  "total_images": 500,
+  "total_sequences": 270,
+  "total_users": 9,
+  "total_countries": 2,
+  "by_country": [
+    {
+      "country": "T\u00fcrkiye",
+      "images": 465,
+      "sequences": 242,
+      "users": 1
+    },
+    {
+      "country": "India",
+      "images": 35,
+      "sequences": 28,
+      "users": 8
+    }
+  ],
+  "by_user": [
+    {
+      "username": "unen",
+      "user_id": "101261185454084",
+      "images": 465,
+      "sequences": 242,
+      "countries": [
+        "T\u00fcrkiye"
+      ]
+    },
+    {
+      "username": "AmrutaA",
+      "user_id": "1237217097511568",
+      "images": 15,
+      "sequences": 12,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "nileshjagtap",
+      "user_id": "1604196696880044",
+      "images": 11,
+      "sequences": 8,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "AliAba",
+      "user_id": "1291069248478728",
+      "images": 3,
+      "sequences": 2,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "Jonty_BP",
+      "user_id": "1659013124977485",
+      "images": 2,
+      "sequences": 2,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "kiranahire",
+      "user_id": "373226905045803",
+      "images": 1,
+      "sequences": 1,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "patilni",
+      "user_id": "290034106994773",
+      "images": 1,
+      "sequences": 1,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "SSGIS12",
+      "user_id": "1213649853520446",
+      "images": 1,
+      "sequences": 1,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "ShreyasBhogte26",
+      "user_id": "991886389674362",
+      "images": 1,
+      "sequences": 1,
+      "countries": [
+        "India"
+      ]
+    }
+  ],
+  "by_day": [
+    {
+      "date": "2025-02-12",
+      "images": 245,
+      "sequences": 124
+    },
+    {
+      "date": "2025-02-13",
+      "images": 4,
+      "sequences": 3
+    },
+    {
+      "date": "2025-02-14",
+      "images": 1,
+      "sequences": 1
+    },
+    {
+      "date": "2025-02-15",
+      "images": 2,
+      "sequences": 2
+    },
+    {
+      "date": "2025-02-16",
+      "images": 213,
+      "sequences": 112
+    },
+    {
+      "date": "2025-02-23",
+      "images": 7,
+      "sequences": 6
+    },
+    {
+      "date": "2025-03-02",
+      "images": 6,
+      "sequences": 4
+    },
+    {
+      "date": "2025-03-05",
+      "images": 1,
+      "sequences": 1
+    },
+    {
+      "date": "2025-03-13",
+      "images": 1,
+      "sequences": 1
+    },
+    {
+      "date": "2025-03-16",
+      "images": 5,
+      "sequences": 3
+    },
+    {
+      "date": "2025-03-21",
+      "images": 2,
+      "sequences": 2
+    },
+    {
+      "date": "2025-03-26",
+      "images": 3,
+      "sequences": 3
+    },
+    {
+      "date": "2025-04-09",
+      "images": 2,
+      "sequences": 2
+    },
+    {
+      "date": "2025-04-26",
+      "images": 1,
+      "sequences": 1
+    },
+    {
+      "date": "2025-05-01",
+      "images": 4,
+      "sequences": 2
+    },
+    {
+      "date": "2025-05-02",
+      "images": 2,
+      "sequences": 2
+    },
+    {
+      "date": "2025-05-24",
+      "images": 1,
+      "sequences": 1
+    }
+  ]
+}

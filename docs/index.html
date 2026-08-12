@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Mapillary Organization Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #0f1115; color: #e6e6e6; }
+  header { padding: 24px 32px; border-bottom: 1px solid #262a33; }
+  header h1 { margin: 0 0 4px; font-size: 22px; }
+  header p { margin: 0; color: #9aa0aa; font-size: 13px; }
+  .stats { display: flex; gap: 16px; padding: 24px 32px; flex-wrap: wrap; }
+  .card { background: #171a21; border: 1px solid #262a33; border-radius: 10px; padding: 18px 22px; min-width: 150px; }
+  .card .num { font-size: 28px; font-weight: 700; }
+  .card .label { font-size: 12px; color: #9aa0aa; text-transform: uppercase; letter-spacing: 0.04em; }
+  section { padding: 8px 32px 32px; }
+  h2 { font-size: 16px; color: #cfd3da; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #262a33; }
+  th { color: #9aa0aa; font-weight: 500; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  canvas { max-height: 320px; }
+  #err { color: #ff8080; padding: 32px; display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mapillary Organization Dashboard</h1>
+  <p id="meta">Loading…</p>
+</header>
+
+<div id="err">Could not load data/latest.json. Run the collector at least once (see README).</div>
+
+<div class="stats" id="stats"></div>
+
+<section class="grid2">
+  <div>
+    <h2>Images per country</h2>
+    <canvas id="countryChart"></canvas>
+  </div>
+  <div>
+    <h2>Images per day</h2>
+    <canvas id="dayChart"></canvas>
+  </div>
+</section>
+
+<section>
+  <h2>By country</h2>
+  <table id="countryTable"><thead><tr><th>Country</th><th>Images</th><th>Sequences</th><th>Users</th></tr></thead><tbody></tbody></table>
+</section>
+
+<section>
+  <h2>By user</h2>
+  <table id="userTable"><thead><tr><th>User</th><th>Images</th><th>Sequences</th><th>Countries</th></tr></thead><tbody></tbody></table>
+</section>
+
+<script>
+async function load() {
+  try {
+    const res = await fetch('../data/latest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('fetch failed');
+    const d = await res.json();
+    render(d);
+  } catch (e) {
+    document.getElementById('err').style.display = 'block';
+    console.error(e);
+  }
+}
+
+function render(d) {
+  document.getElementById('meta').textContent =
+    `Organization ${d.organization_id} · generated ${new Date(d.generated_at).toLocaleString()}`;
+
+  const stats = document.getElementById('stats');
+  const items = [
+    ['Images', d.total_images],
+    ['Sequences', d.total_sequences],
+    ['Users', d.total_users],
+    ['Countries', d.total_countries],
+  ];
+  stats.innerHTML = items.map(([label, num]) =>
+    `<div class="card"><div class="num">${num.toLocaleString()}</div><div class="label">${label}</div></div>`
+  ).join('');
+
+  const cTbody = document.querySelector('#countryTable tbody');
+  cTbody.innerHTML = d.by_country.map(c =>
+    `<tr><td>${c.country}</td><td>${c.images}</td><td>${c.sequences}</td><td>${c.users}</td></tr>`
+  ).join('');
+
+  const uTbody = document.querySelector('#userTable tbody');
+  uTbody.innerHTML = d.by_user.map(u =>
+    `<tr><td>${u.username}</td><td>${u.images}</td><td>${u.sequences}</td><td>${u.countries.join(', ')}</td></tr>`
+  ).join('');
+
+  const topCountries = d.by_country.slice(0, 12);
+  new Chart(document.getElementById('countryChart'), {
+    type: 'bar',
+    data: {
+      labels: topCountries.map(c => c.country),
+      datasets: [{ label: 'Images', data: topCountries.map(c => c.images), backgroundColor: '#5b8def' }]
+    },
+    options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#9aa0aa' } }, y: { ticks: { color: '#9aa0aa' } } } }
+  });
+
+  new Chart(document.getElementById('dayChart'), {
+    type: 'line',
+    data: {
+      labels: d.by_day.map(x => x.date),
+      datasets: [{ label: 'Images', data: d.by_day.map(x => x.images), borderColor: '#5be0a8', tension: 0.25 }]
+    },
+    options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#9aa0aa' } }, y: { ticks: { color: '#9aa0aa' } } } }
+  });
+}
+
+load();
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@ Maplet Starts project.
 ## How it works
 
 1. `src/collect.py` calls the Mapillary API v4 `/images` endpoint filtered by
-   `organization_id`, paging through every image contributed to the org.
+   `organization_id`, paging through images contributed to the org.
 2. Each image's coordinates are reverse-geocoded **offline** (via
    `reverse_geocoder`) into a country — no external geocoding API, no extra
    rate limits.
@@ -18,8 +18,43 @@ Maplet Starts project.
 4. `docs/index.html` is a static dashboard (Chart.js, no backend) that reads
    `data/latest.json` directly — works as a GitHub Pages site.
 5. A GitHub Actions workflow (`.github/workflows/collect.yml`) runs the
-   collector on a schedule and commits the refreshed data back to the repo,
-   so the dashboard is always current.
+   collector daily at 02:00 UTC and commits the refreshed data back to the
+   repo, so the dashboard is always current.
+
+### Backfill + daily append (how the data accumulates)
+
+Every image ever collected lives in a persistent master store,
+`data/images_master.jsonl` (one JSON record per image, committed to the
+repo alongside `data/latest.json`).
+
+- **First run ever** (no master store in the repo yet): backfills everything
+  from **2026-01-01** through today. This can take a while for a
+  large organization — that's expected, it only happens once.
+- **Every run after that**: the script looks at the newest `captured_at`
+  timestamp already in the master store, and only asks Mapillary for images
+  captured from **2 days before that point** onward (the 2-day overlap is a
+  safety margin in case images get uploaded a bit late). New/updated images
+  are merged into the master store by image ID — nothing gets duplicated or
+  double-counted — and `data/latest.json` is rebuilt from the **full**
+  accumulated dataset, not just that day's slice.
+
+So in practice: tonight's 2 AM UTC run backfills 2026-01-01 → today.
+Tomorrow's run only fetches what's new since then and appends it. The
+dashboard always shows totals since 2026-01-01, growing a little each day.
+
+If you ever want to force a full re-backfill (e.g. you suspect the master
+store got corrupted), just delete `data/images_master.jsonl` from the repo
+and the next run will start over from `MAPILLARY_START_DATE` (or the
+2026-01-01 default).
+
+## Data files
+
+| File | Contents |
+|---|---|
+| `data/images_master.jsonl` | Every image ever collected (raw, one per line), the persistent source of truth. Grows by append each day. |
+| `data/latest.json` | Current cumulative summary — this is what the dashboard reads. |
+| `data/latest_images.csv` | Flat per-image table of the full cumulative dataset. |
+| `data/history/<date>.json` | One cumulative snapshot per day, for trend tracking over time. |
 
 ## What you get in `data/latest.json`
 

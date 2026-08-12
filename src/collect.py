@@ -3,23 +3,44 @@
 Mapillary Organization Imagery Collector
 =========================================
 
-Pulls all images contributed to a given Mapillary organization, groups them
-into sequences, resolves each image's country (offline reverse geocoding),
-and writes aggregated JSON (+ CSV) that a static dashboard can render.
+Pulls images contributed to a given Mapillary organization, groups them into
+sequences, resolves each image's country (offline reverse geocoding), and
+writes aggregated JSON (+ CSV) that a static dashboard can render.
+
+INCREMENTAL / APPEND BEHAVIOUR
+-------------------------------
+All images ever collected are kept in a persistent master store
+(data/images_master.jsonl), keyed by image id.
+
+- First run ever (master store doesn't exist yet): backfills from
+  MAPILLARY_START_DATE, or 2026-01-01 by default, up through today.
+- Every later run: only fetches images captured since the newest image
+  already in the master store (minus a small overlap window to catch
+  late-arriving uploads), then merges them into the master store by id
+  (so re-fetched/duplicate images just overwrite in place, nothing doubles
+  up). Aggregates are then rebuilt from the FULL accumulated master store,
+  so data/latest.json always reflects everything collected since 2026-01-01,
+  not just the latest run's slice.
 
 Required environment variables:
     MAPILLARY_TOKEN   - Mapillary API access token (client token, "MLY|...")
     MAPILLARY_ORG_ID  - Organization ID to collect imagery for
 
 Optional environment variables:
-    MAPILLARY_START_DATE  - ISO date (YYYY-MM-DD), only images captured on/after this date
-    MAPILLARY_END_DATE    - ISO date (YYYY-MM-DD), only images captured on/before this date
-    MAPILLARY_PAGE_LIMIT  - page size for API pagination (default 500, max Mapillary allows)
+    MAPILLARY_START_DATE  - ISO date (YYYY-MM-DD), backfill start, used only
+                             on the very first run. Default: 2026-01-01
+    MAPILLARY_END_DATE    - ISO date (YYYY-MM-DD), only images captured on/
+                             before this date. Default: unset (up to now)
+    MAPILLARY_OVERLAP_DAYS - On incremental runs, re-check this many days
+                              before the last-seen image to catch late
+                              uploads. Default: 2
+    MAPILLARY_PAGE_LIMIT   - page size for API pagination (default 500)
 
 Output:
-    data/latest.json          - current full snapshot (used by dashboard)
-    data/latest_images.csv     - flat per-image table
-    data/history/<date>.json  - dated snapshot appended each run, for trend history
+    data/images_master.jsonl  - full accumulated raw dataset, one image per line (persisted)
+    data/latest.json          - current full cumulative snapshot (used by dashboard)
+    data/latest_images.csv    - flat per-image table of the full cumulative dataset
+    data/history/<date>.json  - dated cumulative snapshot, one per day, for trend history
 """
 
 import os
@@ -27,7 +48,7 @@ import sys
 import json
 import csv
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from collections import defaultdict
 
 import requests
@@ -40,8 +61,11 @@ except ImportError:
 MAPILLARY_TOKEN = os.environ.get("MAPILLARY_TOKEN")
 ORG_ID = os.environ.get("MAPILLARY_ORG_ID")
 PAGE_LIMIT = int(os.environ.get("MAPILLARY_PAGE_LIMIT", "500"))
-START_DATE = os.environ.get("MAPILLARY_START_DATE")  # YYYY-MM-DD
+START_DATE = os.environ.get("MAPILLARY_START_DATE")  # YYYY-MM-DD, first-run backfill only
 END_DATE = os.environ.get("MAPILLARY_END_DATE")      # YYYY-MM-DD
+OVERLAP_DAYS = int(os.environ.get("MAPILLARY_OVERLAP_DAYS", "2"))
+
+DEFAULT_BACKFILL_START_DATE = "2026-01-01"
 
 API_ROOT = "https://graph.mapillary.com"
 FIELDS = "id,captured_at,creator,sequence,organization_id,geometry"
@@ -49,6 +73,7 @@ FIELDS = "id,captured_at,creator,sequence,organization_id,geometry"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
+MASTER_PATH = os.path.join(DATA_DIR, "images_master.jsonl")
 
 
 def _iso_to_ms(date_str, end_of_day=False):
@@ -111,6 +136,55 @@ def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=5
             break
 
     return all_records
+
+
+def load_master():
+    """Load the persistent master store (all images ever collected), keyed by id."""
+    master = {}
+    if os.path.exists(MASTER_PATH):
+        with open(MASTER_PATH, "r") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                master[rec["id"]] = rec
+    return master
+
+
+def save_master(master):
+    os.makedirs(DATA_DIR, exist_ok=True)
+    tmp_path = MASTER_PATH + ".tmp"
+    with open(tmp_path, "w") as f:
+        for rec in master.values():
+            f.write(json.dumps(rec) + "\n")
+    os.replace(tmp_path, MASTER_PATH)
+    print(f"Master store saved: {len(master)} total images", file=sys.stderr)
+
+
+def determine_fetch_window(master):
+    """
+    Decide the [start_date, end_date] to query the API for on this run.
+
+    - Empty master -> full backfill window (MAPILLARY_START_DATE or 2026-01-01) to END_DATE/today.
+    - Non-empty master -> from (newest captured_at in master - OVERLAP_DAYS) to END_DATE/today,
+      so we only pull what's new (plus a small safety overlap for late uploads).
+    """
+    if not master:
+        start = START_DATE or DEFAULT_BACKFILL_START_DATE
+        print(f"No existing data found - backfilling from {start}.", file=sys.stderr)
+        return start, END_DATE
+
+    newest_ms = max(r["captured_at"] for r in master.values() if r.get("captured_at"))
+    newest_dt = datetime.fromtimestamp(newest_ms / 1000, tz=timezone.utc)
+    since_dt = newest_dt - timedelta(days=OVERLAP_DAYS)
+    start = since_dt.strftime("%Y-%m-%d")
+    print(
+        f"Existing data found ({len(master)} images, newest captured {newest_dt.date()}). "
+        f"Fetching incrementally from {start} (overlap={OVERLAP_DAYS}d).",
+        file=sys.stderr,
+    )
+    return start, END_DATE
 
 
 def resolve_countries(records):
@@ -277,14 +351,29 @@ def write_outputs(records, summary):
 
 def main():
     print(f"Collecting images for organization {ORG_ID}...", file=sys.stderr)
-    records = fetch_all_images(MAPILLARY_TOKEN, ORG_ID, START_DATE, END_DATE, PAGE_LIMIT)
-    print(f"Fetched {len(records)} images total. Resolving countries...", file=sys.stderr)
-    records = resolve_countries(records)
-    summary = build_aggregates(records, ORG_ID)
-    write_outputs(records, summary)
+
+    master = load_master()
+    fetch_start, fetch_end = determine_fetch_window(master)
+
+    new_records = fetch_all_images(MAPILLARY_TOKEN, ORG_ID, fetch_start, fetch_end, PAGE_LIMIT)
+    print(f"Fetched {len(new_records)} images in this run's window. Resolving countries...", file=sys.stderr)
+    new_records = resolve_countries(new_records)
+
+    # Merge into master store by id - re-fetched images (the overlap window) just
+    # overwrite their existing entry in place, so nothing gets double-counted.
+    for r in new_records:
+        master[r["id"]] = r
+    save_master(master)
+
+    all_records = list(master.values())
+    summary = build_aggregates(all_records, ORG_ID)
+    write_outputs(all_records, summary)
+
     print(
-        f"Done. {summary['total_images']} images, {summary['total_sequences']} sequences, "
-        f"{summary['total_users']} users, {summary['total_countries']} countries.",
+        f"Done. Cumulative since {START_DATE or DEFAULT_BACKFILL_START_DATE}: "
+        f"{summary['total_images']} images, {summary['total_sequences']} sequences, "
+        f"{summary['total_users']} users, {summary['total_countries']} countries "
+        f"({len(new_records)} images added/updated this run).",
         file=sys.stderr,
     )
 

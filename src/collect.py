@@ -76,67 +76,109 @@ HISTORY_DIR = os.path.join(DATA_DIR, "history")
 MASTER_PATH = os.path.join(DATA_DIR, "images_master.jsonl")
 
 
-def _iso_to_api_datetime(date_str, end_of_day=False):
-    """Convert a YYYY-MM-DD string to the ISO 8601 'Z' format the Mapillary
-    API expects for start_captured_at/end_captured_at, e.g. '2022-08-16T16:42:46Z'."""
-    if not date_str:
-        return None
-    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-    if end_of_day:
-        dt = dt.replace(hour=23, minute=59, second=59)
+def _dt_to_api(dt):
+    """Format a UTC datetime as the ISO 8601 'Z' string Mapillary's API expects."""
     return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=500):
-    """Page through /images filtered by organization_id, returning raw records."""
-    if not token:
-        sys.exit("ERROR: MAPILLARY_TOKEN is not set.")
-    if not org_id:
-        sys.exit("ERROR: MAPILLARY_ORG_ID is not set.")
-
-    headers = {"Authorization": f"OAuth {token}"}
-    params = {
-        "organization_id": org_id,
-        "fields": FIELDS,
-        "limit": page_limit,
-    }
-    start_iso = _iso_to_api_datetime(start_date)
-    end_iso = _iso_to_api_datetime(end_date, end_of_day=True)
-    if start_iso:
-        params["start_captured_at"] = start_iso
-    if end_iso:
-        params["end_captured_at"] = end_iso
-
-    url = f"{API_ROOT}/images"
-    all_records = []
-    page = 0
-
-    while url:
-        page += 1
-        resp = requests.get(url, headers=headers, params=params if page == 1 else None, timeout=60)
+def _fetch_page(headers, url, params, timeout=60):
+    """GET a single page, handling 429 backoff. Returns the parsed JSON payload."""
+    while True:
+        resp = requests.get(url, headers=headers, params=params, timeout=timeout)
         if resp.status_code == 429:
-            # Rate limited - back off and retry
             wait = int(resp.headers.get("Retry-After", "5"))
             print(f"  Rate limited, waiting {wait}s...", file=sys.stderr)
             time.sleep(wait)
             continue
         if resp.status_code != 200:
             sys.exit(f"ERROR: Mapillary API returned {resp.status_code}: {resp.text[:500]}")
+        return resp.json()
 
-        payload = resp.json()
+
+# Mapillary's cursor-based pagination on /images is only reliably provided when the
+# query is combined with a creator_username filter (per their docs). Filtered by
+# organization_id alone, a "full" page (== page_limit records) commonly comes back
+# with NO `next` cursor at all - meaning anything past record #page_limit is silently
+# dropped unless we split the query ourselves. So instead of trusting pagination, we
+# fetch date windows and recursively bisect any window that comes back full.
+MIN_SPLIT = timedelta(hours=1)
+
+
+def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, depth=0):
+    """Fetch all images captured in [start_dt, end_dt). Recursively bisects the
+    window if it looks like results were capped rather than pagination-complete."""
+    params = {
+        "organization_id": org_id,
+        "fields": FIELDS,
+        "limit": page_limit,
+        "start_captured_at": _dt_to_api(start_dt),
+        "end_captured_at": _dt_to_api(end_dt - timedelta(seconds=1)),
+    }
+
+    records = []
+    url = f"{API_ROOT}/images"
+    first = True
+    hit_cap_without_cursor = False
+
+    while url:
+        payload = _fetch_page(headers, url, params if first else None)
+        first = False
         data = payload.get("data", [])
-        all_records.extend(data)
-        print(f"  Page {page}: fetched {len(data)} images (total so far: {len(all_records)})", file=sys.stderr)
+        records.extend(data)
 
-        # Cursor-based pagination
         next_url = payload.get("paging", {}).get("next")
-        url = next_url
-        params = None  # next_url already has all query params embedded
+        if next_url:
+            url = next_url
+            params = None
+            continue
 
-        if not data:
-            break
+        url = None
+        if len(data) >= page_limit:
+            hit_cap_without_cursor = True
 
-    return all_records
+    if hit_cap_without_cursor and (end_dt - start_dt) > MIN_SPLIT:
+        mid = start_dt + (end_dt - start_dt) / 2
+        indent = "  " * (depth + 1)
+        print(f"{indent}Window {start_dt.date()}..{end_dt.date()} hit the page cap - splitting "
+              f"at {mid.isoformat()}", file=sys.stderr)
+        left = _fetch_window(headers, org_id, start_dt, mid, page_limit, depth + 1)
+        right = _fetch_window(headers, org_id, mid, end_dt, page_limit, depth + 1)
+        return left + right
+
+    if hit_cap_without_cursor:
+        print(f"  WARNING: window {start_dt}..{end_dt} still at page cap at minimum "
+              f"granularity ({MIN_SPLIT}) - some images in this window may be missing. "
+              f"Consider lowering MIN_SPLIT if this org is very high-volume.", file=sys.stderr)
+
+    indent = "  " * (depth + 1) if depth else "  "
+    print(f"{indent}{start_dt.date()}..{end_dt.date()}: {len(records)} images", file=sys.stderr)
+    return records
+
+
+def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=500):
+    """Fetch every image for the organization captured within [start_date, end_date]
+    (inclusive, YYYY-MM-DD strings), working around organization_id-filtered queries
+    not reliably paginating past the first page."""
+    if not token:
+        sys.exit("ERROR: MAPILLARY_TOKEN is not set.")
+    if not org_id:
+        sys.exit("ERROR: MAPILLARY_ORG_ID is not set.")
+
+    headers = {"Authorization": f"OAuth {token}"}
+
+    start_dt = (
+        datetime.strptime(start_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        if start_date else datetime(2010, 1, 1, tzinfo=timezone.utc)
+    )
+    if end_date:
+        end_dt = datetime.strptime(end_date, "%Y-%m-%d").replace(tzinfo=timezone.utc) + timedelta(days=1)
+    else:
+        end_dt = datetime.now(timezone.utc) + timedelta(days=1)
+
+    print(f"Fetching images from {start_dt.date()} to {(end_dt - timedelta(days=1)).date()}...",
+          file=sys.stderr)
+    records = _fetch_window(headers, org_id, start_dt, end_dt, page_limit)
+    return records
 
 
 def load_master():

@@ -97,16 +97,35 @@ def _fetch_page(headers, url, params, timeout=60):
 
 # Mapillary's cursor-based pagination on /images is only reliably provided when the
 # query is combined with a creator_username filter (per their docs). Filtered by
+# Mapillary's cursor-based pagination on /images is only reliably provided when the
+# query is combined with a creator_username filter (per their docs). Filtered by
 # organization_id alone, a "full" page (== page_limit records) commonly comes back
 # with NO `next` cursor at all - meaning anything past record #page_limit is silently
-# dropped unless we split the query ourselves. So instead of trusting pagination, we
-# fetch date windows and recursively bisect any window that comes back full.
+# dropped. Our earlier fix (bisecting the time range whenever this happens) helps but
+# still has a floor: if a MIN_SPLIT-sized window alone contains more than page_limit
+# images (very plausible during an active mapping campaign - a car capturing every
+# couple of seconds can produce 500+ images in well under an hour), it gets silently
+# truncated with no further recourse.
+#
+# So this now runs in two phases:
+#   Phase 1 (discovery): the org-wide, time-bisected sweep as before. This is enough
+#     to discover every user who has contributed *something*, even if their exact
+#     counts in dense windows are undercounted here.
+#   Phase 2 (authoritative per-user fetch): for each user discovered, re-fetch their
+#     full history filtered by organization_id + creator_username together, which
+#     Mapillary's docs confirm reliably paginates via cursor - no bisection guessing
+#     needed, and no density ceiling. This is what actually guarantees completeness.
+# Phase 2 output supersedes phase 1 for any image ID appearing in both (they merge on
+# id, so nothing gets double-counted).
 MIN_SPLIT = timedelta(hours=1)
+DISCOVERY_MIN_SPLIT = timedelta(hours=1)
 
 
-def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, depth=0):
-    """Fetch all images captured in [start_dt, end_dt). Recursively bisects the
-    window if it looks like results were capped rather than pagination-complete."""
+def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, extra_params=None,
+                   min_split=MIN_SPLIT, depth=0):
+    """Fetch all images captured in [start_dt, end_dt), optionally filtered further by
+    extra_params (e.g. {"creator_username": "..."}). Recursively bisects the window if
+    it looks like results were capped rather than pagination-complete."""
     params = {
         "organization_id": org_id,
         "fields": FIELDS,
@@ -114,6 +133,8 @@ def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, depth=0):
         "start_captured_at": _dt_to_api(start_dt),
         "end_captured_at": _dt_to_api(end_dt - timedelta(seconds=1)),
     }
+    if extra_params:
+        params.update(extra_params)
 
     records = []
     url = f"{API_ROOT}/images"
@@ -136,29 +157,31 @@ def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, depth=0):
         if len(data) >= page_limit:
             hit_cap_without_cursor = True
 
-    if hit_cap_without_cursor and (end_dt - start_dt) > MIN_SPLIT:
+    if hit_cap_without_cursor and (end_dt - start_dt) > min_split:
         mid = start_dt + (end_dt - start_dt) / 2
         indent = "  " * (depth + 1)
         print(f"{indent}Window {start_dt.date()}..{end_dt.date()} hit the page cap - splitting "
               f"at {mid.isoformat()}", file=sys.stderr)
-        left = _fetch_window(headers, org_id, start_dt, mid, page_limit, depth + 1)
-        right = _fetch_window(headers, org_id, mid, end_dt, page_limit, depth + 1)
+        left = _fetch_window(headers, org_id, start_dt, mid, page_limit, extra_params, min_split, depth + 1)
+        right = _fetch_window(headers, org_id, mid, end_dt, page_limit, extra_params, min_split, depth + 1)
         return left + right
 
     if hit_cap_without_cursor:
         print(f"  WARNING: window {start_dt}..{end_dt} still at page cap at minimum "
-              f"granularity ({MIN_SPLIT}) - some images in this window may be missing. "
-              f"Consider lowering MIN_SPLIT if this org is very high-volume.", file=sys.stderr)
+              f"granularity ({min_split}) even with extra_params={extra_params} - "
+              f"results may be incomplete here.", file=sys.stderr)
 
     indent = "  " * (depth + 1) if depth else "  "
-    print(f"{indent}{start_dt.date()}..{end_dt.date()}: {len(records)} images", file=sys.stderr)
+    print(f"{indent}{start_dt.date()}..{end_dt.date()}"
+          f"{' user='+extra_params['creator_username'] if extra_params and extra_params.get('creator_username') else ''}"
+          f": {len(records)} images", file=sys.stderr)
     return records
 
 
 def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=500):
     """Fetch every image for the organization captured within [start_date, end_date]
-    (inclusive, YYYY-MM-DD strings), working around organization_id-filtered queries
-    not reliably paginating past the first page."""
+    (inclusive, YYYY-MM-DD strings), using a two-phase strategy (see comment above)
+    to guarantee completeness even for dense/bursty capture windows."""
     if not token:
         sys.exit("ERROR: MAPILLARY_TOKEN is not set.")
     if not org_id:
@@ -177,8 +200,36 @@ def fetch_all_images(token, org_id, start_date=None, end_date=None, page_limit=5
 
     print(f"Fetching images from {start_dt.date()} to {(end_dt - timedelta(days=1)).date()}...",
           file=sys.stderr)
-    records = _fetch_window(headers, org_id, start_dt, end_dt, page_limit)
-    return records
+
+    print("Phase 1/2: org-wide discovery sweep (finds every contributing user)...", file=sys.stderr)
+    discovery_records = _fetch_window(headers, org_id, start_dt, end_dt, page_limit,
+                                       extra_params=None, min_split=DISCOVERY_MIN_SPLIT)
+
+    by_id = {r["id"]: r for r in discovery_records}
+
+    usernames = sorted({
+        r["creator"]["username"] for r in discovery_records
+        if r.get("creator", {}).get("username")
+    })
+    print(f"Phase 1 complete: {len(discovery_records)} images seen, "
+          f"{len(usernames)} unique contributors found: {usernames}", file=sys.stderr)
+
+    print("Phase 2/2: authoritative per-user fetch (guaranteed-complete pagination)...",
+          file=sys.stderr)
+    for username in usernames:
+        user_records = _fetch_window(
+            headers, org_id, start_dt, end_dt, page_limit,
+            extra_params={"creator_username": username}, min_split=MIN_SPLIT,
+        )
+        new_count = sum(1 for r in user_records if r["id"] not in by_id)
+        for r in user_records:
+            by_id[r["id"]] = r
+        print(f"  '{username}': {len(user_records)} images via per-user pagination "
+              f"({new_count} not seen in discovery phase)", file=sys.stderr)
+
+    all_records = list(by_id.values())
+    print(f"Combined total after both phases: {len(all_records)} images", file=sys.stderr)
+    return all_records
 
 
 def load_master():

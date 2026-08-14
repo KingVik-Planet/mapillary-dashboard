@@ -8,7 +8,7 @@
 # the dashboard actually reads get committed to git.
 
 data/monthly/*.jsonl
-#data/monthly/*.csv
+!data/monthly/*.csv
 data/images_master.jsonl
 data/images_master.jsonl.tmp
 data/latest_images.csv

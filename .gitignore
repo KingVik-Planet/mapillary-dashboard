@@ -1,0 +1,17 @@
+# Raw per-image data is regenerated/updated by the collector on every scheduled
+# run and grows unbounded - it does NOT belong in git history (GitHub hard-blocks
+# any file over 100MB, and repos aren't built for continuously-growing datasets
+# like this anyway). It's persisted across CI runs via actions/cache instead - see
+# .github/workflows/collect.yml.
+#
+# Only the small aggregate outputs (data/latest.json, data/history/*.json) that
+# the dashboard actually reads get committed to git.
+
+data/monthly/*.jsonl
+data/monthly/*.csv
+data/images_master.jsonl
+data/images_master.jsonl.tmp
+data/latest_images.csv
+
+# Keep the tiny .done marker files though (they're just checkpoints, negligible size)
+!data/monthly/*.done

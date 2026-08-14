@@ -2,9 +2,8 @@ name: Mapillary Organization Imagery Collector
 
 on:
   schedule:
-    # Runs every day at 02:00 UTC
-    - cron: "0 2 * * *"
-  workflow_dispatch: {}   # allows manual "Run workflow" trigger from the Actions tab
+    - cron: "0 2 * * *"   # every day at 02:00 UTC
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -24,16 +23,54 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # Raw per-image data (data/monthly/*.jsonl, *.csv, images_master.jsonl,
+      # latest_images.csv) is NOT committed to git - it's too large and grows every
+      # run (GitHub hard-blocks any pushed file over 100MB). Instead it's persisted
+      # between workflow runs via the Actions cache, so the collector's incremental
+      # / monthly-backfill logic still has its checkpoint state and doesn't have to
+      # start over each day. Cache keys include the run id (always unique, so a
+      # fresh cache is always saved), with restore-keys falling back to the most
+      # recent matching entry.
+      - name: Restore raw data cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/monthly
+            data/images_master.jsonl
+            data/latest_images.csv
+          key: mapillary-raw-data-${{ github.run_id }}
+          restore-keys: |
+            mapillary-raw-data-
+
       - name: Run Mapillary collector
         env:
           MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
           MAPILLARY_ORG_ID: ${{ secrets.MAPILLARY_ORG_ID }}
         run: python src/collect.py
 
-      - name: Commit and push updated data
+      # Small aggregate outputs only (data/latest.json, data/history/*.json,
+      # data/monthly/*.done checkpoint markers) - these are what the dashboard
+      # reads and stay tiny indefinitely, so they're safe to commit to git.
+      - name: Commit and push aggregate data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/latest.json data/history/ data/monthly/*.done 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Update Mapillary imagery data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
+
+      # Optional: publish the full raw dataset (the CSV your data/latest_images.csv
+      # holds) as a downloadable Release asset. Release assets allow files up to 2GB
+      # and don't touch git history or repo size at all, so this is a safe place to
+      # keep/download the complete dataset without it ever hitting the 100MB push
+      # limit. Overwrites the same "latest-data" release each run.
+      - name: Publish raw dataset as a Release asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f data/latest_images.csv ]; then
+            gh release view latest-data >/dev/null 2>&1 || \
+              gh release create latest-data --title "Latest Mapillary data" \
+                --notes "Auto-updated by the daily collector run. Not a code release - just a stable download location for the full dataset."
+            gh release upload latest-data data/latest_images.csv --clobber
+          fi

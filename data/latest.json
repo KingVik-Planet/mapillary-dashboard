@@ -1,11 +1,11 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-08-14T11:24:28.517739+00:00",
+  "generated_at": "2026-08-14T13:33:26.918173+00:00",
   "months_fetched": [
-    "2026-01"
+    "2026-01",
+    "2026-02"
   ],
   "months_pending_backfill": [
-    "2026-02",
     "2026-03",
     "2026-04",
     "2026-05",
@@ -13,30 +13,36 @@
     "2026-07",
     "2026-08"
   ],
-  "total_images": 123685,
-  "total_sequences": 302,
-  "total_users": 8,
-  "total_countries": 2,
+  "total_images": 182500,
+  "total_sequences": 510,
+  "total_users": 11,
+  "total_countries": 3,
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 89199,
-      "sequences": 234,
+      "images": 104365,
+      "sequences": 278,
       "users": 1
     },
     {
       "country": "India",
-      "images": 34486,
-      "sequences": 68,
-      "users": 7
+      "images": 77635,
+      "sequences": 231,
+      "users": 9
+    },
+    {
+      "country": "Rwanda",
+      "images": 500,
+      "sequences": 1,
+      "users": 1
     }
   ],
   "by_user": [
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 89199,
-      "sequences": 234,
+      "images": 104365,
+      "sequences": 278,
       "countries": [
         "Taiwan, Province of China"
       ]
@@ -44,8 +50,17 @@
     {
       "username": "Absawant",
       "user_id": "1390940191591088",
-      "images": 26836,
-      "sequences": 39,
+      "images": 42747,
+      "sequences": 66,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "WankhedeR",
+      "user_id": "1017571769878875",
+      "images": 21988,
+      "sequences": 101,
       "countries": [
         "India"
       ]
@@ -54,6 +69,33 @@
       "username": "Milind_Gaikwad",
       "user_id": "1458609044902090",
       "images": 3292,
+      "sequences": 6,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "santoshgaikar",
+      "user_id": "826533097088592",
+      "images": 3280,
+      "sequences": 28,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "images": 2256,
+      "sequences": 6,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "patilni",
+      "user_id": "290034106994773",
+      "images": 1629,
       "sequences": 6,
       "countries": [
         "India"
@@ -69,15 +111,6 @@
       ]
     },
     {
-      "username": "MangeshK955",
-      "user_id": "1298352351455135",
-      "images": 1272,
-      "sequences": 4,
-      "countries": [
-        "India"
-      ]
-    },
-    {
       "username": "AmrutaA",
       "user_id": "1237217097511568",
       "images": 1064,
@@ -87,12 +120,12 @@
       ]
     },
     {
-      "username": "patilni",
-      "user_id": "290034106994773",
-      "images": 643,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "images": 500,
       "sequences": 1,
       "countries": [
-        "India"
+        "Rwanda"
       ]
     },
     {
@@ -195,6 +228,86 @@
       "date": "2026-01-31",
       "images": 1822,
       "sequences": 4
+    },
+    {
+      "date": "2026-02-01",
+      "images": 2650,
+      "sequences": 9
+    },
+    {
+      "date": "2026-02-03",
+      "images": 1586,
+      "sequences": 2
+    },
+    {
+      "date": "2026-02-05",
+      "images": 650,
+      "sequences": 1
+    },
+    {
+      "date": "2026-02-06",
+      "images": 550,
+      "sequences": 4
+    },
+    {
+      "date": "2026-02-09",
+      "images": 2177,
+      "sequences": 4
+    },
+    {
+      "date": "2026-02-12",
+      "images": 500,
+      "sequences": 1
+    },
+    {
+      "date": "2026-02-15",
+      "images": 679,
+      "sequences": 2
+    },
+    {
+      "date": "2026-02-16",
+      "images": 1505,
+      "sequences": 2
+    },
+    {
+      "date": "2026-02-17",
+      "images": 1391,
+      "sequences": 5
+    },
+    {
+      "date": "2026-02-21",
+      "images": 6141,
+      "sequences": 22
+    },
+    {
+      "date": "2026-02-22",
+      "images": 7884,
+      "sequences": 17
+    },
+    {
+      "date": "2026-02-24",
+      "images": 9868,
+      "sequences": 37
+    },
+    {
+      "date": "2026-02-25",
+      "images": 667,
+      "sequences": 1
+    },
+    {
+      "date": "2026-02-26",
+      "images": 2193,
+      "sequences": 12
+    },
+    {
+      "date": "2026-02-27",
+      "images": 14152,
+      "sequences": 68
+    },
+    {
+      "date": "2026-02-28",
+      "images": 6222,
+      "sequences": 24
     }
   ]
 }

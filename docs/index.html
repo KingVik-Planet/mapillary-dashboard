@@ -22,6 +22,7 @@
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   canvas { max-height: 320px; }
   #err { color: #ff8080; padding: 32px; display: none; }
+  #backfillBanner { display: none; margin: 0 32px 8px; padding: 10px 16px; background: #2a2412; border: 1px solid #6b5a1f; border-radius: 8px; font-size: 13px; color: #e0c56b; }
 </style>
 </head>
 <body>
@@ -31,6 +32,7 @@
 </header>
 
 <div id="err">Could not load data/latest.json. Run the collector at least once (see README).</div>
+<div id="backfillBanner"></div>
 
 <div class="stats" id="stats"></div>
 
@@ -71,6 +73,16 @@ async function load() {
 function render(d) {
   document.getElementById('meta').textContent =
     `Organization ${d.organization_id} · generated ${new Date(d.generated_at).toLocaleString()}`;
+
+  const pending = d.months_pending_backfill || [];
+  const banner = document.getElementById('backfillBanner');
+  if (pending.length > 0) {
+    banner.style.display = 'block';
+    banner.textContent = `Backfill in progress: ${pending.length} month(s) not yet fetched (${pending.join(', ')}). ` +
+      `Numbers below will grow as the daily collector catches up (one month per run).`;
+  } else {
+    banner.style.display = 'none';
+  }
 
   const stats = document.getElementById('stats');
   const items = [

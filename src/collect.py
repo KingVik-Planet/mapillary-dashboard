@@ -7,60 +7,62 @@ Pulls images contributed to a given Mapillary organization, groups them into
 sequences, resolves each image's country (offline reverse geocoding), and
 writes aggregated JSON (+ CSV) that a static dashboard can render.
 
-WHY THIS IS MORE COMPLEX THAN "JUST CALL THE API"
----------------------------------------------------
-Two real, confirmed problems with Mapillary's /images endpoint make a naive
-fetch silently incomplete:
+WHY THIS ISN'T A SINGLE SIMPLE API CALL
+-----------------------------------------
+Mapillary's /images endpoint has a confirmed, undocumented gotcha: cursor
+pagination (the `paging.next` field) is NOT reliably returned when filtering
+by organization_id alone. A "full" page (== page_limit records) commonly
+comes back with no cursor at all - anything past record #500 for that query
+is silently dropped, no error, no indication.
 
-1. Cursor pagination (the `paging.next` field) is NOT reliably returned when
-   filtering by organization_id alone. A "full" page (== page_limit records)
-   commonly comes back with no cursor at all - anything past record #500 for
-   that query is just gone, with no error, no indication.
+An earlier version of this script tried to work around that by ALSO
+fetching each contributing user's history filtered by creator_username
+(which does paginate reliably) and merging the results in. That approach
+turned out to be a dead end for two reasons, discovered by actually running
+it against this organization's real data:
+  1. It fetches each user's ENTIRE cross-organization image history for the
+     time window, not just their contributions to this org - some
+     contributors here have 50,000-95,000+ images, making that pass
+     enormously slow (this is what caused a run to take 4+ hours and
+     eventually fail).
+  2. The client-side filter meant to keep only that user's images belonging
+     to THIS org never matched anything, so that expensive pass was
+     silently contributing zero records anyway.
 
-2. Combining organization_id with creator_username in the same request is
-   REJECTED outright by the API ("Incompatible filters: creator_username,
-   organization_id", confirmed by direct testing) - so we can't ask for "just
-   this org, just this user" in one call, which would otherwise have been the
-   easy fix for (1).
+So this version drops that approach entirely and relies solely on
+organization_id-filtered time-window bisection: whenever a window's results
+look capped (== page_limit, no cursor), the window is split in half and
+each half is re-fetched, recursively, down to a fine time granularity
+(MAPILLARY_MIN_SPLIT_MINUTES, default 5 minutes). This is bounded in cost
+(proportional to how many genuinely-dense pockets of time exist), unlike
+the per-user approach which was proportional to each user's total lifetime
+Mapillary output.
 
-THE APPROACH
-------------
-For each calendar month:
-  Phase 1 (discovery): query organization_id alone, bisecting the time
-    window whenever a response looks capped (== page_limit, no cursor).
-    This finds every user who contributed *something* that month, even
-    though exact per-window counts here can't be trusted if truly dense.
-  Phase 2 (authoritative): for each user discovered, query creator_username
-    ALONE (no organization_id - that combination is rejected) across the
-    full month. creator_username-only queries paginate reliably via cursor,
-    so this is complete regardless of density. Results are then filtered
-    client-side to just this organization, using the organization_id field
-    Mapillary returns on each image record.
-Phase 2's output supersedes phase 1 (merged by image id), so phase 1 only
-ever under-counts, never over-counts or misses a contributor entirely.
+MONTHLY CHUNKING + ONE-MONTH-PER-RUN PACING
+----------------------------------------------
+To keep any single run fast and avoid the 4-hour-run problem entirely, this
+script processes at most ONE not-yet-finished period per run:
 
-MONTHLY CHUNKING
------------------
-Processing one month at a time (rather than the whole history every run)
-keeps each run's bisection recursion shallow and fast, and lets us treat
-past months as immutable once finished:
+- If there are past (fully-elapsed) months that haven't been closed out yet,
+  it fetches the OLDEST one of those, writes it to
+  data/monthly/YYYY-MM.jsonl + .csv, and marks it done with a
+  data/monthly/YYYY-MM.done file. Nothing else is fetched this run.
+- Once every past month is closed out, each run instead re-fetches the
+  CURRENT (in-progress) month in full, since it's still accumulating new
+  images. This happens on every run until the calendar rolls into the next
+  month, at which point that month gets one final fetch, is closed out, and
+  a new "current month" begins.
 
-- Every month strictly before the current month is fetched ONCE, written to
-  data/monthly/YYYY-MM.jsonl + YYYY-MM.csv, and marked complete with a
-  YYYY-MM.done marker. Once marked done, it is never re-fetched.
-- The current (in-progress) month is re-fetched in full on every run, since
-  new images keep arriving all month. Once the calendar rolls into the next
-  month, this month gets one final fetch, is written out, and marked done.
-- data/latest.json / data/latest_images.csv are rebuilt every run from ALL
-  monthly files combined (cached past months + freshly fetched current
-  month), so the dashboard always reflects the full history since
-  MAPILLARY_START_MONTH.
+In practice: today's run backfills January and stops. Tomorrow's run
+backfills February and stops. ... Once it catches up to the current month,
+every day's run just refreshes that one month, until the month ends and a
+new one starts piling up the same way.
 
-Trade-off: an image captured in a past month but uploaded to Mapillary very
-late (after that month was already closed out) will not be picked up unless
-that month's .done marker is deleted to force a one-time re-fetch. This
-matches the explicit "close out each month once we move on" request; delete
-data/monthly/<month>.done any time you want to force a recheck.
+data/latest.json / data/latest_images.csv (what the dashboard reads) are
+rebuilt every run from ALL monthly files currently on disk - closed months
+plus whatever's cached for the current month - so the dashboard fills in
+progressively as the backfill catches up, rather than being empty until
+everything is done.
 
 Required environment variables:
     MAPILLARY_TOKEN   - Mapillary API access token (client token, "MLY|...")
@@ -69,20 +71,17 @@ Required environment variables:
 Optional environment variables:
     MAPILLARY_START_MONTH  - "YYYY-MM", first month to backfill. Default: 2026-01
     MAPILLARY_PAGE_LIMIT    - page size for API pagination (default 500)
-    MAPILLARY_DISCOVERY_MIN_SPLIT_HOURS - floor for phase-1 discovery time
-                                bisection, in hours (default 3 - coarser is
-                                fine here since phase 1 only needs to find
-                                who contributed, not exact counts)
-    MAPILLARY_MIN_SPLIT_HOURS - floor for phase-2 per-user bisection fallback,
-                                in hours (default 1 - phase 2 relies on real
-                                cursor pagination and should rarely need this)
+    MAPILLARY_MIN_SPLIT_MINUTES - floor for time-window bisection, in minutes
+                                (default 5 - fine enough to handle dense
+                                mapping campaigns without exploding API
+                                call counts)
 
 Output:
     data/monthly/YYYY-MM.jsonl  - raw per-month image records (persisted, cached)
     data/monthly/YYYY-MM.csv    - flat per-month image table
-    data/monthly/YYYY-MM.done   - marker: this month is closed, never re-fetched
-    data/latest.json            - current full cumulative snapshot (used by dashboard)
-    data/latest_images.csv      - flat per-image table of the full cumulative dataset
+    data/monthly/YYYY-MM.done   - marker: this month is closed, won't be re-fetched
+    data/latest.json            - current cumulative snapshot across all months fetched so far
+    data/latest_images.csv      - flat per-image table of everything fetched so far
     data/history/<date>.json    - dated cumulative snapshot, one per day, for trend history
 """
 
@@ -106,8 +105,7 @@ MAPILLARY_TOKEN = os.environ.get("MAPILLARY_TOKEN")
 ORG_ID = os.environ.get("MAPILLARY_ORG_ID")
 PAGE_LIMIT = int(os.environ.get("MAPILLARY_PAGE_LIMIT", "500"))
 START_MONTH = os.environ.get("MAPILLARY_START_MONTH", "2026-01")  # YYYY-MM
-DISCOVERY_MIN_SPLIT = timedelta(hours=float(os.environ.get("MAPILLARY_DISCOVERY_MIN_SPLIT_HOURS", "3")))
-MIN_SPLIT = timedelta(hours=float(os.environ.get("MAPILLARY_MIN_SPLIT_HOURS", "1")))
+MIN_SPLIT = timedelta(minutes=float(os.environ.get("MAPILLARY_MIN_SPLIT_MINUTES", "5")))
 
 API_ROOT = "https://graph.mapillary.com"
 FIELDS = "id,captured_at,creator,sequence,organization_id,geometry"
@@ -133,7 +131,7 @@ def _fetch_page(headers, url, params, timeout=60):
         resp = requests.get(url, headers=headers, params=params, timeout=timeout)
         if resp.status_code == 429:
             wait = int(resp.headers.get("Retry-After", "5"))
-            print(f"  Rate limited, waiting {wait}s...", file=sys.stderr)
+            print(f"    Rate limited, waiting {wait}s...", file=sys.stderr)
             time.sleep(wait)
             continue
         if resp.status_code != 200:
@@ -141,18 +139,17 @@ def _fetch_page(headers, url, params, timeout=60):
         return resp.json()
 
 
-def _fetch_window(headers, start_dt, end_dt, page_limit, query_params, min_split, depth=0):
-    """Fetch all images captured in [start_dt, end_dt) matching query_params
-    (e.g. {"organization_id": ...} OR {"creator_username": ...} - never both,
-    the API rejects that combination). Recursively bisects the window if it
-    looks like results were capped rather than pagination-complete."""
+def _fetch_window(headers, org_id, start_dt, end_dt, page_limit, min_split, depth=0):
+    """Fetch all images belonging to org_id captured in [start_dt, end_dt).
+    Recursively bisects the window whenever results look capped (== page_limit,
+    no pagination cursor) rather than trusting that's the true, complete count."""
     params = {
+        "organization_id": org_id,
         "fields": FIELDS,
         "limit": page_limit,
         "start_captured_at": _dt_to_api(start_dt),
         "end_captured_at": _dt_to_api(end_dt - timedelta(seconds=1)),
     }
-    params.update(query_params)
 
     records = []
     url = f"{API_ROOT}/images"
@@ -177,20 +174,21 @@ def _fetch_window(headers, start_dt, end_dt, page_limit, query_params, min_split
 
     if hit_cap_without_cursor and (end_dt - start_dt) > min_split:
         mid = start_dt + (end_dt - start_dt) / 2
-        left = _fetch_window(headers, start_dt, mid, page_limit, query_params, min_split, depth + 1)
-        right = _fetch_window(headers, mid, end_dt, page_limit, query_params, min_split, depth + 1)
+        left = _fetch_window(headers, org_id, start_dt, mid, page_limit, min_split, depth + 1)
+        right = _fetch_window(headers, org_id, mid, end_dt, page_limit, min_split, depth + 1)
         return left + right
 
     if hit_cap_without_cursor:
-        print(f"    WARNING: window {start_dt}..{end_dt} (query={query_params}) still at page "
-              f"cap at minimum granularity ({min_split}) - results may be incomplete here.",
+        print(f"    WARNING: window {start_dt}..{end_dt} still at page cap at minimum "
+              f"granularity ({min_split}) - results may be incomplete here. Consider "
+              f"lowering MAPILLARY_MIN_SPLIT_MINUTES if this org is extremely high-volume.",
               file=sys.stderr)
 
     return records
 
 
 # ---------------------------------------------------------------------------
-# Month-at-a-time fetch: discovery sweep + authoritative per-user fetch
+# Month-at-a-time fetch
 # ---------------------------------------------------------------------------
 
 def month_bounds(year, month):
@@ -211,48 +209,22 @@ def fetch_month(headers, org_id, year, month, page_limit, cap_end_dt=None):
         return []
 
     label = f"{year:04d}-{month:02d}"
-    print(f"  [{label}] Phase 1/2: org-wide discovery sweep "
-          f"({start_dt.date()} to {(end_dt - timedelta(seconds=1)).date()})...", file=sys.stderr)
-    discovery_records = _fetch_window(
-        headers, start_dt, end_dt, page_limit,
-        query_params={"organization_id": org_id}, min_split=DISCOVERY_MIN_SPLIT,
-    )
+    print(f"  [{label}] Fetching {start_dt.date()} to {(end_dt - timedelta(seconds=1)).date()}...",
+          file=sys.stderr)
+    records = _fetch_window(headers, org_id, start_dt, end_dt, page_limit, MIN_SPLIT)
 
-    by_id = {r["id"]: r for r in discovery_records}
+    by_id = {r["id"]: r for r in records}
     usernames = sorted({
-        r["creator"]["username"] for r in discovery_records
+        r["creator"]["username"] for r in records
         if r.get("creator", {}).get("username")
     })
-    print(f"  [{label}] Phase 1 complete: {len(discovery_records)} images seen, "
-          f"{len(usernames)} contributor(s): {usernames}", file=sys.stderr)
-
-    print(f"  [{label}] Phase 2/2: authoritative per-user fetch...", file=sys.stderr)
-    org_id_str = str(org_id)
-    for username in usernames:
-        # NOTE: organization_id and creator_username cannot be combined in one
-        # query (the API rejects it) - so we fetch this user's FULL history for
-        # the month (no org filter) and then keep only records whose returned
-        # organization_id matches. creator_username-only queries paginate
-        # reliably, which is the whole point of this second pass.
-        user_records = _fetch_window(
-            headers, start_dt, end_dt, page_limit,
-            query_params={"creator_username": username}, min_split=MIN_SPLIT,
-        )
-        org_matched = [r for r in user_records if str(r.get("organization_id")) == org_id_str]
-        new_count = sum(1 for r in org_matched if r["id"] not in by_id)
-        for r in org_matched:
-            by_id[r["id"]] = r
-        print(f"    '{username}': {len(user_records)} total images, "
-              f"{len(org_matched)} for this org ({new_count} not seen in discovery phase)",
-              file=sys.stderr)
-
-    all_records = list(by_id.values())
-    print(f"  [{label}] Month total: {len(all_records)} images", file=sys.stderr)
-    return all_records
+    print(f"  [{label}] {len(by_id)} images from {len(usernames)} contributor(s): {usernames}",
+          file=sys.stderr)
+    return list(by_id.values())
 
 
 # ---------------------------------------------------------------------------
-# Monthly file cache (closed months are fetched once and never touched again)
+# Monthly file cache
 # ---------------------------------------------------------------------------
 
 def _month_paths(year, month):
@@ -300,9 +272,6 @@ def iter_months(start_year, start_month, end_year, end_month):
 # ---------------------------------------------------------------------------
 
 def resolve_countries(records):
-    """Attach a 'country' field to each record using offline reverse geocoding.
-    Skips records that already have _country (e.g. loaded from a cached
-    closed-month file), so this only does work on freshly fetched records."""
     todo = [r for r in records if "_country" not in r]
     if not todo:
         return records
@@ -314,8 +283,7 @@ def resolve_countries(records):
             r["_country"] = "Unknown"
         return records
 
-    coords = []
-    idx_map = []
+    coords, idx_map = [], []
     for i, r in enumerate(todo):
         geom = r.get("geometry")
         if geom and geom.get("coordinates"):
@@ -324,7 +292,7 @@ def resolve_countries(records):
             idx_map.append(i)
 
     if coords:
-        results = rg.search(coords)  # offline, batched, fast
+        results = rg.search(coords)
         for pos, i in enumerate(idx_map):
             todo[i]["_country"] = results[pos].get("cc", "Unknown")
 
@@ -353,7 +321,7 @@ def country_name(cc):
 # Aggregation + output
 # ---------------------------------------------------------------------------
 
-def build_aggregates(records, org_id):
+def build_aggregates(records, org_id, months_fetched, months_pending):
     by_country = defaultdict(lambda: {"images": 0, "sequences": set(), "users": set()})
     by_user = defaultdict(lambda: {"images": 0, "sequences": set(), "countries": set()})
     by_day = defaultdict(lambda: {"images": 0, "sequences": set()})
@@ -409,6 +377,8 @@ def build_aggregates(records, org_id):
     return {
         "organization_id": org_id,
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "months_fetched": months_fetched,
+        "months_pending_backfill": months_pending,
         "total_images": len(records),
         "total_sequences": len(sequences_seen),
         "total_users": len(users_seen),
@@ -476,41 +446,65 @@ def main():
     now = datetime.now(timezone.utc)
     current_year, current_month = now.year, now.month
 
-    print(f"Collecting images for organization {ORG_ID}, "
-          f"months {start_year:04d}-{start_month:02d} through {current_year:04d}-{current_month:02d}",
-          file=sys.stderr)
+    all_months = list(iter_months(start_year, start_month, current_year, current_month))
+    past_months = [ym for ym in all_months if ym != (current_year, current_month)]
+    unclosed_past = [ym for ym in past_months if not os.path.exists(_month_paths(*ym)["done"])]
 
-    all_records = []
-    for year, month in iter_months(start_year, start_month, current_year, current_month):
+    if unclosed_past:
+        target = unclosed_past[0]
+        print(f"Backfilling one month this run: {target[0]:04d}-{target[1]:02d} "
+              f"({len(unclosed_past) - 1} more past month(s) still pending after this).",
+              file=sys.stderr)
+    else:
+        target = (current_year, current_month)
+        print(f"All past months caught up - refreshing current month "
+              f"{target[0]:04d}-{target[1]:02d}.", file=sys.stderr)
+
+    months_fetched_this_run = []
+    for year, month in all_months:
         paths = _month_paths(year, month)
         is_current = (year, month) == (current_year, current_month)
 
-        if not is_current and os.path.exists(paths["done"]):
-            print(f"[{paths['label']}] closed month, using cached file.", file=sys.stderr)
-            records = load_jsonl(paths["jsonl"])
-        else:
+        if (year, month) == target:
             cap_end_dt = now if is_current else None
             records = fetch_month(headers, ORG_ID, year, month, PAGE_LIMIT, cap_end_dt=cap_end_dt)
             records = resolve_countries(records)
             save_jsonl(paths["jsonl"], records)
             write_csv(paths["csv"], records)
             if not is_current:
-                # This month is now in the past and fully fetched - close it out
-                # so it's never re-fetched again.
                 with open(paths["done"], "w") as f:
                     f.write(datetime.now(timezone.utc).isoformat())
                 print(f"[{paths['label']}] closed out ({len(records)} images).", file=sys.stderr)
             else:
                 print(f"[{paths['label']}] current month, will re-fetch fully next run.",
                       file=sys.stderr)
+            months_fetched_this_run.append(paths["label"])
+        elif os.path.exists(paths["jsonl"]):
+            # Already fetched in a previous run (closed, or a stale current-month cache) - reuse.
+            pass
+        else:
+            # Not reached yet in the backfill pacing - no data for this month this run.
+            print(f"[{paths['label']}] not yet backfilled, skipping for now.", file=sys.stderr)
 
-        all_records.extend(records)
+    # Rebuild combined output from everything currently on disk.
+    all_records = []
+    months_present = []
+    months_pending = []
+    for year, month in all_months:
+        paths = _month_paths(year, month)
+        if os.path.exists(paths["jsonl"]):
+            all_records.extend(load_jsonl(paths["jsonl"]))
+            months_present.append(paths["label"])
+        else:
+            months_pending.append(paths["label"])
 
-    summary = build_aggregates(all_records, ORG_ID)
+    summary = build_aggregates(all_records, ORG_ID, months_present, months_pending)
     write_outputs(all_records, summary)
 
     print(
-        f"Done. Cumulative since {START_MONTH}: "
+        f"Done. Months fetched this run: {months_fetched_this_run}. "
+        f"Cumulative across {len(months_present)} month(s) on disk "
+        f"({len(months_pending)} still pending backfill): "
         f"{summary['total_images']} images, {summary['total_sequences']} sequences, "
         f"{summary['total_users']} users, {summary['total_countries']} countries.",
         file=sys.stderr,

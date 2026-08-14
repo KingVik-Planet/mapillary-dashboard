@@ -22,48 +22,65 @@ Maplet Starts project.
 
 ### Why this isn't a single simple API call
 
-Two confirmed quirks in Mapillary's `/images` endpoint make a naive fetch
-silently incomplete, so the collector works around both:
+Mapillary's `/images` endpoint has a confirmed, undocumented gotcha:
+**pagination breaks when filtering by `organization_id` alone.** A "full"
+page of results (exactly the page limit) often comes back with no `next`
+cursor at all - anything past image #500 for that query is silently
+dropped, no error, no indication.
 
-- **Pagination breaks when filtering by `organization_id` alone.** A "full"
-  page of results often comes back with no `next` cursor at all - anything
-  past image #500 for that query is just gone, with no error. The collector
-  works around this by bisecting the time window whenever a response looks
-  capped, to find every contributing user (the "discovery" pass).
-- **`organization_id` and `creator_username` can't be combined** - Mapillary's
-  API rejects that combination outright. But `creator_username` **alone**
-  paginates reliably. So for each user discovered, the collector re-fetches
-  that user's full history for the month (no org filter) and keeps only the
-  images whose `organization_id` matches this org (the "authoritative" pass).
-  This is what actually guarantees nothing gets missed, regardless of how
-  dense a capture session was.
+The collector works around this by bisecting the time window whenever a
+response looks capped, recursively, down to a fine granularity
+(`MAPILLARY_MIN_SPLIT_MINUTES`, default 5 minutes) - fine enough to fully
+separate out even dense mapping campaigns.
 
-### Monthly chunking + closing out past months
+*(An earlier version also tried re-fetching each contributor's history via
+`creator_username`, since that filter paginates reliably on its own. That
+turned out to be a dead end in practice: `organization_id` and
+`creator_username` can't be combined in one query - Mapillary's API rejects
+it - so that pass had to fetch each user's ENTIRE cross-organization
+history and filter client-side, which for prolific contributors meant
+tens of thousands of irrelevant images per user per month. It was also
+where a real bug hid: it looked like it added completeness but was
+silently matching zero records. Dropped entirely in favor of the simpler,
+bounded-cost approach above.)*
+
+### Monthly chunking + one-month-per-run pacing
 
 Every calendar month from `MAPILLARY_START_MONTH` (default **2026-01**) up to
-the current month is processed separately:
+the current month is tracked separately, and **each run only fetches ONE of
+them**, to keep every run fast and avoid ever repeating a many-hour run:
 
-- **Past, fully-elapsed months** are fetched **once**, written to
-  `data/monthly/YYYY-MM.jsonl` + `YYYY-MM.csv`, and marked done with a
-  `YYYY-MM.done` file. Once marked done, that month is never re-fetched -
-  it's just loaded from disk on every subsequent run.
-- **The current, in-progress month** is re-fetched in full on every run
-  (since new images keep arriving all month). Once the calendar rolls into
-  the next month, it gets one final fetch, is written out, and gets its own
-  `.done` marker - then a new month starts accumulating.
-- `data/latest.json` / `data/latest_images.csv` (what the dashboard and
-  cross-date questions use) are rebuilt every run from **all** monthly files
-  combined - cached past months plus the freshly-fetched current month.
+- If there's a past, fully-elapsed month that hasn't been closed out yet,
+  the run fetches the OLDEST one of those, writes it to
+  `data/monthly/YYYY-MM.jsonl` + `YYYY-MM.csv`, and marks it done with a
+  `YYYY-MM.done` file. Nothing else is fetched this run.
+- Once every past month is closed out, each run instead re-fetches the
+  CURRENT (in-progress) month in full - since it's still accumulating new
+  images, it needs a fresh full fetch every time, not a cached load. This
+  keeps happening daily until the calendar rolls into the next month, at
+  which point that month gets one final fetch, is closed out, and a new
+  "current month" starts.
 
-This keeps each run fast (bisection recursion only ever has to cover at most
-one month, not the whole history), and avoids re-scanning settled data every
-single night.
+In practice: today's run backfills January and stops. Tomorrow's run
+backfills February and stops. ... Once it catches up to the current month,
+every day's run just refreshes that one month, until the month ends and a
+new one starts piling up the same way - exactly the "get January, stop;
+get February, stop; ... once we reach the current month, keep refreshing it
+daily" pattern.
+
+`data/latest.json` / `data/latest_images.csv` (what the dashboard reads)
+are rebuilt every run from **whatever monthly files exist on disk** -
+closed months plus the current month if it's been reached yet - so the
+dashboard fills in progressively as the backfill catches up rather than
+showing nothing until every month is done. `months_pending_backfill` in
+`data/latest.json` tells you exactly which months haven't been reached yet.
 
 **Trade-off:** an image captured in a past month but uploaded to Mapillary
 very late (after that month was already closed out) won't be picked up
 automatically. To force a recheck of a specific month, just delete its
 `data/monthly/YYYY-MM.done` marker - the next run will re-fetch that month
-in full.
+in full (pausing the pacing on whatever month it would otherwise have
+picked up).
 
 ## Data files
 
@@ -114,7 +131,9 @@ In your GitHub repo: **Settings → Secrets and variables → Actions → New re
 
 Optionally set `MAPILLARY_START_MONTH` (format `YYYY-MM`, default `2026-01`)
 as a repo **variable** (not secret) if you want backfill to start from a
-different month.
+different month. You can also set `MAPILLARY_MIN_SPLIT_MINUTES` (default
+`5`) to control how fine the time-window bisection goes for very
+high-volume organizations.
 
 ### 3. Enable GitHub Pages (optional, for the hosted dashboard)
 **Settings → Pages → Source: Deploy from branch → `main` / `docs`**
@@ -123,9 +142,15 @@ Your dashboard will then be live at:
 `https://<your-username>.github.io/<repo-name>/`
 
 ### 4. Run it
-- It runs automatically every day at 02:00 UTC.
-- To trigger it manually: **Actions tab → Mapillary Organization Imagery
-  Collector → Run workflow**.
+- It runs automatically every day at 02:00 UTC, backfilling **one month per
+  run** until it catches up to the current month (see pacing explanation
+  above) - so if you're starting from January and it's August now, expect
+  it to take about a week of daily runs to fully catch up, after which it
+  settles into refreshing just the current month each day.
+- To speed up the initial backfill, or to catch up sooner: **Actions tab →
+  Mapillary Organization Imagery Collector → Run workflow**, and trigger it
+  manually as many times as you like (each manual run also only advances
+  one month, same pacing logic).
 
 ## Running locally
 
@@ -143,8 +168,11 @@ python src/collect.py
   quota), so accuracy is only as good as `reverse_geocoder`'s coastal/border
   approximation — fine for country-level grouping, not for exact
   administrative boundaries.
-- Mapillary's `/images` endpoint pages via cursor; large organizations
-  (100k+ images) will take a few minutes to fully paginate — this runs fine
-  in GitHub Actions' default job time limit but is worth knowing about.
+- Backfill is paced at one month per run (see above) - this is intentional,
+  to keep every run fast and reliable rather than one very long run that
+  risks timing out or hitting transient API errors.
 - `data/history/<date>.json` accumulates one snapshot per day, so you get a
   running trend history for free without needing a database.
+- If you want to speed through the initial backfill faster than one month
+  per day, manually trigger the workflow from the Actions tab repeatedly -
+  each click advances one more month.

@@ -105,7 +105,7 @@ MAPILLARY_TOKEN = os.environ.get("MAPILLARY_TOKEN")
 ORG_ID = os.environ.get("MAPILLARY_ORG_ID")
 PAGE_LIMIT = int(os.environ.get("MAPILLARY_PAGE_LIMIT", "500"))
 START_MONTH = os.environ.get("MAPILLARY_START_MONTH", "2026-01")  # YYYY-MM
-MIN_SPLIT = timedelta(minutes=float(os.environ.get("MAPILLARY_MIN_SPLIT_MINUTES", "5")))
+MIN_SPLIT = timedelta(minutes=float(os.environ.get("MAPILLARY_MIN_SPLIT_MINUTES", "2")))
 
 API_ROOT = "https://graph.mapillary.com"
 FIELDS = "id,captured_at,creator,sequence,organization_id,geometry"

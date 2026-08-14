@@ -1,0 +1,200 @@
+{
+  "organization_id": "333719471505834",
+  "generated_at": "2026-08-14T11:24:28.517739+00:00",
+  "months_fetched": [
+    "2026-01"
+  ],
+  "months_pending_backfill": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "total_images": 123685,
+  "total_sequences": 302,
+  "total_users": 8,
+  "total_countries": 2,
+  "by_country": [
+    {
+      "country": "Taiwan, Province of China",
+      "images": 89199,
+      "sequences": 234,
+      "users": 1
+    },
+    {
+      "country": "India",
+      "images": 34486,
+      "sequences": 68,
+      "users": 7
+    }
+  ],
+  "by_user": [
+    {
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "images": 89199,
+      "sequences": 234,
+      "countries": [
+        "Taiwan, Province of China"
+      ]
+    },
+    {
+      "username": "Absawant",
+      "user_id": "1390940191591088",
+      "images": 26836,
+      "sequences": 39,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "Milind_Gaikwad",
+      "user_id": "1458609044902090",
+      "images": 3292,
+      "sequences": 6,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "rdugal",
+      "user_id": "655381217008772",
+      "images": 1348,
+      "sequences": 4,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "images": 1272,
+      "sequences": 4,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "AmrutaA",
+      "user_id": "1237217097511568",
+      "images": 1064,
+      "sequences": 6,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "patilni",
+      "user_id": "290034106994773",
+      "images": 643,
+      "sequences": 1,
+      "countries": [
+        "India"
+      ]
+    },
+    {
+      "username": "sakshisable17627",
+      "user_id": "2324042318041514",
+      "images": 31,
+      "sequences": 8,
+      "countries": [
+        "India"
+      ]
+    }
+  ],
+  "by_day": [
+    {
+      "date": "2026-01-03",
+      "images": 19162,
+      "sequences": 37
+    },
+    {
+      "date": "2026-01-10",
+      "images": 14962,
+      "sequences": 23
+    },
+    {
+      "date": "2026-01-12",
+      "images": 4211,
+      "sequences": 7
+    },
+    {
+      "date": "2026-01-13",
+      "images": 31,
+      "sequences": 8
+    },
+    {
+      "date": "2026-01-15",
+      "images": 2511,
+      "sequences": 4
+    },
+    {
+      "date": "2026-01-16",
+      "images": 5494,
+      "sequences": 33
+    },
+    {
+      "date": "2026-01-18",
+      "images": 4480,
+      "sequences": 8
+    },
+    {
+      "date": "2026-01-19",
+      "images": 2451,
+      "sequences": 3
+    },
+    {
+      "date": "2026-01-20",
+      "images": 12217,
+      "sequences": 15
+    },
+    {
+      "date": "2026-01-22",
+      "images": 966,
+      "sequences": 2
+    },
+    {
+      "date": "2026-01-23",
+      "images": 17071,
+      "sequences": 28
+    },
+    {
+      "date": "2026-01-24",
+      "images": 10275,
+      "sequences": 36
+    },
+    {
+      "date": "2026-01-25",
+      "images": 6329,
+      "sequences": 18
+    },
+    {
+      "date": "2026-01-27",
+      "images": 1284,
+      "sequences": 2
+    },
+    {
+      "date": "2026-01-28",
+      "images": 3449,
+      "sequences": 25
+    },
+    {
+      "date": "2026-01-29",
+      "images": 14990,
+      "sequences": 46
+    },
+    {
+      "date": "2026-01-30",
+      "images": 1980,
+      "sequences": 6
+    },
+    {
+      "date": "2026-01-31",
+      "images": 1822,
+      "sequences": 4
+    }
+  ]
+}

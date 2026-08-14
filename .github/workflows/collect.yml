@@ -48,14 +48,27 @@ jobs:
           MAPILLARY_ORG_ID: ${{ secrets.MAPILLARY_ORG_ID }}
         run: python src/collect.py
 
-      # Small aggregate outputs only (data/latest.json, data/history/*.json,
-      # data/monthly/*.done checkpoint markers) - these are what the dashboard
-      # reads and stay tiny indefinitely, so they're safe to commit to git.
-      - name: Commit and push aggregate data
+      # Split the raw CSVs into GitHub-safe chunks (each part capped well under
+      # GitHub's 50MB warning / 100MB hard limit) so the actual data is visible
+      # and browsable in the repo, e.g. data/monthly_chunks/2026-05_1.csv,
+      # 2026-05_2.csv, 2026-05_3.csv... Regenerated fresh every run - stale parts
+      # from a previous run are automatically cleaned up.
+      - name: Export CSV data as GitHub-safe chunks
+        run: |
+          python src/export_chunks.py --src data/monthly --out data/monthly_chunks --max-mb 40
+          if [ -f data/latest_images.csv ]; then
+            python src/export_chunks.py --src data/latest_images.csv --out data/latest_images_chunks --max-mb 40
+          fi
+
+      # Small aggregate outputs (data/latest.json, data/history/*.json,
+      # data/monthly/*.done checkpoint markers) plus the chunked CSV exports -
+      # these all stay under GitHub's size limits, so they're safe to commit.
+      - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history/ data/monthly/*.done 2>/dev/null || true
+          git add data/latest.json data/history/ data/monthly/*.done \
+                  data/monthly_chunks/ data/latest_images_chunks/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Update Mapillary imagery data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push
 

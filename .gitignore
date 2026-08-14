@@ -8,10 +8,14 @@
 # the dashboard actually reads get committed to git.
 
 data/monthly/*.jsonl
-!data/monthly/*.csv
+data/monthly/*.csv
 data/images_master.jsonl
 data/images_master.jsonl.tmp
 data/latest_images.csv
 
 # Keep the tiny .done marker files though (they're just checkpoints, negligible size)
 !data/monthly/*.done
+
+# The chunked exports (data/monthly_chunks/*.csv, data/latest_images_chunks/*.csv)
+# ARE committed to git - each part is kept under GitHub's size limit by
+# src/export_chunks.py, so they're intentionally NOT ignored here.

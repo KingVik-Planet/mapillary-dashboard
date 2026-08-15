@@ -1,39 +1,39 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-08-15T01:16:04.566616+00:00",
+  "generated_at": "2026-08-15T03:50:11.217370+00:00",
   "months_fetched": [
     "2026-01",
     "2026-02",
     "2026-03",
     "2026-04",
-    "2026-05"
+    "2026-05",
+    "2026-06"
   ],
   "months_pending_backfill": [
-    "2026-06",
     "2026-07",
     "2026-08"
   ],
-  "total_images": 882756,
-  "total_sequences": 2173,
+  "total_images": 1100860,
+  "total_sequences": 2557,
   "total_users": 39,
-  "total_countries": 5,
+  "total_countries": 6,
   "by_country": [
     {
-      "country": "Taiwan, Province of China",
-      "images": 389624,
-      "sequences": 1071,
-      "users": 1
-    },
-    {
       "country": "T\u00fcrkiye",
-      "images": 303828,
-      "sequences": 539,
+      "images": 499663,
+      "sequences": 845,
       "users": 2
     },
     {
+      "country": "Taiwan, Province of China",
+      "images": 410883,
+      "sequences": 1127,
+      "users": 1
+    },
+    {
       "country": "India",
-      "images": 187050,
-      "sequences": 538,
+      "images": 187562,
+      "sequences": 546,
       "users": 33
     },
     {
@@ -47,25 +47,32 @@
       "images": 798,
       "sequences": 20,
       "users": 2
+    },
+    {
+      "country": "Japan",
+      "images": 498,
+      "sequences": 14,
+      "users": 1
     }
   ],
   "by_user": [
     {
-      "username": "hcyen",
-      "user_id": "101914818722206",
-      "images": 389624,
-      "sequences": 1071,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "images": 460811,
+      "sequences": 738,
       "countries": [
-        "Taiwan, Province of China"
+        "T\u00fcrkiye"
       ]
     },
     {
-      "username": "burakonder",
-      "user_id": "107778611458272",
-      "images": 264976,
-      "sequences": 432,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "images": 411381,
+      "sequences": 1141,
       "countries": [
-        "T\u00fcrkiye"
+        "Japan",
+        "Taiwan, Province of China"
       ]
     },
     {
@@ -168,6 +175,15 @@
       ]
     },
     {
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "images": 1731,
+      "sequences": 30,
+      "countries": [
+        "India"
+      ]
+    },
+    {
       "username": "patilni",
       "user_id": "290034106994773",
       "images": 1629,
@@ -199,15 +215,6 @@
       "user_id": "655381217008772",
       "images": 1348,
       "sequences": 4,
-      "countries": [
-        "India"
-      ]
-    },
-    {
-      "username": "VVM15",
-      "user_id": "1701022144100237",
-      "images": 1219,
-      "sequences": 22,
       "countries": [
         "India"
       ]
@@ -842,6 +849,41 @@
       "date": "2026-05-29",
       "images": 39167,
       "sequences": 52
+    },
+    {
+      "date": "2026-06-06",
+      "images": 12443,
+      "sequences": 32
+    },
+    {
+      "date": "2026-06-07",
+      "images": 40884,
+      "sequences": 65
+    },
+    {
+      "date": "2026-06-13",
+      "images": 8816,
+      "sequences": 24
+    },
+    {
+      "date": "2026-06-14",
+      "images": 42410,
+      "sequences": 66
+    },
+    {
+      "date": "2026-06-15",
+      "images": 512,
+      "sequences": 8
+    },
+    {
+      "date": "2026-06-21",
+      "images": 112706,
+      "sequences": 177
+    },
+    {
+      "date": "2026-06-26",
+      "images": 333,
+      "sequences": 12
     }
   ]
 }

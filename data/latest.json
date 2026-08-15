@@ -1,33 +1,32 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-08-14T22:33:23.707418+00:00",
+  "generated_at": "2026-08-15T01:16:04.566616+00:00",
   "months_fetched": [
     "2026-01",
     "2026-02",
     "2026-03",
-    "2026-04"
-    
+    "2026-04",
+    "2026-05"
   ],
   "months_pending_backfill": [
-    "2026-05",
     "2026-06",
     "2026-07",
     "2026-08"
   ],
-  "total_images": 811083,
+  "total_images": 882756,
   "total_sequences": 2173,
   "total_users": 39,
   "total_countries": 5,
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 377042,
+      "images": 389624,
       "sequences": 1071,
       "users": 1
     },
     {
       "country": "T\u00fcrkiye",
-      "images": 244737,
+      "images": 303828,
       "sequences": 539,
       "users": 2
     },
@@ -54,7 +53,7 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 377042,
+      "images": 389624,
       "sequences": 1071,
       "countries": [
         "Taiwan, Province of China"
@@ -63,7 +62,7 @@
     {
       "username": "burakonder",
       "user_id": "107778611458272",
-      "images": 205885,
+      "images": 264976,
       "sequences": 432,
       "countries": [
         "T\u00fcrkiye"
@@ -748,6 +747,101 @@
       "date": "2026-04-30",
       "images": 13342,
       "sequences": 25
+    },
+    {
+      "date": "2026-05-01",
+      "images": 11810,
+      "sequences": 21
+    },
+    {
+      "date": "2026-05-02",
+      "images": 2081,
+      "sequences": 3
+    },
+    {
+      "date": "2026-05-03",
+      "images": 1340,
+      "sequences": 3
+    },
+    {
+      "date": "2026-05-07",
+      "images": 9,
+      "sequences": 1
+    },
+    {
+      "date": "2026-05-09",
+      "images": 9726,
+      "sequences": 60
+    },
+    {
+      "date": "2026-05-10",
+      "images": 66071,
+      "sequences": 155
+    },
+    {
+      "date": "2026-05-11",
+      "images": 5329,
+      "sequences": 18
+    },
+    {
+      "date": "2026-05-12",
+      "images": 40954,
+      "sequences": 85
+    },
+    {
+      "date": "2026-05-13",
+      "images": 28621,
+      "sequences": 95
+    },
+    {
+      "date": "2026-05-14",
+      "images": 43560,
+      "sequences": 106
+    },
+    {
+      "date": "2026-05-15",
+      "images": 26116,
+      "sequences": 87
+    },
+    {
+      "date": "2026-05-16",
+      "images": 7961,
+      "sequences": 43
+    },
+    {
+      "date": "2026-05-17",
+      "images": 9059,
+      "sequences": 18
+    },
+    {
+      "date": "2026-05-23",
+      "images": 28030,
+      "sequences": 54
+    },
+    {
+      "date": "2026-05-24",
+      "images": 33335,
+      "sequences": 57
+    },
+    {
+      "date": "2026-05-25",
+      "images": 109,
+      "sequences": 2
+    },
+    {
+      "date": "2026-05-26",
+      "images": 119,
+      "sequences": 1
+    },
+    {
+      "date": "2026-05-28",
+      "images": 91955,
+      "sequences": 125
+    },
+    {
+      "date": "2026-05-29",
+      "images": 39167,
+      "sequences": 52
     }
   ]
 }

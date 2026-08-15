@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-08-15T13:50:43.225663+00:00",
+  "generated_at": "2026-08-15T17:34:45.083672+00:00",
   "months_fetched": [
     "2026-01",
     "2026-02",
@@ -8,20 +8,19 @@
     "2026-04",
     "2026-05",
     "2026-06",
-    "2026-07"
-  ],
-  "months_pending_backfill": [
+    "2026-07",
     "2026-08"
   ],
-  "total_images": 1204863,
-  "total_sequences": 2895,
+  "months_pending_backfill": [],
+  "total_images": 1286982,
+  "total_sequences": 3672,
   "total_users": 42,
-  "total_countries": 8,
+  "total_countries": 9,
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 502364,
-      "sequences": 1380,
+      "images": 566776,
+      "sequences": 1578,
       "users": 1
     },
     {
@@ -38,20 +37,26 @@
     },
     {
       "country": "Ghana",
-      "images": 5295,
-      "sequences": 76,
+      "images": 19612,
+      "sequences": 586,
       "users": 1
     },
     {
       "country": "Rwanda",
-      "images": 4359,
-      "sequences": 22,
+      "images": 6287,
+      "sequences": 24,
       "users": 2
     },
     {
       "country": "Albania",
       "images": 3277,
       "sequences": 5,
+      "users": 1
+    },
+    {
+      "country": "Togo",
+      "images": 1462,
+      "sequences": 67,
       "users": 1
     },
     {
@@ -71,8 +76,8 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 502862,
-      "sequences": 1394,
+      "images": 567274,
+      "sequences": 1592,
       "countries": [
         "Japan",
         "Taiwan, Province of China"
@@ -124,6 +129,16 @@
       ]
     },
     {
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "images": 21074,
+      "sequences": 653,
+      "countries": [
+        "Ghana",
+        "Togo"
+      ]
+    },
+    {
       "username": "nileshjagtap",
       "user_id": "1604196696880044",
       "images": 17955,
@@ -133,12 +148,12 @@
       ]
     },
     {
-      "username": "cmenttor",
-      "user_id": "108933258580999",
-      "images": 5295,
-      "sequences": 76,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "images": 4020,
+      "sequences": 4,
       "countries": [
-        "Ghana"
+        "Rwanda"
       ]
     },
     {
@@ -211,15 +226,6 @@
       "sequences": 8,
       "countries": [
         "India"
-      ]
-    },
-    {
-      "username": "kingvik",
-      "user_id": "103644195212255",
-      "images": 2092,
-      "sequences": 2,
-      "countries": [
-        "Rwanda"
       ]
     },
     {
@@ -1003,6 +1009,56 @@
       "date": "2026-07-31",
       "images": 3347,
       "sequences": 39
+    },
+    {
+      "date": "2026-08-01",
+      "images": 22251,
+      "sequences": 106
+    },
+    {
+      "date": "2026-08-02",
+      "images": 31225,
+      "sequences": 80
+    },
+    {
+      "date": "2026-08-03",
+      "images": 18530,
+      "sequences": 160
+    },
+    {
+      "date": "2026-08-04",
+      "images": 3981,
+      "sequences": 98
+    },
+    {
+      "date": "2026-08-06",
+      "images": 304,
+      "sequences": 38
+    },
+    {
+      "date": "2026-08-07",
+      "images": 1613,
+      "sequences": 113
+    },
+    {
+      "date": "2026-08-08",
+      "images": 804,
+      "sequences": 34
+    },
+    {
+      "date": "2026-08-09",
+      "images": 1311,
+      "sequences": 64
+    },
+    {
+      "date": "2026-08-10",
+      "images": 1720,
+      "sequences": 63
+    },
+    {
+      "date": "2026-08-11",
+      "images": 380,
+      "sequences": 23
     }
   ]
 }

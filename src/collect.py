@@ -4,8 +4,9 @@ Mapillary Organization Imagery Collector
 =========================================
 
 Pulls images contributed to a given Mapillary organization, groups them into
-sequences, resolves each image's country (offline reverse geocoding), and
-writes aggregated JSON (+ CSV) that a static dashboard can render.
+sequences, resolves each image's country (offline reverse geocoding),
+computes kilometers of ground covered, and writes aggregated JSON (+ CSV)
+that a static dashboard can render.
 
 WHY THIS ISN'T A SINGLE SIMPLE API CALL
 -----------------------------------------
@@ -64,6 +65,23 @@ plus whatever's cached for the current month - so the dashboard fills in
 progressively as the backfill catches up, rather than being empty until
 everything is done.
 
+KILOMETERS COVERED
+-------------------
+Distance is estimated as straight-line (haversine great-circle) distance
+between consecutive images WITHIN THE SAME SEQUENCE, ordered by
+captured_at. This is NOT road-network distance - it will slightly
+undercount actual route length (it cuts corners between capture points),
+and its accuracy depends on how densely images were captured along the
+route. It is computed once per run over the FULL combined record set
+(across all monthly files currently on disk), not per-month, because a
+single sequence can span a month boundary - splitting it per-month would
+truncate the distance calculation at that boundary and silently drop the
+km for the crossing segment. Each inter-image "segment" of distance is
+attributed to the country and calendar day of the LATER of its two points
+(matters for sequences that cross a border or midnight). Segments for the
+still-in-progress current month may be incomplete/revised upward on
+subsequent runs, same as image counts.
+
 Required environment variables:
     MAPILLARY_TOKEN   - Mapillary API access token (client token, "MLY|...")
     MAPILLARY_ORG_ID  - Organization ID to collect imagery for
@@ -91,6 +109,7 @@ import json
 import csv
 import time
 import calendar
+from math import radians, sin, cos, sqrt, atan2
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
 
@@ -114,6 +133,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 MONTHLY_DIR = os.path.join(DATA_DIR, "monthly")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
+
+EARTH_RADIUS_KM = 6371.0088  # mean earth radius
 
 
 # ---------------------------------------------------------------------------
@@ -318,15 +339,68 @@ def country_name(cc):
 
 
 # ---------------------------------------------------------------------------
+# Distance (kilometers covered)
+# ---------------------------------------------------------------------------
+
+def haversine_km(lat1, lon1, lat2, lon2):
+    """Great-circle distance between two lat/lon points, in kilometers."""
+    phi1, phi2 = radians(lat1), radians(lat2)
+    dphi = radians(lat2 - lat1)
+    dlambda = radians(lon2 - lon1)
+    a = sin(dphi / 2) ** 2 + cos(phi1) * cos(phi2) * sin(dlambda / 2) ** 2
+    return 2 * EARTH_RADIUS_KM * atan2(sqrt(a), sqrt(1 - a))
+
+
+def compute_segment_distances(records):
+    """Walk each sequence (grouped by 'sequence', ordered by captured_at) and
+    compute the straight-line distance from each image to the PREVIOUS image
+    in that same sequence. Mutates records in place, adding:
+        r["_segment_km"]      - distance (km) from the previous image in its
+                                 sequence; 0.0 for a sequence's first image or
+                                 for images missing coords/timestamp/sequence.
+
+    Must be called on the FULL combined record set (all months on disk), not
+    per-month, since a sequence can span a month boundary - see module
+    docstring "KILOMETERS COVERED" for why that matters.
+    """
+    by_seq = defaultdict(list)
+    for r in records:
+        r.setdefault("_segment_km", 0.0)
+        seq = r.get("sequence")
+        geom = r.get("geometry")
+        if seq and geom and geom.get("coordinates") and r.get("captured_at") is not None:
+            by_seq[seq].append(r)
+
+    for seq_id, imgs in by_seq.items():
+        imgs.sort(key=lambda r: r["captured_at"])
+        prev = None
+        for r in imgs:
+            if prev is not None:
+                lon1, lat1 = prev["geometry"]["coordinates"][0], prev["geometry"]["coordinates"][1]
+                lon2, lat2 = r["geometry"]["coordinates"][0], r["geometry"]["coordinates"][1]
+                r["_segment_km"] = haversine_km(lat1, lon1, lat2, lon2)
+            prev = r
+
+    return records
+
+
+# ---------------------------------------------------------------------------
 # Aggregation + output
 # ---------------------------------------------------------------------------
 
 def build_aggregates(records, org_id, months_fetched, months_pending):
-    by_country = defaultdict(lambda: {"images": 0, "sequences": set(), "users": set()})
-    by_user = defaultdict(lambda: {"images": 0, "sequences": set(), "countries": set()})
-    by_day = defaultdict(lambda: {"images": 0, "sequences": set()})
+    compute_segment_distances(records)
+
+    by_country = defaultdict(lambda: {"images": 0, "sequences": set(), "users": set(), "km": 0.0})
+    by_user = defaultdict(lambda: {"images": 0, "sequences": set(), "countries": set(), "km": 0.0})
+    by_day = defaultdict(lambda: {"images": 0, "sequences": set(), "km": 0.0})
+    by_sequence = defaultdict(lambda: {
+        "images": 0, "km": 0.0, "username": None, "user_id": None,
+        "country": None, "start": None, "end": None,
+    })
     sequences_seen = set()
     users_seen = {}
+    total_km = 0.0
 
     for r in records:
         cc = r.get("_country", "Unknown")
@@ -336,17 +410,20 @@ def build_aggregates(records, org_id, months_fetched, months_pending):
         user_id = creator.get("id", "unknown")
         username = creator.get("username", user_id)
         captured_at_ms = r.get("captured_at")
+        seg_km = r.get("_segment_km", 0.0)
         day = None
         if captured_at_ms:
             day = datetime.fromtimestamp(captured_at_ms / 1000, tz=timezone.utc).strftime("%Y-%m-%d")
 
         by_country[cname]["images"] += 1
+        by_country[cname]["km"] += seg_km
         if seq_id:
             by_country[cname]["sequences"].add(seq_id)
             sequences_seen.add(seq_id)
         by_country[cname]["users"].add(username)
 
         by_user[username]["images"] += 1
+        by_user[username]["km"] += seg_km
         if seq_id:
             by_user[username]["sequences"].add(seq_id)
         by_user[username]["countries"].add(cname)
@@ -354,24 +431,57 @@ def build_aggregates(records, org_id, months_fetched, months_pending):
 
         if day:
             by_day[day]["images"] += 1
+            by_day[day]["km"] += seg_km
             if seq_id:
                 by_day[day]["sequences"].add(seq_id)
 
+        total_km += seg_km
+
+        if seq_id:
+            s = by_sequence[seq_id]
+            s["images"] += 1
+            s["km"] += seg_km
+            s["username"] = username
+            s["user_id"] = user_id
+            if s["country"] is None:
+                s["country"] = cname
+            if captured_at_ms is not None:
+                if s["start"] is None or captured_at_ms < s["start"]:
+                    s["start"] = captured_at_ms
+                if s["end"] is None or captured_at_ms > s["end"]:
+                    s["end"] = captured_at_ms
+
     countries_out = [
-        {"country": c, "images": v["images"], "sequences": len(v["sequences"]), "users": len(v["users"])}
+        {
+            "country": c, "images": v["images"], "sequences": len(v["sequences"]),
+            "users": len(v["users"]), "km": round(v["km"], 3),
+        }
         for c, v in sorted(by_country.items(), key=lambda kv: -kv[1]["images"])
     ]
     users_out = [
         {
             "username": u, "user_id": users_seen.get(u, "unknown"),
             "images": v["images"], "sequences": len(v["sequences"]),
-            "countries": sorted(v["countries"]),
+            "countries": sorted(v["countries"]), "km": round(v["km"], 3),
         }
         for u, v in sorted(by_user.items(), key=lambda kv: -kv[1]["images"])
     ]
     daily_out = [
-        {"date": d, "images": v["images"], "sequences": len(v["sequences"])}
+        {"date": d, "images": v["images"], "sequences": len(v["sequences"]), "km": round(v["km"], 3)}
         for d, v in sorted(by_day.items())
+    ]
+    sequences_out = [
+        {
+            "sequence_id": seq_id,
+            "images": v["images"],
+            "km": round(v["km"], 3),
+            "username": v["username"],
+            "user_id": v["user_id"],
+            "country": v["country"],
+            "start_captured_at": v["start"],
+            "end_captured_at": v["end"],
+        }
+        for seq_id, v in sorted(by_sequence.items(), key=lambda kv: -kv[1]["km"])
     ]
 
     return {
@@ -383,9 +493,16 @@ def build_aggregates(records, org_id, months_fetched, months_pending):
         "total_sequences": len(sequences_seen),
         "total_users": len(users_seen),
         "total_countries": len([c for c in by_country if c != "Unknown"]),
+        "total_km_covered": round(total_km, 3),
+        "km_covered_note": (
+            "Straight-line (haversine) distance between consecutive images in "
+            "the same sequence, summed. Not road-network distance - undercounts "
+            "actual route length, and accuracy depends on capture density."
+        ),
         "by_country": countries_out,
         "by_user": users_out,
         "by_day": daily_out,
+        "by_sequence": sequences_out,
     }
 
 
@@ -394,7 +511,7 @@ def write_csv(path, records):
     with open(path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["image_id", "sequence_id", "user_id", "username",
-                          "captured_at_utc", "country", "lon", "lat"])
+                          "captured_at_utc", "country", "lon", "lat", "segment_km"])
         for r in records:
             geom = r.get("geometry") or {}
             coords = geom.get("coordinates", [None, None])
@@ -407,6 +524,7 @@ def write_csv(path, records):
             writer.writerow([
                 r.get("id"), r.get("sequence"), creator.get("id"), creator.get("username"),
                 captured_iso, country_name(r.get("_country", "Unknown")), coords[0], coords[1],
+                round(r.get("_segment_km", 0.0), 4),
             ])
 
 
@@ -506,7 +624,8 @@ def main():
         f"Cumulative across {len(months_present)} month(s) on disk "
         f"({len(months_pending)} still pending backfill): "
         f"{summary['total_images']} images, {summary['total_sequences']} sequences, "
-        f"{summary['total_users']} users, {summary['total_countries']} countries.",
+        f"{summary['total_users']} users, {summary['total_countries']} countries, "
+        f"{summary['total_km_covered']} km covered.",
         file=sys.stderr,
     )
 

@@ -123,7 +123,7 @@ except ImportError:
 MAPILLARY_TOKEN = os.environ.get("MAPILLARY_TOKEN")
 ORG_ID = os.environ.get("MAPILLARY_ORG_ID")
 PAGE_LIMIT = int(os.environ.get("MAPILLARY_PAGE_LIMIT", "500"))
-START_MONTH = os.environ.get("MAPILLARY_START_MONTH", "2026-01")  # YYYY-MM
+START_MONTH = os.environ.get("MAPILLARY_START_MONTH", "2025-01")  # YYYY-MM
 MIN_SPLIT = timedelta(minutes=float(os.environ.get("MAPILLARY_MIN_SPLIT_MINUTES", "1")))
 
 API_ROOT = "https://graph.mapillary.com"

@@ -1,0 +1,39 @@
+{
+  "organization_id": "333719471505834",
+  "generated_at": "2026-09-02T06:33:39.982287+00:00",
+  "months_fetched": [
+    "2025-01"
+  ],
+  "months_pending_backfill": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "total_images": 0,
+  "total_sequences": 0,
+  "total_users": 0,
+  "total_countries": 0,
+  "total_km_covered": 0.0,
+  "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
+  "by_country": [],
+  "by_user": [],
+  "by_day": [],
+  "by_sequence": []
+}

@@ -35,7 +35,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            data/monthly
+            data/monthly/*.jsonl
+            data/monthly/*.csv
             data/images_master.jsonl
             data/latest_images.csv
           key: mapillary-raw-data-${{ github.run_id }}

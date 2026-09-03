@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-09-02T23:45:26.992435+00:00",
+  "generated_at": "2026-09-03T01:10:47.875544+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -18,41 +18,41 @@
     "2026-02",
     "2026-03",
     "2026-04",
-    "2026-05"
+    "2026-05",
+    "2026-06"
   ],
   "months_pending_backfill": [
-    "2026-06",
     "2026-07",
     "2026-08",
     "2026-09"
   ],
-  "total_images": 2227342,
-  "total_sequences": 4841,
+  "total_images": 2455651,
+  "total_sequences": 5225,
   "total_users": 49,
-  "total_countries": 12,
-  "total_km_covered": 17876.168,
+  "total_countries": 13,
+  "total_km_covered": 18864.453,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
-      "country": "Taiwan, Province of China",
-      "images": 921023,
-      "sequences": 2465,
-      "users": 1,
-      "km": 8879.316
+      "country": "T\u00fcrkiye",
+      "images": 1117075,
+      "sequences": 1636,
+      "users": 2,
+      "km": 4281.888
     },
     {
-      "country": "T\u00fcrkiye",
-      "images": 911035,
-      "sequences": 1330,
-      "users": 2,
-      "km": 3474.761
+      "country": "Taiwan, Province of China",
+      "images": 942282,
+      "sequences": 2521,
+      "users": 1,
+      "km": 9050.183
     },
     {
       "country": "India",
-      "images": 345689,
-      "sequences": 901,
+      "images": 346201,
+      "sequences": 909,
       "users": 40,
-      "km": 5075.13
+      "km": 5079.119
     },
     {
       "country": "Netherlands",
@@ -116,21 +116,29 @@
       "sequences": 8,
       "users": 1,
       "km": 176.656
+    },
+    {
+      "country": "Japan",
+      "images": 498,
+      "sequences": 14,
+      "users": 1,
+      "km": 6.301
     }
   ],
   "by_user": [
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 941810,
-      "sequences": 2506,
+      "images": 963567,
+      "sequences": 2576,
       "countries": [
         "China",
         "Hong Kong",
+        "Japan",
         "Macao",
         "Taiwan, Province of China"
       ],
-      "km": 9047.301
+      "km": 9224.47
     },
     {
       "username": "unen",
@@ -145,12 +153,12 @@
     {
       "username": "burakonder",
       "user_id": "107778611458272",
-      "images": 270072,
-      "sequences": 432,
+      "images": 476112,
+      "sequences": 738,
       "countries": [
         "T\u00fcrkiye"
       ],
-      "km": 1141.3
+      "km": 1948.427
     },
     {
       "username": "nileshjagtap",
@@ -304,6 +312,16 @@
       "km": 13.336
     },
     {
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "images": 1731,
+      "sequences": 30,
+      "countries": [
+        "India"
+      ],
+      "km": 16.731
+    },
+    {
       "username": "AliAba",
       "user_id": "1291069248478728",
       "images": 1609,
@@ -332,16 +350,6 @@
         "Chile"
       ],
       "km": 3.86
-    },
-    {
-      "username": "VVM15",
-      "user_id": "1701022144100237",
-      "images": 1219,
-      "sequences": 22,
-      "countries": [
-        "India"
-      ],
-      "km": 12.742
     },
     {
       "username": "sherinmurgesh",
@@ -1820,6 +1828,48 @@
       "images": 39167,
       "sequences": 52,
       "km": 161.476
+    },
+    {
+      "date": "2026-06-06",
+      "images": 12443,
+      "sequences": 32,
+      "km": 99.899
+    },
+    {
+      "date": "2026-06-07",
+      "images": 42063,
+      "sequences": 65,
+      "km": 158.786
+    },
+    {
+      "date": "2026-06-13",
+      "images": 8816,
+      "sequences": 24,
+      "km": 70.969
+    },
+    {
+      "date": "2026-06-14",
+      "images": 42410,
+      "sequences": 66,
+      "km": 157.605
+    },
+    {
+      "date": "2026-06-15",
+      "images": 512,
+      "sequences": 8,
+      "km": 3.989
+    },
+    {
+      "date": "2026-06-21",
+      "images": 121732,
+      "sequences": 177,
+      "km": 491.247
+    },
+    {
+      "date": "2026-06-26",
+      "images": 333,
+      "sequences": 12,
+      "km": 5.79
     }
   ],
   "by_sequence": [
@@ -9074,6 +9124,16 @@
       "end_captured_at": 1765231599500
     },
     {
+      "sequence_id": "Iaol3wxFZEGfqj12AhPL57",
+      "images": 994,
+      "km": 8.008,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781317148599,
+      "end_captured_at": 1781317803408
+    },
+    {
       "sequence_id": "suV43SbHAyYB1itr8j7MWn",
       "images": 996,
       "km": 8.008,
@@ -9102,6 +9162,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765212535000,
       "end_captured_at": 1765213247000
+    },
+    {
+      "sequence_id": "wAl0vaCMrYpgD9Q5eWPfHG",
+      "images": 994,
+      "km": 8.007,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780781180138,
+      "end_captured_at": 1780781674239
     },
     {
       "sequence_id": "D8HlV7uY4IGF5S3gKeQU9B",
@@ -9272,6 +9342,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778635259250,
       "end_captured_at": 1778635538500
+    },
+    {
+      "sequence_id": "sOSHW2wg6moRJhGz5BariQ",
+      "images": 998,
+      "km": 7.99,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780777657387,
+      "end_captured_at": 1780778729848
     },
     {
       "sequence_id": "gRkuOZe1DtQrYSx9L8hAfH",
@@ -9624,6 +9704,16 @@
       "end_captured_at": 1751767200719
     },
     {
+      "sequence_id": "YVR97l1uQaTXcWstf2emzM",
+      "images": 979,
+      "km": 7.86,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780773963000,
+      "end_captured_at": 1780774472809
+    },
+    {
       "sequence_id": "136CfYXERUTSckzwty9OsK",
       "images": 974,
       "km": 7.856,
@@ -9852,6 +9942,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765765555000,
       "end_captured_at": 1765766172500
+    },
+    {
+      "sequence_id": "gB4zA8wC2tWPEYlqMIO7yv",
+      "images": 957,
+      "km": 7.744,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781310234454,
+      "end_captured_at": 1781310605739
     },
     {
       "sequence_id": "g5qZ7mW3FoB2VCSKINO9pv",
@@ -10302,6 +10402,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1751738400165,
       "end_captured_at": 1751738400409
+    },
+    {
+      "sequence_id": "A2X4Y7oIUPajByNRwDsOKL",
+      "images": 935,
+      "km": 7.548,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781309769655,
+      "end_captured_at": 1781310233985
     },
     {
       "sequence_id": "Xe9jQHNJKmf8MCtiTdAsv2",
@@ -11364,6 +11474,16 @@
       "end_captured_at": 1751763600817
     },
     {
+      "sequence_id": "uIJRc1atSxjfvg9hmWUCoy",
+      "images": 855,
+      "km": 6.878,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781318821533,
+      "end_captured_at": 1781319571596
+    },
+    {
       "sequence_id": "5h1GpPWJkKgYOSN38wjQ2d",
       "images": 856,
       "km": 6.869,
@@ -11442,6 +11562,16 @@
       "country": "India",
       "start_captured_at": 1774081558509,
       "end_captured_at": 1774082079892
+    },
+    {
+      "sequence_id": "Ua6xSjNnC1yfgv9eDtkEbZ",
+      "images": 838,
+      "km": 6.786,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780780415558,
+      "end_captured_at": 1780781179809
     },
     {
       "sequence_id": "RJYg2AnfSj0kMsdhqitD6W",
@@ -11832,6 +11962,16 @@
       "country": "India",
       "start_captured_at": 1772159498000,
       "end_captured_at": 1772160092000
+    },
+    {
+      "sequence_id": "tyjmUuF8gzVO24HIMNdxkl",
+      "images": 808,
+      "km": 6.487,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780782848000,
+      "end_captured_at": 1780783302353
     },
     {
       "sequence_id": "UYRHx6Cq0ZM4zdWifSFgNO",
@@ -12404,6 +12544,26 @@
       "end_captured_at": 1757109461000
     },
     {
+      "sequence_id": "ucMdLR5rA8NhW6QV37n9D0",
+      "images": 992,
+      "km": 5.905,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782055905200,
+      "end_captured_at": 1782056104800
+    },
+    {
+      "sequence_id": "bonlSiP17QCJ6MNe9WzVUY",
+      "images": 988,
+      "km": 5.898,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782056834000,
+      "end_captured_at": 1782057033800
+    },
+    {
       "sequence_id": "FTEd5v91ge0umcVxAOy7iY",
       "images": 526,
       "km": 5.868,
@@ -12522,6 +12682,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1767478029000,
       "end_captured_at": 1767478351000
+    },
+    {
+      "sequence_id": "rg368Ut7saPvyCmdiqLBW2",
+      "images": 719,
+      "km": 5.761,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780779234482,
+      "end_captured_at": 1780780109341
     },
     {
       "sequence_id": "PpIahw9qoutVgbGYrJW1Rk",
@@ -12844,6 +13014,16 @@
       "end_captured_at": 1769721244000
     },
     {
+      "sequence_id": "U9HM5GgPI7ADT4wlizmhFf",
+      "images": 988,
+      "km": 5.522,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782055681000,
+      "end_captured_at": 1782055905000
+    },
+    {
       "sequence_id": "TyzX0RVU2kDJQs5IhKo1qj",
       "images": 992,
       "km": 5.517,
@@ -12852,6 +13032,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1778410663400,
       "end_captured_at": 1778410863200
+    },
+    {
+      "sequence_id": "B80Ur9K43SXEOkvsATcetd",
+      "images": 688,
+      "km": 5.517,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780776818613,
+      "end_captured_at": 1780777655926
     },
     {
       "sequence_id": "2iP0AtqVB86IZL3zc1fQse",
@@ -13014,6 +13204,16 @@
       "end_captured_at": 1760739850500
     },
     {
+      "sequence_id": "y6hiJTwW9Dt3jMazSlmN1q",
+      "images": 988,
+      "km": 5.387,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782056257000,
+      "end_captured_at": 1782056457400
+    },
+    {
       "sequence_id": "zcu5C6JXpQgqLyHBYeK2Gv",
       "images": 788,
       "km": 5.376,
@@ -13144,6 +13344,16 @@
       "end_captured_at": 1778789886000
     },
     {
+      "sequence_id": "Ylsczyo8pd2SLaCbmeIgU7",
+      "images": 657,
+      "km": 5.28,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780788165474,
+      "end_captured_at": 1780788826907
+    },
+    {
       "sequence_id": "62MeiNSsadElGB8rh91xHX",
       "images": 32,
       "km": 5.278,
@@ -13162,6 +13372,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765246318000,
       "end_captured_at": 1765246927000
+    },
+    {
+      "sequence_id": "d3CtPcrY9wiLWK06zRunFE",
+      "images": 992,
+      "km": 5.273,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782056457600,
+      "end_captured_at": 1782056674000
     },
     {
       "sequence_id": "NawpdDmlz5fBLVOXcxEyAk",
@@ -13374,6 +13594,16 @@
       "end_captured_at": 1765225250000
     },
     {
+      "sequence_id": "pD1Y8erxLPIdQ3h0N6CiWV",
+      "images": 638,
+      "km": 5.158,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781317803817,
+      "end_captured_at": 1781318296968
+    },
+    {
       "sequence_id": "t6Nc17Wq3zHQdC0IxFXo2s",
       "images": 641,
       "km": 5.146,
@@ -13492,6 +13722,26 @@
       "country": "India",
       "start_captured_at": 1773406902740,
       "end_captured_at": 1773407883359
+    },
+    {
+      "sequence_id": "OmDK95cIfyBaoprvgnWswZ",
+      "images": 992,
+      "km": 5.099,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023783000,
+      "end_captured_at": 1782023982800
+    },
+    {
+      "sequence_id": "icrzVwS19U6sJAHN0pjoOd",
+      "images": 983,
+      "km": 5.083,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782055190800,
+      "end_captured_at": 1782055362000
     },
     {
       "sequence_id": "1IWemhlA2Yr3gUV4O8q9Ti",
@@ -13694,6 +13944,16 @@
       "end_captured_at": 1768070140000
     },
     {
+      "sequence_id": "eXNagrIAo1REmV7pulW9jP",
+      "images": 992,
+      "km": 4.969,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051154000,
+      "end_captured_at": 1782051366600
+    },
+    {
       "sequence_id": "edlCgMHDJGNhuyc8fZ2Ex1",
       "images": 40,
       "km": 4.967,
@@ -13804,6 +14064,26 @@
       "end_captured_at": 1779938941800
     },
     {
+      "sequence_id": "xnAK0krZWSL13E9l6HBzIN",
+      "images": 988,
+      "km": 4.916,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051778600,
+      "end_captured_at": 1782051978400
+    },
+    {
+      "sequence_id": "RKWGNEhlkHD0goquipQZnC",
+      "images": 988,
+      "km": 4.915,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023983000,
+      "end_captured_at": 1782024182800
+    },
+    {
       "sequence_id": "g5R7OCQoDhvHtUiKFpf4Se",
       "images": 992,
       "km": 4.913,
@@ -13812,6 +14092,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779611911600,
       "end_captured_at": 1779612111400
+    },
+    {
+      "sequence_id": "dfsIGZ7jbp0rCWmuBxlKHc",
+      "images": 992,
+      "km": 4.912,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782030281000,
+      "end_captured_at": 1782030480800
     },
     {
       "sequence_id": "BJU2Qc6ix7q18sCuLnPzGY",
@@ -13894,6 +14184,16 @@
       "end_captured_at": 1778809792000
     },
     {
+      "sequence_id": "KWd5F0yRI64qM8eczTEOnL",
+      "images": 606,
+      "km": 4.871,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781315932311,
+      "end_captured_at": 1781316511910
+    },
+    {
       "sequence_id": "F2HDcQCzT9L1RhvZAwOedG",
       "images": 601,
       "km": 4.865,
@@ -13972,6 +14272,26 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1751738400000,
       "end_captured_at": 1751738400153
+    },
+    {
+      "sequence_id": "Ayfg2ULZjoTlpxhsbn6NXm",
+      "images": 988,
+      "km": 4.829,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051366800,
+      "end_captured_at": 1782051558800
+    },
+    {
+      "sequence_id": "YDUIhW3NBRl6e7VxFJLuXA",
+      "images": 988,
+      "km": 4.827,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028418000,
+      "end_captured_at": 1782028618200
     },
     {
       "sequence_id": "08iBeqXJcRrdZTMufWYoDV",
@@ -14064,6 +14384,16 @@
       "end_captured_at": 1780067090800
     },
     {
+      "sequence_id": "Wk2xBqw564M1Rbz37aioAL",
+      "images": 599,
+      "km": 4.781,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780784756622,
+      "end_captured_at": 1780785167761
+    },
+    {
       "sequence_id": "qjIDiEPcm6O9xT5YyNMwJQ",
       "images": 874,
       "km": 4.777,
@@ -14122,6 +14452,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769293003000,
       "end_captured_at": 1769293628000
+    },
+    {
+      "sequence_id": "2qWmp39QryGxNYcSXhoAgl",
+      "images": 992,
+      "km": 4.752,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051601000,
+      "end_captured_at": 1782051778400
     },
     {
       "sequence_id": "eCFfTY6KgOow0LBvWsznSG",
@@ -14192,6 +14532,26 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1762556875500,
       "end_captured_at": 1762557340000
+    },
+    {
+      "sequence_id": "QK59E0A7nmGf2sRXCgrx8O",
+      "images": 792,
+      "km": 4.723,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782056674200,
+      "end_captured_at": 1782056834000
+    },
+    {
+      "sequence_id": "VtimQ1wL2IDRS9bpPO4AEN",
+      "images": 988,
+      "km": 4.721,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782050170400,
+      "end_captured_at": 1782050370200
     },
     {
       "sequence_id": "QA7k62PtNIJsmpRWxj830z",
@@ -14282,6 +14642,16 @@
       "country": "India",
       "start_captured_at": 1772889479105,
       "end_captured_at": 1772890641327
+    },
+    {
+      "sequence_id": "F610zpNEXQGJd5WxehuBkZ",
+      "images": 992,
+      "km": 4.677,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782052498000,
+      "end_captured_at": 1782052698400
     },
     {
       "sequence_id": "iNFcBGHZPxL5AtfIneR3W1",
@@ -14464,6 +14834,16 @@
       "end_captured_at": 1780063842000
     },
     {
+      "sequence_id": "VTbwfBxQeXE8vCmsM6tizO",
+      "images": 992,
+      "km": 4.587,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049970000,
+      "end_captured_at": 1782050170200
+    },
+    {
       "sequence_id": "QoV7G9RLtYxr5seUTHDAvI",
       "images": 992,
       "km": 4.58,
@@ -14472,6 +14852,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1780064573000,
       "end_captured_at": 1780064782800
+    },
+    {
+      "sequence_id": "49UKh8oJNkw1xHjnpDWvrt",
+      "images": 992,
+      "km": 4.575,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023407400,
+      "end_captured_at": 1782023607200
+    },
+    {
+      "sequence_id": "jrtnQ8PgufGzDUecyFYSaT",
+      "images": 988,
+      "km": 4.571,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042362000,
+      "end_captured_at": 1782042577000
     },
     {
       "sequence_id": "SoXROHQ5vGUuYc1EeKtMwL",
@@ -14542,6 +14942,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779943910800,
       "end_captured_at": 1779944110600
+    },
+    {
+      "sequence_id": "ecxEdaksO6Km58GpIbrlLD",
+      "images": 989,
+      "km": 4.53,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049074000,
+      "end_captured_at": 1782049281400
     },
     {
       "sequence_id": "1Z7xTsY0qjpNzW5RPaeVo4",
@@ -14662,6 +15072,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779954152800,
       "end_captured_at": 1779954352600
+    },
+    {
+      "sequence_id": "N72SnpwRkZt0bj4mWIBU81",
+      "images": 990,
+      "km": 4.502,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782030542000,
+      "end_captured_at": 1782030782600
     },
     {
       "sequence_id": "8g6tmcJ7qUoXAIWaZS9BT3",
@@ -14894,6 +15314,16 @@
       "end_captured_at": 1757110494000
     },
     {
+      "sequence_id": "Ap6mnw9JDNXOf1QqF3sbMd",
+      "images": 989,
+      "km": 4.439,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780821018000,
+      "end_captured_at": 1780821233666
+    },
+    {
       "sequence_id": "cy9MdNY7VfgnSbk0LCKGJs",
       "images": 459,
       "km": 4.426,
@@ -14974,6 +15404,16 @@
       "end_captured_at": 1765748803000
     },
     {
+      "sequence_id": "0EHw9kY7sFaMOTBJejNLlu",
+      "images": 755,
+      "km": 4.404,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782056105000,
+      "end_captured_at": 1782056257666
+    },
+    {
       "sequence_id": "OBY4JVFGsqb8T3QHa7wpn6",
       "images": 992,
       "km": 4.4,
@@ -15012,6 +15452,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769295758000,
       "end_captured_at": 1769296133000
+    },
+    {
+      "sequence_id": "n4B87FxzUvHIi5lacC2S0d",
+      "images": 988,
+      "km": 4.389,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054933000,
+      "end_captured_at": 1782055190600
     },
     {
       "sequence_id": "y5oBEhYkjl0327K9WUAP8S",
@@ -15072,6 +15522,16 @@
       "country": "India",
       "start_captured_at": 1744191695266,
       "end_captured_at": 1744191975461
+    },
+    {
+      "sequence_id": "RL3NqvFEefP6m7UdAQM4jX",
+      "images": 992,
+      "km": 4.367,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049281600,
+      "end_captured_at": 1782049485000
     },
     {
       "sequence_id": "N9IynwrQO7DEvhc20S31Fg",
@@ -15152,6 +15612,16 @@
       "country": "India",
       "start_captured_at": 1772194134000,
       "end_captured_at": 1772194339000
+    },
+    {
+      "sequence_id": "lr7xVzHEJWeXPtAKIRFaLv",
+      "images": 977,
+      "km": 4.339,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026428000,
+      "end_captured_at": 1782026684400
     },
     {
       "sequence_id": "4oMTR6Q5q9ltK1xdW8jkX2",
@@ -15264,6 +15734,26 @@
       "end_captured_at": 1763244084000
     },
     {
+      "sequence_id": "VPqntFoTW8aDxBK4Cz7rhL",
+      "images": 988,
+      "km": 4.316,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782024562800,
+      "end_captured_at": 1782024762600
+    },
+    {
+      "sequence_id": "Syi8edcEv7bj3YPMkGnupF",
+      "images": 991,
+      "km": 4.315,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028994000,
+      "end_captured_at": 1782029246200
+    },
+    {
       "sequence_id": "jpta6SUMd82qf1AuYylJBP",
       "images": 533,
       "km": 4.315,
@@ -15272,6 +15762,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1762642629000,
       "end_captured_at": 1762642909000
+    },
+    {
+      "sequence_id": "OPqbUas8c0Yvw2zZKEJ6hu",
+      "images": 988,
+      "km": 4.311,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782030782800,
+      "end_captured_at": 1782030982600
     },
     {
       "sequence_id": "BU3ZuASQCLYpgv2DRWH0wz",
@@ -15394,6 +15894,26 @@
       "end_captured_at": 1756682228000
     },
     {
+      "sequence_id": "iOnFwTXlLHfM3U04psGrV8",
+      "images": 866,
+      "km": 4.277,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023607400,
+      "end_captured_at": 1782023782000
+    },
+    {
+      "sequence_id": "G0T4dsN5zUXM3HKfqCWvPJ",
+      "images": 992,
+      "km": 4.274,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028618400,
+      "end_captured_at": 1782028884200
+    },
+    {
       "sequence_id": "e1V59surDmiFBTz3RXtLgE",
       "images": 532,
       "km": 4.273,
@@ -15402,6 +15922,36 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765328510666,
       "end_captured_at": 1765329303000
+    },
+    {
+      "sequence_id": "n4oeFwRP6cQgbIHKO0SEsT",
+      "images": 988,
+      "km": 4.266,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781442078000,
+      "end_captured_at": 1781442308800
+    },
+    {
+      "sequence_id": "89Dk2Y7WwLu3rFZbodnqeP",
+      "images": 988,
+      "km": 4.262,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780817444600,
+      "end_captured_at": 1780817644400
+    },
+    {
+      "sequence_id": "txb9PquUQn0M54HpszmeRd",
+      "images": 994,
+      "km": 4.262,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782036925000,
+      "end_captured_at": 1782037198800
     },
     {
       "sequence_id": "kKEujNF2PAWcQtLORS5alo",
@@ -15514,6 +16064,16 @@
       "end_captured_at": 1779940686600
     },
     {
+      "sequence_id": "M4TW8YnwLFOxrtH5ah2ig1",
+      "images": 992,
+      "km": 4.221,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781442888200,
+      "end_captured_at": 1781443088000
+    },
+    {
       "sequence_id": "kgr1lbnj4eORPtosJH0qzT",
       "images": 992,
       "km": 4.217,
@@ -15604,6 +16164,26 @@
       "end_captured_at": 1765523315004
     },
     {
+      "sequence_id": "DHEJCblhju61a5Aoq4cLSY",
+      "images": 988,
+      "km": 4.193,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049721800,
+      "end_captured_at": 1782049938800
+    },
+    {
+      "sequence_id": "VIxz6vOhwfaNRoJWE4ynb9",
+      "images": 714,
+      "km": 4.19,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057152200,
+      "end_captured_at": 1782057295800
+    },
+    {
       "sequence_id": "dYFtJfZT24sxNC6Av0nBQo",
       "images": 518,
       "km": 4.186,
@@ -15612,6 +16192,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1764110873000,
       "end_captured_at": 1764111454000
+    },
+    {
+      "sequence_id": "fVL8ojEAmvDi7yTpCHYG26",
+      "images": 988,
+      "km": 4.178,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782052050000,
+      "end_captured_at": 1782052278000
     },
     {
       "sequence_id": "kAwg6BxSJTXOFVsmMha3Wr",
@@ -15634,6 +16224,16 @@
       "end_captured_at": 1761460049435
     },
     {
+      "sequence_id": "y8HM3zKt26LBYZxoI4J1rE",
+      "images": 988,
+      "km": 4.166,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781447892000,
+      "end_captured_at": 1781448092000
+    },
+    {
       "sequence_id": "Klj3Tvn0k5BSN6Hw8dEGm1",
       "images": 875,
       "km": 4.166,
@@ -15652,6 +16252,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765238587500,
       "end_captured_at": 1765238847000
+    },
+    {
+      "sequence_id": "eMjzfbIWAiCS2slxnT31EP",
+      "images": 992,
+      "km": 4.152,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782027586400,
+      "end_captured_at": 1782027786200
     },
     {
       "sequence_id": "v0oIxkd2JrOsZhzjQ5wLE9",
@@ -15694,6 +16304,16 @@
       "end_captured_at": 1779610181800
     },
     {
+      "sequence_id": "4XgSbY9lAte6uPLcDCZOE5",
+      "images": 894,
+      "km": 4.147,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782052278200,
+      "end_captured_at": 1782052498000
+    },
+    {
       "sequence_id": "ixTHohvqbIfsGNLSV19d8k",
       "images": 517,
       "km": 4.144,
@@ -15702,6 +16322,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1763417887000,
       "end_captured_at": 1763418159000
+    },
+    {
+      "sequence_id": "i3t6uZamELsdJcC7p9YInD",
+      "images": 518,
+      "km": 4.142,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780786756000,
+      "end_captured_at": 1780787571665
     },
     {
       "sequence_id": "c8oYpAQEGagCZvjKsqeXT9",
@@ -15774,6 +16404,16 @@
       "end_captured_at": 1743503818132
     },
     {
+      "sequence_id": "L8RPkmsB0tqce7gX6lhyCM",
+      "images": 992,
+      "km": 4.13,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819149800,
+      "end_captured_at": 1780819349600
+    },
+    {
       "sequence_id": "Xy32LKpQjn6UmhqTlrcM4f",
       "images": 515,
       "km": 4.127,
@@ -15804,6 +16444,16 @@
       "end_captured_at": 1756600945000
     },
     {
+      "sequence_id": "b4VDSmiKug7yqpwB0GfxUo",
+      "images": 992,
+      "km": 4.122,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782024359000,
+      "end_captured_at": 1782024562600
+    },
+    {
       "sequence_id": "y038AmGCTg7Y9DcLRNelFd",
       "images": 244,
       "km": 4.122,
@@ -15812,6 +16462,36 @@
       "country": "India",
       "start_captured_at": 1772150063000,
       "end_captured_at": 1772150465500
+    },
+    {
+      "sequence_id": "dlKxrO9vpjtV3sbXQ1uocA",
+      "images": 978,
+      "km": 4.111,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780817223000,
+      "end_captured_at": 1780817444400
+    },
+    {
+      "sequence_id": "i4ASMpDrCYukTU2o9txvX3",
+      "images": 978,
+      "km": 4.111,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780817223000,
+      "end_captured_at": 1780817444400
+    },
+    {
+      "sequence_id": "vT1iVhMdygmeWZUFoqnpBY",
+      "images": 992,
+      "km": 4.111,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049521000,
+      "end_captured_at": 1782049721600
     },
     {
       "sequence_id": "9QR3cuKYyBdgs1nvJ5M4Lj",
@@ -15842,6 +16522,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1780065804600,
       "end_captured_at": 1780066007600
+    },
+    {
+      "sequence_id": "YGFrxeRgPCDKOTAQJB6mn2",
+      "images": 992,
+      "km": 4.103,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782027841000,
+      "end_captured_at": 1782028041600
     },
     {
       "sequence_id": "34AMK2UWoTNyIuE0lfLahb",
@@ -15894,6 +16584,16 @@
       "end_captured_at": 1779942757000
     },
     {
+      "sequence_id": "yft9g0N2WkwcUlGD5VTXup",
+      "images": 731,
+      "km": 4.094,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782055362200,
+      "end_captured_at": 1782055509666
+    },
+    {
       "sequence_id": "posNznMKhr2cudwPmFGOtH",
       "images": 159,
       "km": 4.087,
@@ -15902,6 +16602,16 @@
       "country": "India",
       "start_captured_at": 1744192202286,
       "end_captured_at": 1744192444954
+    },
+    {
+      "sequence_id": "yh0F2QTcntWKJR36wDU4Bv",
+      "images": 990,
+      "km": 4.083,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782027265000,
+      "end_captured_at": 1782027586200
     },
     {
       "sequence_id": "c07GHtRLVf8Z3yzv14BO2I",
@@ -15974,6 +16684,26 @@
       "end_captured_at": 1779610381800
     },
     {
+      "sequence_id": "I5uEWPBXR0iAyrM9HOVNsd",
+      "images": 987,
+      "km": 4.062,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060778500,
+      "end_captured_at": 1782061088200
+    },
+    {
+      "sequence_id": "hlISMZUs0NjDGc7Py1Xdq8",
+      "images": 992,
+      "km": 4.058,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782029642000,
+      "end_captured_at": 1782029841800
+    },
+    {
       "sequence_id": "pwIv1AlFzU2koLN97mghV3",
       "images": 503,
       "km": 4.056,
@@ -15982,6 +16712,26 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1759095619000,
       "end_captured_at": 1759096714000
+    },
+    {
+      "sequence_id": "bXaMnS0pCqimAPF2zVjeo1",
+      "images": 991,
+      "km": 4.056,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782029965000,
+      "end_captured_at": 1782030280800
+    },
+    {
+      "sequence_id": "IwivulZCpW7hdezkycVq0S",
+      "images": 992,
+      "km": 4.048,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781442309000,
+      "end_captured_at": 1781442538200
     },
     {
       "sequence_id": "EWtgamuBIJk5s8X42FR3VY",
@@ -15994,6 +16744,16 @@
       "end_captured_at": 1756499267000
     },
     {
+      "sequence_id": "3P84QOLG1SzgI6WlNCDpdH",
+      "images": 503,
+      "km": 4.043,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780774473840,
+      "end_captured_at": 1780775252921
+    },
+    {
       "sequence_id": "5zp1eo8l2ji7ItFwbvPTEO",
       "images": 990,
       "km": 4.036,
@@ -16002,6 +16762,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779612800000,
       "end_captured_at": 1779613037400
+    },
+    {
+      "sequence_id": "acNTMLmQVgI3zJhZPyxjoH",
+      "images": 988,
+      "km": 4.035,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780808139400,
+      "end_captured_at": 1780808339200
+    },
+    {
+      "sequence_id": "i9VDjqpYB7EZPSr4ew1N3u",
+      "images": 992,
+      "km": 4.034,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448092200,
+      "end_captured_at": 1781448292400
     },
     {
       "sequence_id": "mcAyfhz192VKkHweYnRaob",
@@ -16072,6 +16852,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1778398594000,
       "end_captured_at": 1778398808200
+    },
+    {
+      "sequence_id": "CWsULEl2GRDJ5n7BzbFqKa",
+      "images": 727,
+      "km": 4.019,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782024183000,
+      "end_captured_at": 1782024359666
     },
     {
       "sequence_id": "dZyFKgQm2D4lHc8OBh5Jiv",
@@ -16174,6 +16964,16 @@
       "end_captured_at": 1779939911000
     },
     {
+      "sequence_id": "UrGIH09opOJfzQRPC18MtT",
+      "images": 983,
+      "km": 3.985,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059394000,
+      "end_captured_at": 1782059541800
+    },
+    {
       "sequence_id": "3B6fiWG7J9VUcZQ0woHrhY",
       "images": 406,
       "km": 3.985,
@@ -16204,6 +17004,16 @@
       "end_captured_at": 1778388179800
     },
     {
+      "sequence_id": "pESYyIPU6TixeRhQq1ruza",
+      "images": 992,
+      "km": 3.974,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781443521600,
+      "end_captured_at": 1781443721200
+    },
+    {
       "sequence_id": "YsQ6MS3Z9ytjG8lPr4BmIa",
       "images": 988,
       "km": 3.972,
@@ -16222,6 +17032,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765238924000,
       "end_captured_at": 1765239356000
+    },
+    {
+      "sequence_id": "hzLjXiNo3JvHdnt40kQWfg",
+      "images": 941,
+      "km": 3.971,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781441863600,
+      "end_captured_at": 1781442077000
     },
     {
       "sequence_id": "WHQ0CPcyaVdjIKqYwA29Fn",
@@ -16262,6 +17082,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1778399169000,
       "end_captured_at": 1778399395800
+    },
+    {
+      "sequence_id": "miOyxJbvKgsHZ7pGUtFLWr",
+      "images": 989,
+      "km": 3.956,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042092800,
+      "end_captured_at": 1782042304600
+    },
+    {
+      "sequence_id": "07T8WfAJHjwvP23bCuhkYR",
+      "images": 495,
+      "km": 3.955,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780775325784,
+      "end_captured_at": 1780775924762
     },
     {
       "sequence_id": "2dTS39nOperGywBIFoP7Wi",
@@ -16314,6 +17154,36 @@
       "end_captured_at": 1751735401000
     },
     {
+      "sequence_id": "gq34H6hkzoyPFNsE0aAdBj",
+      "images": 992,
+      "km": 3.935,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781442591000,
+      "end_captured_at": 1781442888000
+    },
+    {
+      "sequence_id": "1RGyWh8nia0pNd2xCXV6gm",
+      "images": 990,
+      "km": 3.933,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448525000,
+      "end_captured_at": 1781448744600
+    },
+    {
+      "sequence_id": "GJyzSNFC6Yfjo1uWQgZVRr",
+      "images": 992,
+      "km": 3.93,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780820570000,
+      "end_captured_at": 1780820784200
+    },
+    {
       "sequence_id": "a3yzHbNv1PCdIXWtFoRDJY",
       "images": 992,
       "km": 3.93,
@@ -16322,6 +17192,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1778390964800,
       "end_captured_at": 1778391185600
+    },
+    {
+      "sequence_id": "L5wBEzagKxT9yHjbcl8kN7",
+      "images": 990,
+      "km": 3.929,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780818495000,
+      "end_captured_at": 1780818763600
     },
     {
       "sequence_id": "Xfikc79mApjyaz5ZIK1FtE",
@@ -16464,6 +17344,16 @@
       "end_captured_at": 1757474817000
     },
     {
+      "sequence_id": "5PKqcpi3Yb4rNegQ2Wk8LA",
+      "images": 988,
+      "km": 3.903,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780820784400,
+      "end_captured_at": 1780820984200
+    },
+    {
       "sequence_id": "8PWS96cCDpjr3qYuXI2yJZ",
       "images": 481,
       "km": 3.902,
@@ -16472,6 +17362,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778790999000,
       "end_captured_at": 1778791567000
+    },
+    {
+      "sequence_id": "dDygpxHcIf1Xu74rJtLmjl",
+      "images": 992,
+      "km": 3.898,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054605200,
+      "end_captured_at": 1782054862000
     },
     {
       "sequence_id": "i1xDzSfP0EnU5hvpbmj6WR",
@@ -16502,6 +17402,16 @@
       "country": "India",
       "start_captured_at": 1772765156498,
       "end_captured_at": 1772765616144
+    },
+    {
+      "sequence_id": "YuNJ7VF6hi8rnl43dDHLeP",
+      "images": 989,
+      "km": 3.886,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028041800,
+      "end_captured_at": 1782028272000
     },
     {
       "sequence_id": "gRD5hrLk08zYaCQwcsEVSF",
@@ -16544,6 +17454,16 @@
       "end_captured_at": 1776430859932
     },
     {
+      "sequence_id": "WIOsmrdSNhnKCAk8Fv2Tzp",
+      "images": 988,
+      "km": 3.87,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780808446000,
+      "end_captured_at": 1780808674000
+    },
+    {
       "sequence_id": "5CRMJachvtn1lgQk6xAL4W",
       "images": 575,
       "km": 3.868,
@@ -16584,6 +17504,16 @@
       "end_captured_at": 1767469883000
     },
     {
+      "sequence_id": "0XklcN47Yo8FLmxMG1yiHn",
+      "images": 983,
+      "km": 3.861,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060647700,
+      "end_captured_at": 1782060778400
+    },
+    {
       "sequence_id": "kbCajHnutmBQDvV2GdZYO6",
       "images": 573,
       "km": 3.86,
@@ -16614,6 +17544,16 @@
       "end_captured_at": 1775403575833
     },
     {
+      "sequence_id": "FJhvPWpdbjMotw9EN7AUSR",
+      "images": 989,
+      "km": 3.845,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026112000,
+      "end_captured_at": 1782026339500
+    },
+    {
       "sequence_id": "GmywBVJAgnFbUIafLSl6QN",
       "images": 479,
       "km": 3.843,
@@ -16632,6 +17572,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1775403577013,
       "end_captured_at": 1775403696933
+    },
+    {
+      "sequence_id": "RhMsTCLgpd2kYK4DjXqbHc",
+      "images": 482,
+      "km": 3.841,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780785551781,
+      "end_captured_at": 1780786090664
     },
     {
       "sequence_id": "Js8gXt24ELulAidbYyvwVB",
@@ -16654,6 +17604,16 @@
       "end_captured_at": 1775403817933
     },
     {
+      "sequence_id": "9d3TjRYaBJcxL8Mtlm0Xs7",
+      "images": 991,
+      "km": 3.837,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781440465000,
+      "end_captured_at": 1781440706750
+    },
+    {
       "sequence_id": "paW732dFkSmNCBgqcnObz4",
       "images": 989,
       "km": 3.836,
@@ -16674,6 +17634,16 @@
       "end_captured_at": 1772766655501
     },
     {
+      "sequence_id": "xDmu7yrs3gWJwCpHcMhNzX",
+      "images": 997,
+      "km": 3.828,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780809023000,
+      "end_captured_at": 1780809358750
+    },
+    {
       "sequence_id": "WLZ7IYPNUEjs6CkmyTGwSu",
       "images": 988,
       "km": 3.819,
@@ -16684,6 +17654,16 @@
       "end_captured_at": 1779958625400
     },
     {
+      "sequence_id": "Lgp1umK9QHCwr2vNWj6XR4",
+      "images": 988,
+      "km": 3.818,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042577333,
+      "end_captured_at": 1782042865000
+    },
+    {
       "sequence_id": "faZMhYODUiov1L8NF5jPSz",
       "images": 1145,
       "km": 3.817,
@@ -16692,6 +17672,46 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776430135012,
       "end_captured_at": 1776430254933
+    },
+    {
+      "sequence_id": "RPVaXyfQKqTdF4bI2A5JSu",
+      "images": 992,
+      "km": 3.815,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782053206000,
+      "end_captured_at": 1782053419000
+    },
+    {
+      "sequence_id": "hoJLngk3zB92Mbywdu7KEs",
+      "images": 988,
+      "km": 3.815,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780818943000,
+      "end_captured_at": 1780819149600
+    },
+    {
+      "sequence_id": "rNJEPez0l8hIKCWu4BxoMn",
+      "images": 992,
+      "km": 3.813,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023207000,
+      "end_captured_at": 1782023407200
+    },
+    {
+      "sequence_id": "w3iX98PlkzOvFCsSboyH4h",
+      "images": 992,
+      "km": 3.811,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780813329000,
+      "end_captured_at": 1780813575400
     },
     {
       "sequence_id": "8M50YWCxFX3on1BaArGQOI",
@@ -16814,6 +17834,16 @@
       "end_captured_at": 1764746813933
     },
     {
+      "sequence_id": "P9ezQL7q3wnvJHXYC6oFh2",
+      "images": 987,
+      "km": 3.78,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058351000,
+      "end_captured_at": 1782058501700
+    },
+    {
       "sequence_id": "Ch2UMv5XQr91GLqOu8SFot",
       "images": 1147,
       "km": 3.778,
@@ -16922,6 +17952,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1764967186000,
       "end_captured_at": 1764967869000
+    },
+    {
+      "sequence_id": "RXx59AcM6w0ihkNzYGdPB4",
+      "images": 993,
+      "km": 3.753,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782029390000,
+      "end_captured_at": 1782029641800
     },
     {
       "sequence_id": "SygFRf3UraQ7DwcVelhM1I",
@@ -17054,6 +18094,16 @@
       "end_captured_at": 1756692455000
     },
     {
+      "sequence_id": "DqVjUKRobLwdcCs0xXN6S4",
+      "images": 987,
+      "km": 3.702,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781443168000,
+      "end_captured_at": 1781443521400
+    },
+    {
       "sequence_id": "v9E7mKDPuhnOwcJj4akyo3",
       "images": 1082,
       "km": 3.699,
@@ -17062,6 +18112,36 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764746573013,
       "end_captured_at": 1764746692934
+    },
+    {
+      "sequence_id": "8urWOeIb2vSCoxVJUwRm65",
+      "images": 987,
+      "km": 3.697,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058818000,
+      "end_captured_at": 1782058981300
+    },
+    {
+      "sequence_id": "2iVpnQCePBMz7xj1b3gctO",
+      "images": 874,
+      "km": 3.696,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780816219600,
+      "end_captured_at": 1780816419400
+    },
+    {
+      "sequence_id": "fHGZMsh9u57OLPpyVtXJEg",
+      "images": 993,
+      "km": 3.695,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781447443000,
+      "end_captured_at": 1781447740200
     },
     {
       "sequence_id": "dpJQwaSuhDf74ntLlxcbE0",
@@ -17204,6 +18284,16 @@
       "end_captured_at": 1760737534000
     },
     {
+      "sequence_id": "VzT8LIft1RUAhQB9xOZdMX",
+      "images": 989,
+      "km": 3.67,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782031524000,
+      "end_captured_at": 1782031860750
+    },
+    {
       "sequence_id": "nbKg0fkucjdTRW2LN9eQY4",
       "images": 457,
       "km": 3.669,
@@ -17214,6 +18304,16 @@
       "end_captured_at": 1759612030000
     },
     {
+      "sequence_id": "Ef6LR2i3mwZohaHn7VdUu9",
+      "images": 989,
+      "km": 3.669,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781452157000,
+      "end_captured_at": 1781452437800
+    },
+    {
       "sequence_id": "yMJGZtNz1mjfhwlsPCi9QW",
       "images": 992,
       "km": 3.666,
@@ -17222,6 +18322,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776589635000,
       "end_captured_at": 1776589930666
+    },
+    {
+      "sequence_id": "lKWuE5DQ63UbOwpcTB4rVs",
+      "images": 990,
+      "km": 3.663,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807256800,
+      "end_captured_at": 1780807459400
     },
     {
       "sequence_id": "LCuQm4FPwy1AlYrt0KdScX",
@@ -17272,6 +18382,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764746210012,
       "end_captured_at": 1764746329967
+    },
+    {
+      "sequence_id": "x9lyCqEYzhUB2ajbkPweSf",
+      "images": 993,
+      "km": 3.661,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042939000,
+      "end_captured_at": 1782043199000
     },
     {
       "sequence_id": "dZMj0TSKxoUh6zFGmBusaH",
@@ -17364,6 +18484,16 @@
       "end_captured_at": 1751732165000
     },
     {
+      "sequence_id": "50bNeorTPaxt4inzFv32w1",
+      "images": 990,
+      "km": 3.645,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780816000000,
+      "end_captured_at": 1780816219400
+    },
+    {
       "sequence_id": "Rn2Uj9GkDaAxio6mLlTZNW",
       "images": 875,
       "km": 3.645,
@@ -17384,6 +18514,16 @@
       "end_captured_at": 1763248556000
     },
     {
+      "sequence_id": "OGN83yUftwsg95YkdXJCn0",
+      "images": 994,
+      "km": 3.643,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819392000,
+      "end_captured_at": 1780819610800
+    },
+    {
       "sequence_id": "AM1E6W9NcI5gP8ljH3fBYL",
       "images": 1070,
       "km": 3.642,
@@ -17392,6 +18532,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739339231013,
       "end_captured_at": 1739339350967
+    },
+    {
+      "sequence_id": "ZLc4h78oGNxqsYX0DaFuS1",
+      "images": 990,
+      "km": 3.641,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780815424000,
+      "end_captured_at": 1780815688666
     },
     {
       "sequence_id": "3ZNhkeqBFjI9uM5JQL1Hbl",
@@ -17434,6 +18584,16 @@
       "end_captured_at": 1739343949933
     },
     {
+      "sequence_id": "qnyicFROk7A2YPKLfVWxzM",
+      "images": 991,
+      "km": 3.634,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781440956000,
+      "end_captured_at": 1781441226000
+    },
+    {
       "sequence_id": "Wz1t4SpQVv3ZxklUj0nshf",
       "images": 567,
       "km": 3.633,
@@ -17464,6 +18624,16 @@
       "end_captured_at": 1779939233200
     },
     {
+      "sequence_id": "aNkP7UYHQFRbdL2ex6pohy",
+      "images": 860,
+      "km": 3.628,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782052698600,
+      "end_captured_at": 1782052915500
+    },
+    {
       "sequence_id": "YwWukq9Nj6vAmpdPR1SIn3",
       "images": 994,
       "km": 3.627,
@@ -17482,6 +18652,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776518645013,
       "end_captured_at": 1776518764900
+    },
+    {
+      "sequence_id": "XeZgDKrd72CUuJ1MTiYp63",
+      "images": 993,
+      "km": 3.626,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781434441000,
+      "end_captured_at": 1781434785000
     },
     {
       "sequence_id": "jq5Dw21OsiNQhGoYJZ3Cz6",
@@ -17522,6 +18702,36 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765022844013,
       "end_captured_at": 1765022963833
+    },
+    {
+      "sequence_id": "CxukEQ1Uw9iXNbRd4VfYKv",
+      "images": 989,
+      "km": 3.616,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782025512000,
+      "end_captured_at": 1782025774000
+    },
+    {
+      "sequence_id": "i41JbTNEaLRYh5Sc2srozu",
+      "images": 992,
+      "km": 3.615,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807871000,
+      "end_captured_at": 1780808139200
+    },
+    {
+      "sequence_id": "WVFcxurNaOe6YKJp5HPDiC",
+      "images": 994,
+      "km": 3.613,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781450231000,
+      "end_captured_at": 1781450591600
     },
     {
       "sequence_id": "F1j6csVwyZhEdSeTArPflQ",
@@ -17592,6 +18802,36 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779624207000,
       "end_captured_at": 1779624551666
+    },
+    {
+      "sequence_id": "fWZhlgGKarBtueFNwE3vYT",
+      "images": 994,
+      "km": 3.606,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781443744000,
+      "end_captured_at": 1781444018000
+    },
+    {
+      "sequence_id": "8ncSfpN4kwOrI7RPEtYWGo",
+      "images": 991,
+      "km": 3.605,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782024936000,
+      "end_captured_at": 1782025220400
+    },
+    {
+      "sequence_id": "IlVxPdAEsDS8meizBoLMfX",
+      "images": 991,
+      "km": 3.605,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780821600000,
+      "end_captured_at": 1780821857200
     },
     {
       "sequence_id": "8v3CK1GRV7odtSXlBqYQxp",
@@ -17704,6 +18944,26 @@
       "end_captured_at": 1778431332000
     },
     {
+      "sequence_id": "tAew62xjgyVoPdKmbfz47h",
+      "images": 983,
+      "km": 3.589,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780814848000,
+      "end_captured_at": 1780815238000
+    },
+    {
+      "sequence_id": "CGDd1QYgrBkxKawm2j63Ho",
+      "images": 983,
+      "km": 3.589,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780814848000,
+      "end_captured_at": 1780815238000
+    },
+    {
       "sequence_id": "ygmOX2GeJFlPHZiAp7oLVE",
       "images": 983,
       "km": 3.588,
@@ -17772,6 +19032,16 @@
       "country": "India",
       "start_captured_at": 1765619117285,
       "end_captured_at": 1765619805163
+    },
+    {
+      "sequence_id": "04RF2SCfV5nqwzbrAEYLiM",
+      "images": 997,
+      "km": 3.581,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782034740000,
+      "end_captured_at": 1782035115200
     },
     {
       "sequence_id": "r5Wmg4kqtj2G3SpZVJNbLa",
@@ -18074,6 +19344,16 @@
       "end_captured_at": 1764769693933
     },
     {
+      "sequence_id": "6zgjtuorBGimMKH3U5SRTy",
+      "images": 978,
+      "km": 3.56,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057987000,
+      "end_captured_at": 1782058143800
+    },
+    {
       "sequence_id": "9QGWMDYvjKcF0f4w6NrIRz",
       "images": 980,
       "km": 3.559,
@@ -18294,6 +19574,16 @@
       "end_captured_at": 1764765700866
     },
     {
+      "sequence_id": "6SQfR7hYptJ3lMuUb89Gkx",
+      "images": 995,
+      "km": 3.549,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781446487000,
+      "end_captured_at": 1781446929500
+    },
+    {
       "sequence_id": "dw67I9uaTnkCmxYQ8SLJMX",
       "images": 964,
       "km": 3.549,
@@ -18302,6 +19592,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776435988013,
       "end_captured_at": 1776436107866
+    },
+    {
+      "sequence_id": "Rg3scvofOQuCnJ45eF9kDq",
+      "images": 993,
+      "km": 3.548,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781435017000,
+      "end_captured_at": 1781435354600
     },
     {
       "sequence_id": "jtNUOPJ2bXfR34aiCcTWrG",
@@ -18704,6 +20004,16 @@
       "end_captured_at": 1765286423868
     },
     {
+      "sequence_id": "08ERvk7dzIKwMGQa3jbuOx",
+      "images": 989,
+      "km": 3.52,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819674000,
+      "end_captured_at": 1780819946333
+    },
+    {
       "sequence_id": "q2PGE6vuj1Qp7ByVFrsOgi",
       "images": 994,
       "km": 3.52,
@@ -18772,6 +20082,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764766791013,
       "end_captured_at": 1764766910900
+    },
+    {
+      "sequence_id": "AO8mS30GD4QqaKBncidYfL",
+      "images": 994,
+      "km": 3.517,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781451581000,
+      "end_captured_at": 1781451958000
     },
     {
       "sequence_id": "0egk2P1cDsq7AFimHoLnG5",
@@ -18872,6 +20192,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778358636000,
       "end_captured_at": 1778358921000
+    },
+    {
+      "sequence_id": "uakxzsTViydtHn2UOhv87G",
+      "images": 998,
+      "km": 3.512,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781441503000,
+      "end_captured_at": 1781441863400
     },
     {
       "sequence_id": "wfjNhm4M2ZxOeBpoaDGPzR",
@@ -19154,6 +20484,16 @@
       "end_captured_at": 1779020557600
     },
     {
+      "sequence_id": "3rXRiOMHecq0vVsZdw8j6m",
+      "images": 990,
+      "km": 3.498,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448972000,
+      "end_captured_at": 1781449364000
+    },
+    {
       "sequence_id": "WonNEiSuBcGZb9af8XkIO4",
       "images": 477,
       "km": 3.497,
@@ -19274,6 +20614,16 @@
       "end_captured_at": 1776577306600
     },
     {
+      "sequence_id": "rqxMGDzUFOnel6E1LCTRcY",
+      "images": 994,
+      "km": 3.494,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782043515000,
+      "end_captured_at": 1782043883666
+    },
+    {
       "sequence_id": "eF2zVqjWhAvfSUkscBoiGE",
       "images": 904,
       "km": 3.494,
@@ -19312,6 +20662,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776592595000,
       "end_captured_at": 1776592956500
+    },
+    {
+      "sequence_id": "mD3MVNo4l8uOPzkIeFQShw",
+      "images": 973,
+      "km": 3.492,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782025774200,
+      "end_captured_at": 1782025975000
     },
     {
       "sequence_id": "4h8zWl6ka3qwrFByNjeALM",
@@ -19504,6 +20864,16 @@
       "end_captured_at": 1765020663832
     },
     {
+      "sequence_id": "SvMIRUV0sjAok3udz8eP2C",
+      "images": 995,
+      "km": 3.484,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781438411000,
+      "end_captured_at": 1781438824333
+    },
+    {
       "sequence_id": "6RsIWv7QHVzcNZihxyBrbC",
       "images": 896,
       "km": 3.484,
@@ -19562,6 +20932,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765017640012,
       "end_captured_at": 1765017759934
+    },
+    {
+      "sequence_id": "jSz63IsLQqynl48N7abE1i",
+      "images": 997,
+      "km": 3.48,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781446996000,
+      "end_captured_at": 1781447430000
     },
     {
       "sequence_id": "W5GSf6gczVmdPOHXbpaJrT",
@@ -19642,6 +21022,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778792106000,
       "end_captured_at": 1778792769000
+    },
+    {
+      "sequence_id": "xPN362Of5dIuKcwQaX4Ehe",
+      "images": 890,
+      "km": 3.475,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780818763800,
+      "end_captured_at": 1780818943500
     },
     {
       "sequence_id": "7ECoc52ueWzAyOQRwS4p0F",
@@ -19762,6 +21152,16 @@
       "country": "India",
       "start_captured_at": 1771923768373,
       "end_captured_at": 1771924305539
+    },
+    {
+      "sequence_id": "rEGpvKqwx36JbzDO7d1BWH",
+      "images": 994,
+      "km": 3.468,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782037897000,
+      "end_captured_at": 1782038208500
     },
     {
       "sequence_id": "my1B5f96h4ruDXcKJ7wgn2",
@@ -19944,6 +21344,16 @@
       "end_captured_at": 1765272437966
     },
     {
+      "sequence_id": "vFao2TubRN7YsnU1XJPK3E",
+      "images": 426,
+      "km": 3.46,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781314812770,
+      "end_captured_at": 1781315156972
+    },
+    {
       "sequence_id": "9iF60pkZSgW31btYHG4qfE",
       "images": 933,
       "km": 3.459,
@@ -20002,6 +21412,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765272560012,
       "end_captured_at": 1765272679899
+    },
+    {
+      "sequence_id": "TJGUrL2ehcxZz6mY9NvnPg",
+      "images": 994,
+      "km": 3.454,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782047079000,
+      "end_captured_at": 1782047456000
     },
     {
       "sequence_id": "N8hKXIFm1JDZRMtwziueGS",
@@ -20064,6 +21484,16 @@
       "end_captured_at": 1764766547867
     },
     {
+      "sequence_id": "QIo4P5veVCgcO8nYq9Bxhk",
+      "images": 856,
+      "km": 3.452,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782024762800,
+      "end_captured_at": 1782024935666
+    },
+    {
       "sequence_id": "oIRPam69HvpEe5GjyCYZJ0",
       "images": 891,
       "km": 3.451,
@@ -20072,6 +21502,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765018608013,
       "end_captured_at": 1765018727933
+    },
+    {
+      "sequence_id": "kT6WhBGFyZDYpSs8owHQMK",
+      "images": 988,
+      "km": 3.45,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782031119000,
+      "end_captured_at": 1782031386800
     },
     {
       "sequence_id": "u12xN4f07rIpDZvyOCThLV",
@@ -20122,6 +21562,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739346129013,
       "end_captured_at": 1739346248966
+    },
+    {
+      "sequence_id": "3JnfHEN0rM5XmxOKz6RylT",
+      "images": 996,
+      "km": 3.447,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782044605000,
+      "end_captured_at": 1782045019000
     },
     {
       "sequence_id": "WOEbH4sQyelo7a8PqU9cIn",
@@ -20424,6 +21874,16 @@
       "end_captured_at": 1773722141888
     },
     {
+      "sequence_id": "3fA6DKyEnsNVkexz72bZOv",
+      "images": 996,
+      "km": 3.431,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782032677000,
+      "end_captured_at": 1782033176666
+    },
+    {
       "sequence_id": "tiz0gLyfFA8TJNQeHcODPs",
       "images": 425,
       "km": 3.431,
@@ -20432,6 +21892,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778803761000,
       "end_captured_at": 1778804218000
+    },
+    {
+      "sequence_id": "9jlCd3vtAbWY7OmQoqPI4y",
+      "images": 992,
+      "km": 3.429,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781437054000,
+      "end_captured_at": 1781437566500
     },
     {
       "sequence_id": "y0nPbXBrHdk8YoLhg51e2R",
@@ -20614,6 +22084,26 @@
       "end_captured_at": 1739703441934
     },
     {
+      "sequence_id": "SdNprXIhM7Eq6zGsom3ckD",
+      "images": 989,
+      "km": 3.406,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807480000,
+      "end_captured_at": 1780807682600
+    },
+    {
+      "sequence_id": "3Qq6WaFvrt5d2Te8ymwsZp",
+      "images": 995,
+      "km": 3.405,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782044092000,
+      "end_captured_at": 1782044517500
+    },
+    {
       "sequence_id": "xSNtYOe0C5lDd72kyiBXZj",
       "images": 878,
       "km": 3.405,
@@ -20622,6 +22112,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765023691012,
       "end_captured_at": 1765023810900
+    },
+    {
+      "sequence_id": "Xaz7t91Ei0rIh4wdJf2LFk",
+      "images": 993,
+      "km": 3.404,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782040627000,
+      "end_captured_at": 1782041043000
     },
     {
       "sequence_id": "SPKJ0n75ouUWqNeblvyf4R",
@@ -20642,6 +22142,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764753143013,
       "end_captured_at": 1764753262933
+    },
+    {
+      "sequence_id": "D0duGYLKE82mae3ATyJwR7",
+      "images": 999,
+      "km": 3.403,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781437836000,
+      "end_captured_at": 1781438253500
     },
     {
       "sequence_id": "lNEWeVcgHBMxARkoqp13Uj",
@@ -20682,6 +22192,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765285699012,
       "end_captured_at": 1765285818867
+    },
+    {
+      "sequence_id": "PfEzFTcgktCYO0j2XB9uqp",
+      "images": 998,
+      "km": 3.401,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780812176000,
+      "end_captured_at": 1780812633000
     },
     {
       "sequence_id": "uGD4npHE5W0BvVSrRqbLcC",
@@ -20772,6 +22292,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1762628201000,
       "end_captured_at": 1762628852000
+    },
+    {
+      "sequence_id": "7hRLieV6wcFEjI8ZraNb9f",
+      "images": 988,
+      "km": 3.394,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781435594000,
+      "end_captured_at": 1781436071500
     },
     {
       "sequence_id": "7U45ZxofrO6VDJCysgY9Fz",
@@ -20882,6 +22412,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765020060013,
       "end_captured_at": 1765020179967
+    },
+    {
+      "sequence_id": "PolWIAEvb8ycu426N9nRD5",
+      "images": 998,
+      "km": 3.381,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780810447000,
+      "end_captured_at": 1780811000000
     },
     {
       "sequence_id": "e9aOlW0MVopdq1yhCmPgLR",
@@ -21104,6 +22644,16 @@
       "end_captured_at": 1765285090966
     },
     {
+      "sequence_id": "B1eWXv3isdzZhbtlDVa4PL",
+      "images": 939,
+      "km": 3.364,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780806941000,
+      "end_captured_at": 1780807256600
+    },
+    {
       "sequence_id": "LB8S9sXcWm4YVtazjDopxy",
       "images": 879,
       "km": 3.362,
@@ -21132,6 +22682,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1775990500000,
       "end_captured_at": 1775990911500
+    },
+    {
+      "sequence_id": "TZtHkdhcRpEaSqWXnL1U5F",
+      "images": 997,
+      "km": 3.358,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780811022000,
+      "end_captured_at": 1780811525666
     },
     {
       "sequence_id": "PLACGRODrczW5Yb3tMueo0",
@@ -21254,6 +22814,16 @@
       "end_captured_at": 1764761343867
     },
     {
+      "sequence_id": "48IrBWl6VAcaMRSLfEDyK3",
+      "images": 973,
+      "km": 3.351,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060187100,
+      "end_captured_at": 1782060292100
+    },
+    {
       "sequence_id": "auo5kqhHPw64lWbE827fey",
       "images": 1015,
       "km": 3.351,
@@ -21304,6 +22874,16 @@
       "end_captured_at": 1739717882900
     },
     {
+      "sequence_id": "IQmREsUN6YSlphtdTx51PZ",
+      "images": 993,
+      "km": 3.349,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782032100000,
+      "end_captured_at": 1782032565000
+    },
+    {
       "sequence_id": "rh9MeXFfdm25Akt8ciG3ag",
       "images": 958,
       "km": 3.349,
@@ -21312,6 +22892,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1780072631000,
       "end_captured_at": 1780072997666
+    },
+    {
+      "sequence_id": "oafUGVl3Pqum2sjTkKOLEQ",
+      "images": 997,
+      "km": 3.349,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780811599000,
+      "end_captured_at": 1780812148333
     },
     {
       "sequence_id": "GdzD8rCKWam0QSLhkXYcMx",
@@ -21504,6 +23094,16 @@
       "end_captured_at": 1780069160000
     },
     {
+      "sequence_id": "ONdb1WqrejJHEap7UzQx4R",
+      "images": 982,
+      "km": 3.336,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059542000,
+      "end_captured_at": 1782059647200
+    },
+    {
       "sequence_id": "xefzKFOkbwl98qSQY6Hhnu",
       "images": 889,
       "km": 3.336,
@@ -21612,6 +23212,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764751086012,
       "end_captured_at": 1764751205900
+    },
+    {
+      "sequence_id": "4opWkPl8IAD0HTafmjQRGh",
+      "images": 973,
+      "km": 3.328,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058143900,
+      "end_captured_at": 1782058250900
     },
     {
       "sequence_id": "G9Lljg6hWH5nvRixDdqwBO",
@@ -22034,6 +23644,16 @@
       "end_captured_at": 1773540170666
     },
     {
+      "sequence_id": "A7ceS2zBH1YjXGdQmNtOrf",
+      "images": 982,
+      "km": 3.286,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057296000,
+      "end_captured_at": 1782057399500
+    },
+    {
       "sequence_id": "p5xzqmtMPQvJlyN6d2uk3D",
       "images": 234,
       "km": 3.284,
@@ -22072,6 +23692,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739703927013,
       "end_captured_at": 1739704046899
+    },
+    {
+      "sequence_id": "KBdVbfgAj8wX173T2OuL9r",
+      "images": 947,
+      "km": 3.279,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782038809000,
+      "end_captured_at": 1782039280000
     },
     {
       "sequence_id": "c8oQLhvruRpdzbxZI0SUXG",
@@ -22324,6 +23954,36 @@
       "end_captured_at": 1768736247039
     },
     {
+      "sequence_id": "Vo4Yu2m1y6dAUJDlveILOq",
+      "images": 982,
+      "km": 3.248,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060292200,
+      "end_captured_at": 1782060392100
+    },
+    {
+      "sequence_id": "giWujJVNyfvMAFTnCDKQsE",
+      "images": 973,
+      "km": 3.247,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060547000,
+      "end_captured_at": 1782060647600
+    },
+    {
+      "sequence_id": "TYDlpV32C5Nua7zJ8ovOqh",
+      "images": 973,
+      "km": 3.246,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060087100,
+      "end_captured_at": 1782060187000
+    },
+    {
       "sequence_id": "17qMJEpRwa2Wd5z3VYZ0Xy",
       "images": 394,
       "km": 3.246,
@@ -22364,6 +24024,16 @@
       "end_captured_at": 1764768846900
     },
     {
+      "sequence_id": "9Mb2uKPr8AvlysXpLqhzQF",
+      "images": 973,
+      "km": 3.243,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060392200,
+      "end_captured_at": 1782060492100
+    },
+    {
       "sequence_id": "8vSxq3MGXB7f6KRd1JwTZL",
       "images": 393,
       "km": 3.242,
@@ -22374,6 +24044,26 @@
       "end_captured_at": 1764484759542
     },
     {
+      "sequence_id": "70KLAMVPnwc1iBdouzTyNU",
+      "images": 973,
+      "km": 3.242,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059847300,
+      "end_captured_at": 1782059947200
+    },
+    {
+      "sequence_id": "j39sJF6aBlvAbzHdCKGVwD",
+      "images": 982,
+      "km": 3.241,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057610900,
+      "end_captured_at": 1782057710800
+    },
+    {
       "sequence_id": "GZunrkYJs5cMi4fq0LQgRW",
       "images": 878,
       "km": 3.241,
@@ -22382,6 +24072,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764758319013,
       "end_captured_at": 1764758438866
+    },
+    {
+      "sequence_id": "msr0WP9oI4vtBc5Ja7Y3Ej",
+      "images": 973,
+      "km": 3.241,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057710900,
+      "end_captured_at": 1782057810800
     },
     {
       "sequence_id": "hbnlrDJN4Gcf8CxFRoHOA7",
@@ -22404,6 +24104,16 @@
       "end_captured_at": 1776437196900
     },
     {
+      "sequence_id": "Wh4B1yailuOMZ9YGLQDx0j",
+      "images": 400,
+      "km": 3.239,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780785239000,
+      "end_captured_at": 1780785551260
+    },
+    {
       "sequence_id": "06QqC85z7FJa9lH2gPmyKk",
       "images": 893,
       "km": 3.239,
@@ -22424,6 +24134,36 @@
       "end_captured_at": 1776577583666
     },
     {
+      "sequence_id": "lxh25R7KzGW3uUTi4HBPbX",
+      "images": 982,
+      "km": 3.237,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059747300,
+      "end_captured_at": 1782059847200
+    },
+    {
+      "sequence_id": "ABdl5GtQSE17nwKiT8byWp",
+      "images": 982,
+      "km": 3.236,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059181600,
+      "end_captured_at": 1782059281500
+    },
+    {
+      "sequence_id": "XiGEFoDtTmWxRyrhgj6kYZ",
+      "images": 973,
+      "km": 3.235,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059281600,
+      "end_captured_at": 1782059381500
+    },
+    {
       "sequence_id": "adciZI4LA8Onetb0TPXf2j",
       "images": 872,
       "km": 3.235,
@@ -22432,6 +24172,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765287030013,
       "end_captured_at": 1765287149900
+    },
+    {
+      "sequence_id": "D9VTSF38iMIxt5fzOJHCvw",
+      "images": 973,
+      "km": 3.235,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058251000,
+      "end_captured_at": 1782058350900
+    },
+    {
+      "sequence_id": "z1nyceS7TXFIKwDVOMgfWh",
+      "images": 982,
+      "km": 3.235,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057810900,
+      "end_captured_at": 1782057910800
     },
     {
       "sequence_id": "X7ZOlrEmBgkQu82ns9V4Wb",
@@ -22504,6 +24264,16 @@
       "end_captured_at": 1756714738925
     },
     {
+      "sequence_id": "JZvNXY3PUQERFjeWih72V5",
+      "images": 973,
+      "km": 3.232,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059647300,
+      "end_captured_at": 1782059747200
+    },
+    {
       "sequence_id": "2iquMkEW8TYPZvbz4aoVLy",
       "images": 877,
       "km": 3.231,
@@ -22574,6 +24344,16 @@
       "end_captured_at": 1772763910163
     },
     {
+      "sequence_id": "80NnO9ilT1ZUByvdYfQhkE",
+      "images": 973,
+      "km": 3.226,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057510900,
+      "end_captured_at": 1782057610800
+    },
+    {
       "sequence_id": "NDQiJZfjU4wF8AurYhpOq9",
       "images": 869,
       "km": 3.226,
@@ -22612,6 +24392,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764754354012,
       "end_captured_at": 1764754473934
+    },
+    {
+      "sequence_id": "fJTakCGYhUMiWpZvPESFQy",
+      "images": 973,
+      "km": 3.219,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059081600,
+      "end_captured_at": 1782059181500
     },
     {
       "sequence_id": "7u9AlK3RLPjXqMhHiItD8z",
@@ -22714,6 +24504,16 @@
       "end_captured_at": 1739341891900
     },
     {
+      "sequence_id": "uksdeBOo4Rr23C0Jvp7wqf",
+      "images": 911,
+      "km": 3.207,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782037309000,
+      "end_captured_at": 1782037757500
+    },
+    {
       "sequence_id": "mPFR2yxiwbcNaqEe5UjYsZ",
       "images": 398,
       "km": 3.206,
@@ -22724,6 +24524,16 @@
       "end_captured_at": 1760731788000
     },
     {
+      "sequence_id": "9apv2mFZ8kTuJhr3W5iywl",
+      "images": 973,
+      "km": 3.205,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058981400,
+      "end_captured_at": 1782059081500
+    },
+    {
       "sequence_id": "L0hIXKB6rgZwyiD1UHMtqV",
       "images": 397,
       "km": 3.205,
@@ -22732,6 +24542,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778708892000,
       "end_captured_at": 1778709307000
+    },
+    {
+      "sequence_id": "g1Vh59Gav3uKJlbFZXIzQd",
+      "images": 982,
+      "km": 3.204,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057410000,
+      "end_captured_at": 1782057510800
     },
     {
       "sequence_id": "LRfhYnHm7502AxOtlXisbe",
@@ -23034,6 +24854,16 @@
       "end_captured_at": 1765288602967
     },
     {
+      "sequence_id": "QXeoaL43PVi7qlktmCHjgr",
+      "images": 390,
+      "km": 3.153,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780783302706,
+      "end_captured_at": 1780783564886
+    },
+    {
       "sequence_id": "ytqnNSVUuIwh8pYP3FieXH",
       "images": 392,
       "km": 3.152,
@@ -23234,6 +25064,26 @@
       "end_captured_at": 1773540591000
     },
     {
+      "sequence_id": "JFguH7OzESpfL3o1A2l5ty",
+      "images": 866,
+      "km": 3.124,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782045201000,
+      "end_captured_at": 1782045446000
+    },
+    {
+      "sequence_id": "oGzZsTygaEbu8rUW2dnLCJ",
+      "images": 389,
+      "km": 3.123,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781316575819,
+      "end_captured_at": 1781317147820
+    },
+    {
       "sequence_id": "OGKL5unmXcwiSbyJUpeVWI",
       "images": 913,
       "km": 3.123,
@@ -23252,6 +25102,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1760742201000,
       "end_captured_at": 1760742502710
+    },
+    {
+      "sequence_id": "udXqKlxoa1St6yfgeBv7PI",
+      "images": 751,
+      "km": 3.111,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781447740400,
+      "end_captured_at": 1781447892000
     },
     {
       "sequence_id": "6PGBjUufC3Y21tdEbDolkZ",
@@ -23604,6 +25464,16 @@
       "end_captured_at": 1764761706933
     },
     {
+      "sequence_id": "0KwHXzxBTldFmnZj6WQGy9",
+      "images": 849,
+      "km": 3.059,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782025220600,
+      "end_captured_at": 1782025512000
+    },
+    {
       "sequence_id": "nA3VGpj1ZDQUvXLbJKHfOw",
       "images": 870,
       "km": 3.056,
@@ -23662,6 +25532,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778454507000,
       "end_captured_at": 1778454858000
+    },
+    {
+      "sequence_id": "9U4nk8LYBROMcJSsPHIdDt",
+      "images": 860,
+      "km": 3.052,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780813997000,
+      "end_captured_at": 1780814350333
     },
     {
       "sequence_id": "a9VA8Mz5Jr6LFnhgj3ysfQ",
@@ -23772,6 +25652,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739347823012,
       "end_captured_at": 1739347943000
+    },
+    {
+      "sequence_id": "xy4NUKDZFaYO3fXrLuMAER",
+      "images": 378,
+      "km": 3.028,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781315562673,
+      "end_captured_at": 1781315931624
+    },
+    {
+      "sequence_id": "2dAOQq7pNCDXaRFVfYrzuM",
+      "images": 811,
+      "km": 3.027,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780808674333,
+      "end_captured_at": 1780809023000
     },
     {
       "sequence_id": "5LgiKz1uHx30DUe79sn8bN",
@@ -23972,6 +25872,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765272923013,
       "end_captured_at": 1765273042899
+    },
+    {
+      "sequence_id": "iDIkbdpJlGjzWxM4KXgmOL",
+      "images": 783,
+      "km": 2.998,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054415400,
+      "end_captured_at": 1782054605000
     },
     {
       "sequence_id": "yNBYDR8md7qjEHwgOMZlpG",
@@ -24344,6 +26254,16 @@
       "end_captured_at": 1764754957867
     },
     {
+      "sequence_id": "2WVdafpvmB8jDsqbI9T1Jw",
+      "images": 839,
+      "km": 2.947,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026886000,
+      "end_captured_at": 1782027200000
+    },
+    {
       "sequence_id": "m0U2j5ZMHt36qlzknv1bhN",
       "images": 367,
       "km": 2.947,
@@ -24424,6 +26344,16 @@
       "end_captured_at": 1765279093933
     },
     {
+      "sequence_id": "nSqTPg3IzpQlFm5GBCa0si",
+      "images": 815,
+      "km": 2.932,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780815689000,
+      "end_captured_at": 1780816000666
+    },
+    {
       "sequence_id": "MCpOoZ0HA6TeY1DcFbSJlI",
       "images": 500,
       "km": 2.932,
@@ -24452,6 +26382,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764753749012,
       "end_captured_at": 1764753868867
+    },
+    {
+      "sequence_id": "adzQsGhv7lXbwKyMWm9jpF",
+      "images": 722,
+      "km": 2.931,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028272200,
+      "end_captured_at": 1782028418000
     },
     {
       "sequence_id": "4ztQmWS7oUlbgkdiBpvFN1",
@@ -24512,6 +26452,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764764007013,
       "end_captured_at": 1764764126933
+    },
+    {
+      "sequence_id": "ULQ2VoMh8Oemj316DA4iSE",
+      "images": 826,
+      "km": 2.916,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782043199200,
+      "end_captured_at": 1782043515500
     },
     {
       "sequence_id": "Jl1PNsgKdeYToSqp5GyBh2",
@@ -24644,6 +26594,16 @@
       "end_captured_at": 1765288360966
     },
     {
+      "sequence_id": "Zea65wIElFDvtVPMYdk7XJ",
+      "images": 849,
+      "km": 2.892,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781446039000,
+      "end_captured_at": 1781446486500
+    },
+    {
       "sequence_id": "RnlxBT6WMUbfqPOCXjFDGw",
       "images": 356,
       "km": 2.887,
@@ -24714,6 +26674,16 @@
       "end_captured_at": 1765277157933
     },
     {
+      "sequence_id": "ctzudCEBA4vNhYIF93XOHM",
+      "images": 771,
+      "km": 2.875,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781440707000,
+      "end_captured_at": 1781440938500
+    },
+    {
       "sequence_id": "4hfRUKve6rajPoMy7sn59D",
       "images": 771,
       "km": 2.875,
@@ -24732,6 +26702,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739709010013,
       "end_captured_at": 1739709129900
+    },
+    {
+      "sequence_id": "ByJ5NGFCOmRYZPfIpt6KcT",
+      "images": 736,
+      "km": 2.872,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448744800,
+      "end_captured_at": 1781448970000
     },
     {
       "sequence_id": "mxCpc925oiHGwl7Tnb01AU",
@@ -24942,6 +26922,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765019455012,
       "end_captured_at": 1765019574967
+    },
+    {
+      "sequence_id": "cRVewgjmlaFxEyO1hisW6n",
+      "images": 545,
+      "km": 2.841,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782037199000,
+      "end_captured_at": 1782037309500
     },
     {
       "sequence_id": "ATKmvW0E8GH9skSIXJFfrB",
@@ -25244,6 +27234,36 @@
       "end_captured_at": 1765241853000
     },
     {
+      "sequence_id": "f7Jzl5x0U8pISH1sbiVXh9",
+      "images": 475,
+      "km": 2.778,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782041937000,
+      "end_captured_at": 1782042092600
+    },
+    {
+      "sequence_id": "dnVuj2J8l4q6NhPvSUDbea",
+      "images": 714,
+      "km": 2.777,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780815238200,
+      "end_captured_at": 1780815424000
+    },
+    {
+      "sequence_id": "t9zBEQjuydHfpOLA2h1KwV",
+      "images": 714,
+      "km": 2.777,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780815238200,
+      "end_captured_at": 1780815424000
+    },
+    {
       "sequence_id": "QfJoeGRX5FgHNLSAucmisE",
       "images": 348,
       "km": 2.776,
@@ -25272,6 +27292,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1773532726000,
       "end_captured_at": 1773533010000
+    },
+    {
+      "sequence_id": "E8OMcyrXB6e3aFUSjKtq2n",
+      "images": 346,
+      "km": 2.773,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781312324559,
+      "end_captured_at": 1781313027000
     },
     {
       "sequence_id": "brRe7E9Asx6qp1t5iIomNP",
@@ -25354,6 +27384,16 @@
       "end_captured_at": 1776574491000
     },
     {
+      "sequence_id": "PYcA2IjpFEUWHynwodkKmJ",
+      "images": 345,
+      "km": 2.765,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781313433893,
+      "end_captured_at": 1781313928000
+    },
+    {
       "sequence_id": "lzVu0sFHKtSa1kendRMWLG",
       "images": 799,
       "km": 2.761,
@@ -25402,6 +27442,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765831602000,
       "end_captured_at": 1765831973000
+    },
+    {
+      "sequence_id": "sFEd0UepygRT5nxu2wa6Qz",
+      "images": 819,
+      "km": 2.753,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781439457000,
+      "end_captured_at": 1781439877000
     },
     {
       "sequence_id": "d0nAvRgwcS7XyZYMz1P2CF",
@@ -25574,6 +27624,16 @@
       "end_captured_at": 1778449104000
     },
     {
+      "sequence_id": "duClIP7ML0qWX4JtEi8Tsg",
+      "images": 162,
+      "km": 2.712,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435317316,
+      "end_captured_at": 1782435688826
+    },
+    {
       "sequence_id": "zkhcODgYt5RNujeXraLmy9",
       "images": 339,
       "km": 2.71,
@@ -25582,6 +27642,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1773100508000,
       "end_captured_at": 1773101015000
+    },
+    {
+      "sequence_id": "8yeT9dalOboB4KQhN1gCnc",
+      "images": 612,
+      "km": 2.707,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782029842000,
+      "end_captured_at": 1782029965800
     },
     {
       "sequence_id": "SYB0N5HP9qEf48Z3QzhAl7",
@@ -25974,6 +28044,16 @@
       "end_captured_at": 1764748906900
     },
     {
+      "sequence_id": "E180zg5nDHdebulkrQmNfM",
+      "images": 739,
+      "km": 2.632,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781449421000,
+      "end_captured_at": 1781449805000
+    },
+    {
       "sequence_id": "kXxOVTJiF2aeGQt41YAZUo",
       "images": 763,
       "km": 2.632,
@@ -26154,6 +28234,26 @@
       "end_captured_at": 1762629634000
     },
     {
+      "sequence_id": "mY5OEiqazJnTLX1y3Av4DM",
+      "images": 325,
+      "km": 2.605,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781314467692,
+      "end_captured_at": 1781314811535
+    },
+    {
+      "sequence_id": "aTrI74yXDWAMVR0CmcgN1G",
+      "images": 773,
+      "km": 2.604,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781451007000,
+      "end_captured_at": 1781451580666
+    },
+    {
       "sequence_id": "JkcKRFWyvdA9uMrmn2qBV5",
       "images": 586,
       "km": 2.603,
@@ -26204,6 +28304,16 @@
       "end_captured_at": 1778437417000
     },
     {
+      "sequence_id": "MLvEO5Kdsu3Yfwa9pJBQzh",
+      "images": 692,
+      "km": 2.595,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781444752600,
+      "end_captured_at": 1781444897666
+    },
+    {
       "sequence_id": "9Pz0x53EyVuevnmQAJ7bHi",
       "images": 752,
       "km": 2.594,
@@ -26212,6 +28322,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765275706013,
       "end_captured_at": 1765275824900
+    },
+    {
+      "sequence_id": "o8JNPWRun1af4EH2Akz0X3",
+      "images": 720,
+      "km": 2.593,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782046748000,
+      "end_captured_at": 1782046978000
     },
     {
       "sequence_id": "AVyjIOlDpxeqBH67KQWm1w",
@@ -26424,6 +28544,16 @@
       "end_captured_at": 1772765127770
     },
     {
+      "sequence_id": "Imz1W50hkRiaBC9regO4Dq",
+      "images": 718,
+      "km": 2.557,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780809359000,
+      "end_captured_at": 1780809599666
+    },
+    {
       "sequence_id": "YUmbXPqlxOz6NhTfrkdD5W",
       "images": 747,
       "km": 2.557,
@@ -26504,6 +28634,16 @@
       "end_captured_at": 1769708432000
     },
     {
+      "sequence_id": "VstPUKFS1GHTxypgY3Xjzv",
+      "images": 315,
+      "km": 2.547,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781310745634,
+      "end_captured_at": 1781311320871
+    },
+    {
       "sequence_id": "VUr3fmGO0YycqQM8zv2SEK",
       "images": 749,
       "km": 2.546,
@@ -26522,6 +28662,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779941518000,
       "end_captured_at": 1779941900500
+    },
+    {
+      "sequence_id": "N8mwA9M5CroL72JVuxBUkO",
+      "images": 657,
+      "km": 2.543,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781452438000,
+      "end_captured_at": 1781452575000
+    },
+    {
+      "sequence_id": "anz5d7JtKUI1V2BApXDREo",
+      "images": 699,
+      "km": 2.542,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781435354800,
+      "end_captured_at": 1781435593500
     },
     {
       "sequence_id": "Z2EXUCtg5bwjBNYOLn8pvi",
@@ -26794,6 +28954,16 @@
       "end_captured_at": 1739705619866
     },
     {
+      "sequence_id": "q5xnYFRlBb1jdOpwAGsKWc",
+      "images": 706,
+      "km": 2.512,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780816419600,
+      "end_captured_at": 1780816570000
+    },
+    {
       "sequence_id": "wzn2psoV4cCgfUrL0qSkH6",
       "images": 745,
       "km": 2.512,
@@ -26892,6 +29062,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778880501000,
       "end_captured_at": 1778880725000
+    },
+    {
+      "sequence_id": "O3cX0TeU2gp7iMHGkylQmB",
+      "images": 507,
+      "km": 2.494,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782028884400,
+      "end_captured_at": 1782028993000
     },
     {
       "sequence_id": "n1aI0MpTWicKlHmBL9rCD5",
@@ -27014,6 +29194,16 @@
       "end_captured_at": 1765829912500
     },
     {
+      "sequence_id": "ePw7hKvAqScXF2u8UCxfMQ",
+      "images": 747,
+      "km": 2.468,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057910900,
+      "end_captured_at": 1782057987750
+    },
+    {
       "sequence_id": "8oek0Htdgqyfi2vVBcs1DZ",
       "images": 305,
       "km": 2.467,
@@ -27042,6 +29232,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739352563012,
       "end_captured_at": 1739352682934
+    },
+    {
+      "sequence_id": "clwbeG6oHVpgaFkRydZhq0",
+      "images": 679,
+      "km": 2.461,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819946666,
+      "end_captured_at": 1780820121500
     },
     {
       "sequence_id": "j1nhEeVOcfvCmGwX35aQbs",
@@ -27192,6 +29392,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1756594466000,
       "end_captured_at": 1756594909000
+    },
+    {
+      "sequence_id": "3dlJPf5ZqrCk4bpM0VzcWt",
+      "images": 296,
+      "km": 2.428,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780776291781,
+      "end_captured_at": 1780776740680
     },
     {
       "sequence_id": "M3pilgyv0oYrX2bJxGfjPT",
@@ -27424,6 +29634,26 @@
       "end_captured_at": 1764971539500
     },
     {
+      "sequence_id": "7prOeTEsJPbgRo6aSDV5dt",
+      "images": 675,
+      "km": 2.39,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781434785333,
+      "end_captured_at": 1781435017500
+    },
+    {
+      "sequence_id": "iCxROSNfmWQ4BlkZutE82V",
+      "images": 718,
+      "km": 2.388,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782035187000,
+      "end_captured_at": 1782035635500
+    },
+    {
       "sequence_id": "RnZCl19eJbmtPBj4OYfUap",
       "images": 297,
       "km": 2.384,
@@ -27574,6 +29804,16 @@
       "end_captured_at": 1739717156833
     },
     {
+      "sequence_id": "hXdxVTZnuL08PgiJIvHmMp",
+      "images": 628,
+      "km": 2.356,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780809850000,
+      "end_captured_at": 1780810071000
+    },
+    {
       "sequence_id": "BRDF2i9uXZ8QOtPWTxkVmv",
       "images": 586,
       "km": 2.347,
@@ -27624,6 +29864,16 @@
       "end_captured_at": 1746264522590
     },
     {
+      "sequence_id": "NwHDhjU6IoqfEAg8Wm2TYl",
+      "images": 546,
+      "km": 2.336,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780817670000,
+      "end_captured_at": 1780817782500
+    },
+    {
       "sequence_id": "CaBKhfqVm8kjFPzsdRp2LH",
       "images": 291,
       "km": 2.334,
@@ -27652,6 +29902,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778892969000,
       "end_captured_at": 1778893547500
+    },
+    {
+      "sequence_id": "xqsRUv0ZcH5dMjkr4GSbWF",
+      "images": 667,
+      "km": 2.328,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781451958333,
+      "end_captured_at": 1781452157000
     },
     {
       "sequence_id": "v1705aDPBg89ptAS4zfCsd",
@@ -27874,6 +30134,16 @@
       "end_captured_at": 1778700897000
     },
     {
+      "sequence_id": "5u6evJB1V3lItyGnsrjzPX",
+      "images": 682,
+      "km": 2.267,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782035636000,
+      "end_captured_at": 1782036084000
+    },
+    {
       "sequence_id": "BKYkiQ6mJEDwua8L4XWbON",
       "images": 282,
       "km": 2.264,
@@ -28072,6 +30342,26 @@
       "country": "India",
       "start_captured_at": 1742980287834,
       "end_captured_at": 1742980720740
+    },
+    {
+      "sequence_id": "aZkM3hQqPGxLjJTKw6ov7N",
+      "images": 278,
+      "km": 2.23,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780778730687,
+      "end_captured_at": 1780779144810
+    },
+    {
+      "sequence_id": "XHmMo2gUPwVfOWD9rChFRK",
+      "images": 277,
+      "km": 2.227,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781314044486,
+      "end_captured_at": 1781314379938
     },
     {
       "sequence_id": "GOglJE8AcBuYFvIw42eR0z",
@@ -28434,6 +30724,16 @@
       "end_captured_at": 1747030383010
     },
     {
+      "sequence_id": "u0v12gNtoAh8nezVBwGZ4Q",
+      "images": 533,
+      "km": 2.172,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780808339400,
+      "end_captured_at": 1780808446800
+    },
+    {
       "sequence_id": "zPTnMIgeYdQJUSXRrpoCH7",
       "images": 272,
       "km": 2.17,
@@ -28522,6 +30822,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1761420198000,
       "end_captured_at": 1761420754000
+    },
+    {
+      "sequence_id": "lcsyiKpXuRGmOtoNaMgDHZ",
+      "images": 531,
+      "km": 2.152,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782030982800,
+      "end_captured_at": 1782031118666
     },
     {
       "sequence_id": "cpt7Iinh2ZUz0QYHvWSqow",
@@ -28914,6 +31224,16 @@
       "end_captured_at": 1775988028000
     },
     {
+      "sequence_id": "oQYs7MUe4nEWjhN08ArX1D",
+      "images": 552,
+      "km": 2.083,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781444897000,
+      "end_captured_at": 1781445089000
+    },
+    {
       "sequence_id": "agPwcuIsre8JHvSk5X2pxB",
       "images": 20,
       "km": 2.082,
@@ -29254,6 +31574,16 @@
       "end_captured_at": 1756505893000
     },
     {
+      "sequence_id": "1H97W4L2jfzDwhsdkJnTGt",
+      "images": 577,
+      "km": 2.01,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782039534000,
+      "end_captured_at": 1782039810000
+    },
+    {
       "sequence_id": "jFlY0VKCsRImfnQ6UvaxMq",
       "images": 611,
       "km": 2.008,
@@ -29304,6 +31634,16 @@
       "end_captured_at": 1766787839000
     },
     {
+      "sequence_id": "08HdgVZxWLpiCeU2AYh7fv",
+      "images": 578,
+      "km": 2.001,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782039921000,
+      "end_captured_at": 1782040138666
+    },
+    {
       "sequence_id": "QKIbLlZmogXVJrTSPH6RWE",
       "images": 246,
       "km": 1.996,
@@ -29312,6 +31652,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769626233000,
       "end_captured_at": 1769626650000
+    },
+    {
+      "sequence_id": "tmMQLEpTJBv4iWIaOg6RKx",
+      "images": 588,
+      "km": 1.992,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058501800,
+      "end_captured_at": 1782058563750
     },
     {
       "sequence_id": "5Jx9ZwPmhDKFzMnkO0igVt",
@@ -29372,6 +31722,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1760227305000,
       "end_captured_at": 1760227635000
+    },
+    {
+      "sequence_id": "U65s9fwaSrLJQji0zv1MoC",
+      "images": 595,
+      "km": 1.983,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781445591000,
+      "end_captured_at": 1781446038500
     },
     {
       "sequence_id": "DQmNj3CGdTUhapLcxZSiYu",
@@ -29582,6 +31942,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778776633000,
       "end_captured_at": 1778777035000
+    },
+    {
+      "sequence_id": "VkW2da0P6yf1KCRegMrzQo",
+      "images": 556,
+      "km": 1.959,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781438982000,
+      "end_captured_at": 1781439237000
     },
     {
       "sequence_id": "zvPj08kKZ71VDqcBCfUHJI",
@@ -29804,6 +32174,16 @@
       "end_captured_at": 1778794935000
     },
     {
+      "sequence_id": "Yb51Le2jNthvnqzFE0MWUm",
+      "images": 236,
+      "km": 1.904,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780783636891,
+      "end_captured_at": 1780783906878
+    },
+    {
       "sequence_id": "VDRFSc91vHI6qaUxnu0t2L",
       "images": 237,
       "km": 1.904,
@@ -29844,6 +32224,16 @@
       "end_captured_at": 1772174736000
     },
     {
+      "sequence_id": "CvIw6Bn4aPqsldx1rNkSMV",
+      "images": 517,
+      "km": 1.893,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782031861000,
+      "end_captured_at": 1782032020000
+    },
+    {
       "sequence_id": "9Gr17o0UgtIKZvwLbqap2m",
       "images": 537,
       "km": 1.893,
@@ -29872,6 +32262,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778691111000,
       "end_captured_at": 1778691457000
+    },
+    {
+      "sequence_id": "HglUDS8aCM0ctm1EKFnQw5",
+      "images": 235,
+      "km": 1.889,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780784465692,
+      "end_captured_at": 1780784681920
     },
     {
       "sequence_id": "6izu7Jy5BjEd4cr3Yta0nF",
@@ -29952,6 +32352,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739353289013,
       "end_captured_at": 1739353407866
+    },
+    {
+      "sequence_id": "cZ6CampWRPoN4FqOgELQ0k",
+      "images": 562,
+      "km": 1.877,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781444321000,
+      "end_captured_at": 1781444589000
     },
     {
       "sequence_id": "C8lTckVBpNHIMSrxq50tLU",
@@ -30134,6 +32544,16 @@
       "end_captured_at": 1744436321959
     },
     {
+      "sequence_id": "4Ih3BfnlRATHvygcSDaGiM",
+      "images": 531,
+      "km": 1.835,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782040263000,
+      "end_captured_at": 1782040556000
+    },
+    {
       "sequence_id": "h3rq4xUFiO5QzKdfCTcogB",
       "images": 229,
       "km": 1.832,
@@ -30284,6 +32704,16 @@
       "end_captured_at": 1776433203400
     },
     {
+      "sequence_id": "RwoyDlHr6fOhads803NWgx",
+      "images": 226,
+      "km": 1.805,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781318569766,
+      "end_captured_at": 1781318820812
+    },
+    {
       "sequence_id": "kmTQSJEKRb7hH4ylAFoI2t",
       "images": 223,
       "km": 1.803,
@@ -30314,6 +32744,16 @@
       "end_captured_at": 1778449471000
     },
     {
+      "sequence_id": "SkD61ApO9BlziZmC8fXLxe",
+      "images": 545,
+      "km": 1.795,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060492200,
+      "end_captured_at": 1782060547833
+    },
+    {
       "sequence_id": "AGLk8ewSUbvzDIFmxJu4Nc",
       "images": 541,
       "km": 1.79,
@@ -30332,6 +32772,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778701304000,
       "end_captured_at": 1778701624000
+    },
+    {
+      "sequence_id": "Mt9ejTB2CDSO5Flqr0N4cA",
+      "images": 520,
+      "km": 1.786,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782043884000,
+      "end_captured_at": 1782044092000
     },
     {
       "sequence_id": "LzSGxhJ8cWmae6sRl3XnPr",
@@ -30372,6 +32822,16 @@
       "country": "Chile",
       "start_captured_at": 1775054877747,
       "end_captured_at": 1775056237058
+    },
+    {
+      "sequence_id": "H3EmpPXCNqKWTO75rZAble",
+      "images": 221,
+      "km": 1.78,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780787572405,
+      "end_captured_at": 1780787872846
     },
     {
       "sequence_id": "hjb5eVPxquzpAXWYBvMN0w",
@@ -30494,6 +32954,16 @@
       "end_captured_at": 1739340560867
     },
     {
+      "sequence_id": "nNSua49cetBqJgFwR3LrjY",
+      "images": 534,
+      "km": 1.752,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782036350000,
+      "end_captured_at": 1782036706000
+    },
+    {
       "sequence_id": "tYBOJmU4KEivgzrMRwdx3H",
       "images": 216,
       "km": 1.752,
@@ -30592,6 +33062,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769626905000,
       "end_captured_at": 1769627325000
+    },
+    {
+      "sequence_id": "chvuP70mXsV6zD3fwWyKHR",
+      "images": 484,
+      "km": 1.731,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782046155000,
+      "end_captured_at": 1782046299000
     },
     {
       "sequence_id": "URmpnrHFbYxWtNTf6EDLB8",
@@ -30954,6 +33434,16 @@
       "end_captured_at": 1775998365666
     },
     {
+      "sequence_id": "mqlJZMLYg0NUxCbAdi5I2B",
+      "images": 395,
+      "km": 1.675,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781443088200,
+      "end_captured_at": 1781443167800
+    },
+    {
       "sequence_id": "n1FrN8H9EysvifAUZYCOkd",
       "images": 211,
       "km": 1.675,
@@ -31024,6 +33514,16 @@
       "end_captured_at": 1779960806666
     },
     {
+      "sequence_id": "gzZ3ictUYDpwNQ2BPWE0Vj",
+      "images": 475,
+      "km": 1.671,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059971000,
+      "end_captured_at": 1782060024833
+    },
+    {
       "sequence_id": "KfC5oAyqnzLxVulwsZ2I78",
       "images": 515,
       "km": 1.671,
@@ -31032,6 +33532,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1764750360013,
       "end_captured_at": 1764750479967
+    },
+    {
+      "sequence_id": "YSjzdMvoKtAFquJmhE6UDb",
+      "images": 504,
+      "km": 1.668,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782060035000,
+      "end_captured_at": 1782060087000
     },
     {
       "sequence_id": "3dmXKureGnh7w8jHEFCv2l",
@@ -31072,6 +33582,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778357669000,
       "end_captured_at": 1778357739500
+    },
+    {
+      "sequence_id": "nvAXDNBURio68bEh7xC5sp",
+      "images": 465,
+      "km": 1.664,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780813575600,
+      "end_captured_at": 1780813698000
     },
     {
       "sequence_id": "KBVzkmhxsvRZ86Jbq7Ttaj",
@@ -31394,6 +33914,26 @@
       "end_captured_at": 1768587987924
     },
     {
+      "sequence_id": "FSBdkxuMQjP9lU0tJ5Kv2z",
+      "images": 446,
+      "km": 1.607,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780821857400,
+      "end_captured_at": 1780822006500
+    },
+    {
+      "sequence_id": "PedM2RCwhHcQyLFrSoqE1v",
+      "images": 353,
+      "km": 1.607,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051978600,
+      "end_captured_at": 1782052049800
+    },
+    {
       "sequence_id": "xbkR6DCWwSh4a3IiHdnft1",
       "images": 201,
       "km": 1.606,
@@ -31684,6 +34224,16 @@
       "end_captured_at": 1776517796900
     },
     {
+      "sequence_id": "y0a35JVcjhxwP7Z8WSCLfX",
+      "images": 197,
+      "km": 1.569,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781311909957,
+      "end_captured_at": 1781312235729
+    },
+    {
       "sequence_id": "65o7fsBOAiZqwaJSPG1CrD",
       "images": 160,
       "km": 1.569,
@@ -31724,6 +34274,16 @@
       "end_captured_at": 1778889712000
     },
     {
+      "sequence_id": "vGn1fcu85MEKwkNqpgaR6J",
+      "images": 177,
+      "km": 1.564,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514223640,
+      "end_captured_at": 1781514401124
+    },
+    {
       "sequence_id": "yl3JgbcG4HmTut8M7QanVq",
       "images": 499,
       "km": 1.562,
@@ -31744,6 +34304,16 @@
       "end_captured_at": 1752055342000
     },
     {
+      "sequence_id": "YEK9wjN0FTnpX6IxHb24ya",
+      "images": 434,
+      "km": 1.562,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780812752000,
+      "end_captured_at": 1780812964000
+    },
+    {
       "sequence_id": "aHkUolPhwuqc7yBIgdZLme",
       "images": 203,
       "km": 1.561,
@@ -31762,6 +34332,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776572342000,
       "end_captured_at": 1776572785000
+    },
+    {
+      "sequence_id": "GYIryHJSQVqMsw514EOZak",
+      "images": 303,
+      "km": 1.559,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782030481000,
+      "end_captured_at": 1782030542500
+    },
+    {
+      "sequence_id": "uE0bsQfXho9cySOZRvAHxn",
+      "images": 193,
+      "km": 1.559,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780789364975,
+      "end_captured_at": 1780789751438
     },
     {
       "sequence_id": "4RwAaSxWGbovy5dBjqMmPO",
@@ -31802,6 +34392,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769302505000,
       "end_captured_at": 1769302664000
+    },
+    {
+      "sequence_id": "y3lraKJVWgFBvqPk7D0ReL",
+      "images": 194,
+      "km": 1.553,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781315254679,
+      "end_captured_at": 1781315470773
     },
     {
       "sequence_id": "m8h4sYtU3QqPHADaN1WZ2n",
@@ -32182,6 +34782,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1775973704000,
       "end_captured_at": 1775974114000
+    },
+    {
+      "sequence_id": "P84fNnGaTxAVB1I9bk0qDd",
+      "images": 188,
+      "km": 1.496,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780781674717,
+      "end_captured_at": 1780781858702
     },
     {
       "sequence_id": "59y4WODeMlqIgXjFCLn18p",
@@ -32654,6 +35264,16 @@
       "end_captured_at": 1742566124000
     },
     {
+      "sequence_id": "ulGITBNmRzsoa9dLWYpg1F",
+      "images": 400,
+      "km": 1.448,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782031387000,
+      "end_captured_at": 1782031471000
+    },
+    {
       "sequence_id": "Se3B1wLhQN4WomfEGFVKlg",
       "images": 182,
       "km": 1.448,
@@ -33014,6 +35634,16 @@
       "end_captured_at": 1765819432000
     },
     {
+      "sequence_id": "fDqRySevg1xbo2ZC3tIjJ9",
+      "images": 290,
+      "km": 1.41,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042304800,
+      "end_captured_at": 1782042362750
+    },
+    {
       "sequence_id": "0HPYLzZQOgJBDUINmKch1y",
       "images": 175,
       "km": 1.408,
@@ -33142,6 +35772,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779019445000,
       "end_captured_at": 1779019764000
+    },
+    {
+      "sequence_id": "EjaPxyog9sfp5BIDzdbhQ7",
+      "images": 303,
+      "km": 1.391,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782058564000,
+      "end_captured_at": 1782058639000
     },
     {
       "sequence_id": "WtyRoZjOCExiASs2XDNecu",
@@ -33574,6 +36214,26 @@
       "end_captured_at": 1759092289000
     },
     {
+      "sequence_id": "TIrZBA6tjxy1EkfNCH2g3L",
+      "images": 353,
+      "km": 1.346,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054862200,
+      "end_captured_at": 1782054933666
+    },
+    {
+      "sequence_id": "YhMLIC67aURs5wZG2loVig",
+      "images": 382,
+      "km": 1.344,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782023004166,
+      "end_captured_at": 1782023080500
+    },
+    {
       "sequence_id": "b0Bj5tLpIekHyTOKoVmAid",
       "images": 168,
       "km": 1.34,
@@ -33672,6 +36332,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1763418256000,
       "end_captured_at": 1763418386000
+    },
+    {
+      "sequence_id": "Z1LMYHkEvRr50J7KmTzg8x",
+      "images": 165,
+      "km": 1.317,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780788981497,
+      "end_captured_at": 1780789266546
     },
     {
       "sequence_id": "DLmX4djybIshi1rkSZ028W",
@@ -33804,6 +36474,16 @@
       "end_captured_at": 1765274010833
     },
     {
+      "sequence_id": "FfV8wx0SgeW6lRbsaptvA3",
+      "images": 389,
+      "km": 1.288,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782036084000,
+      "end_captured_at": 1782036329000
+    },
+    {
       "sequence_id": "Qf4aqX5TmBhcrG8j9E2svx",
       "images": 162,
       "km": 1.287,
@@ -33812,6 +36492,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765815193000,
       "end_captured_at": 1765815481000
+    },
+    {
+      "sequence_id": "3CkgVZXNQsUMB2u8jRz40v",
+      "images": 359,
+      "km": 1.286,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448340000,
+      "end_captured_at": 1781448420000
     },
     {
       "sequence_id": "2l89z6DOTwUmAY0KrVfseI",
@@ -33984,6 +36674,16 @@
       "end_captured_at": 1764965426000
     },
     {
+      "sequence_id": "shrkjBdvXRKzVOTUN167IS",
+      "images": 159,
+      "km": 1.268,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780780110285,
+      "end_captured_at": 1780780329848
+    },
+    {
       "sequence_id": "wE3PbSjdmyUVl7eLZvTH9h",
       "images": 200,
       "km": 1.268,
@@ -34002,6 +36702,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1757120971000,
       "end_captured_at": 1757121266000
+    },
+    {
+      "sequence_id": "yEjQbXBcHOnTh2m1Aur4gd",
+      "images": 375,
+      "km": 1.267,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780813029000,
+      "end_captured_at": 1780813329000
     },
     {
       "sequence_id": "tf96A8zPedlRJ0ygck7CHD",
@@ -34114,6 +36824,16 @@
       "end_captured_at": 1760231969000
     },
     {
+      "sequence_id": "Ke5iqO7wbfgZmysXR69MDA",
+      "images": 383,
+      "km": 1.251,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781444018250,
+      "end_captured_at": 1781444320500
+    },
+    {
       "sequence_id": "5xuVPc1HzvZsUTImLnGOYb",
       "images": 388,
       "km": 1.249,
@@ -34174,6 +36894,16 @@
       "end_captured_at": 1756499756000
     },
     {
+      "sequence_id": "PgoSw2UtyGZzs8Kd5BakQT",
+      "images": 349,
+      "km": 1.245,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781444654800,
+      "end_captured_at": 1781444752400
+    },
+    {
       "sequence_id": "qYO3QNxlBLIDnyHMcReJg8",
       "images": 380,
       "km": 1.243,
@@ -34232,6 +36962,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739348307012,
       "end_captured_at": 1739348425733
+    },
+    {
+      "sequence_id": "OTG4cEHJBUpmSdlDK0FfuA",
+      "images": 367,
+      "km": 1.234,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780809600000,
+      "end_captured_at": 1780809787000
     },
     {
       "sequence_id": "QyH1TkYbWjVfDa4P6eNvdw",
@@ -34324,6 +37064,16 @@
       "end_captured_at": 1751742000992
     },
     {
+      "sequence_id": "ylWj15ObeMf7xGBFYpkghL",
+      "images": 320,
+      "km": 1.227,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781450591800,
+      "end_captured_at": 1781450669000
+    },
+    {
       "sequence_id": "IDk4EJ5rHe7lxPYZf8OhwX",
       "images": 153,
       "km": 1.225,
@@ -34352,6 +37102,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765193381013,
       "end_captured_at": 1765193500633
+    },
+    {
+      "sequence_id": "zRpmPgqUnD1kFaMY82BQ6N",
+      "images": 258,
+      "km": 1.222,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782051559000,
+      "end_captured_at": 1782051601833
     },
     {
       "sequence_id": "cmLh8zAWN04HXYlGpOeEsn",
@@ -34834,6 +37594,26 @@
       "end_captured_at": 1778436288000
     },
     {
+      "sequence_id": "S4m2l0tPe7n9fNXFVbhcQG",
+      "images": 55,
+      "km": 1.17,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435708260,
+      "end_captured_at": 1782435824244
+    },
+    {
+      "sequence_id": "B75VegQ6ON3hWECcAmlTuM",
+      "images": 326,
+      "km": 1.17,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781441226250,
+      "end_captured_at": 1781441338000
+    },
+    {
       "sequence_id": "85veFN39pSKVULkdZwAMtu",
       "images": 145,
       "km": 1.17,
@@ -35014,6 +37794,16 @@
       "end_captured_at": 1776592539000
     },
     {
+      "sequence_id": "8CGtEHXkJe7I6hqOM4zo3j",
+      "images": 340,
+      "km": 1.15,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781438253750,
+      "end_captured_at": 1781438411500
+    },
+    {
       "sequence_id": "yHc7jBgwd4P8YWFO3NnGDM",
       "images": 115,
       "km": 1.147,
@@ -35142,6 +37932,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1775990082200,
       "end_captured_at": 1775990215000
+    },
+    {
+      "sequence_id": "OlNo7cCBjhfHzERiVYtgd8",
+      "images": 261,
+      "km": 1.137,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781442538400,
+      "end_captured_at": 1781442591500
     },
     {
       "sequence_id": "tzbmVyoXkRgApQ0YC5Nc39",
@@ -35314,6 +38114,16 @@
       "end_captured_at": 1756694205000
     },
     {
+      "sequence_id": "MlYg3Zf2JLExFTQ4tHi1WB",
+      "images": 138,
+      "km": 1.113,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780788827485,
+      "end_captured_at": 1780788913732
+    },
+    {
       "sequence_id": "HTR8cLJenuxth3dbDWkIF5",
       "images": 137,
       "km": 1.112,
@@ -35422,6 +38232,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778709427000,
       "end_captured_at": 1778709626000
+    },
+    {
+      "sequence_id": "C6y9P8FTAVDrRvMQsI3lnh",
+      "images": 302,
+      "km": 1.099,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782053555000,
+      "end_captured_at": 1782053722500
     },
     {
       "sequence_id": "1Fw03pxBvV27ZieEdhoAnm",
@@ -35784,6 +38604,16 @@
       "end_captured_at": 1772906721000
     },
     {
+      "sequence_id": "Im6u0CMONEUljpc1A7tiWJ",
+      "images": 242,
+      "km": 1.059,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782050370400,
+      "end_captured_at": 1782050418750
+    },
+    {
       "sequence_id": "UKg5CzdtBRiIFbs8SPwk3T",
       "images": 295,
       "km": 1.058,
@@ -35884,6 +38714,16 @@
       "end_captured_at": 1766777328000
     },
     {
+      "sequence_id": "yd8UcFlb97htwuVmMxpPTo",
+      "images": 131,
+      "km": 1.048,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781318378830,
+      "end_captured_at": 1781318501824
+    },
+    {
       "sequence_id": "sKZRgultvjNWAFDoO21PCz",
       "images": 132,
       "km": 1.048,
@@ -35942,6 +38782,16 @@
       "country": "India",
       "start_captured_at": 1774616609039,
       "end_captured_at": 1774616766041
+    },
+    {
+      "sequence_id": "OJbktgBS5aD618KehZFw9H",
+      "images": 270,
+      "km": 1.04,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781449364200,
+      "end_captured_at": 1781449420800
     },
     {
       "sequence_id": "OWs083ULJ2FleEXBASoGxv",
@@ -36094,6 +38944,16 @@
       "end_captured_at": 1765842351000
     },
     {
+      "sequence_id": "gFUC1rJepDKj3Ga80ky7Su",
+      "images": 236,
+      "km": 1.019,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781448292600,
+      "end_captured_at": 1781448340666
+    },
+    {
       "sequence_id": "Ei8FymwIMJesNKY6bkOVW0",
       "images": 128,
       "km": 1.017,
@@ -36204,6 +39064,16 @@
       "end_captured_at": 1773061694236
     },
     {
+      "sequence_id": "2iGTA5DZqcUrXNYbKfxPVe",
+      "images": 284,
+      "km": 1.003,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782041787000,
+      "end_captured_at": 1782041870000
+    },
+    {
       "sequence_id": "wgODAYl19obR7P5pe4sJV2",
       "images": 125,
       "km": 1.003,
@@ -36274,6 +39144,16 @@
       "end_captured_at": 1756591476000
     },
     {
+      "sequence_id": "7hg6W8wYFVnPrxBqKDIj31",
+      "images": 126,
+      "km": 0.999,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781313100637,
+      "end_captured_at": 1781313298617
+    },
+    {
       "sequence_id": "qNext8zh2VyiF5cGZlHXrU",
       "images": 124,
       "km": 0.999,
@@ -36282,6 +39162,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778601817000,
       "end_captured_at": 1778602076000
+    },
+    {
+      "sequence_id": "GQ3UKqC9TrJFoNezPuktsA",
+      "images": 259,
+      "km": 0.999,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780820513600,
+      "end_captured_at": 1780820569800
     },
     {
       "sequence_id": "pI5QgifTsoycAXhzvS7MN0",
@@ -36404,6 +39294,16 @@
       "end_captured_at": 1756693959000
     },
     {
+      "sequence_id": "8JDYf56BxEQ2bkNodysIvO",
+      "images": 264,
+      "km": 0.985,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780812633250,
+      "end_captured_at": 1780812752000
+    },
+    {
       "sequence_id": "pWrIf7shPXMFi6Sja4NQKZ",
       "images": 124,
       "km": 0.984,
@@ -36412,6 +39312,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778557692000,
       "end_captured_at": 1778557835000
+    },
+    {
+      "sequence_id": "4iekcTSEy9ZbG60nH3Papx",
+      "images": 295,
+      "km": 0.98,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782041043500,
+      "end_captured_at": 1782041202500
     },
     {
       "sequence_id": "iL4KGITjQb1CetqpNHn9Xx",
@@ -36854,6 +39764,16 @@
       "end_captured_at": 1751727600995
     },
     {
+      "sequence_id": "XWIK8dAlSQVvRzH1m6bJiL",
+      "images": 118,
+      "km": 0.939,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780787942916,
+      "end_captured_at": 1780788021867
+    },
+    {
       "sequence_id": "Y4EeWSQo1ilU3x9wKBRCqu",
       "images": 298,
       "km": 0.937,
@@ -36892,6 +39812,16 @@
       "country": "India",
       "start_captured_at": 1742131237259,
       "end_captured_at": 1742131292196
+    },
+    {
+      "sequence_id": "ykw3bA92sHC0uve4x1mJFK",
+      "images": 245,
+      "km": 0.931,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782027786400,
+      "end_captured_at": 1782027841750
     },
     {
       "sequence_id": "OwqCIlusL7hWxbEovT9Vaz",
@@ -36964,6 +39894,16 @@
       "end_captured_at": 1778890223000
     },
     {
+      "sequence_id": "v76V90BG8aQ4inFSMDYpkt",
+      "images": 265,
+      "km": 0.924,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782038208750,
+      "end_captured_at": 1782038320500
+    },
+    {
       "sequence_id": "hy5mT8tsHEInVavzYR71FX",
       "images": 94,
       "km": 0.923,
@@ -37012,6 +39952,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765186474012,
       "end_captured_at": 1765186593834
+    },
+    {
+      "sequence_id": "Tsi6zu50EpPyb1Q9AVHeLU",
+      "images": 253,
+      "km": 0.921,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782042865333,
+      "end_captured_at": 1782042939000
     },
     {
       "sequence_id": "SV472DbaABx9OqPuyjM3K1",
@@ -37694,6 +40644,16 @@
       "end_captured_at": 1752052188000
     },
     {
+      "sequence_id": "Yc9ub32h7NkwsUOPzMH618",
+      "images": 206,
+      "km": 0.854,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819349800,
+      "end_captured_at": 1780819391750
+    },
+    {
       "sequence_id": "eCP4TkHsdc1vgruiJK8tMl",
       "images": 124,
       "km": 0.853,
@@ -37954,6 +40914,16 @@
       "end_captured_at": 1778790243000
     },
     {
+      "sequence_id": "fmWU0bjO6PIuYe54roMtkB",
+      "images": 235,
+      "km": 0.837,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782047456500,
+      "end_captured_at": 1782047527000
+    },
+    {
       "sequence_id": "4ca10HXYwBy2VDoMzg963W",
       "images": 103,
       "km": 0.835,
@@ -37962,6 +40932,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1751730906000,
       "end_captured_at": 1751730967000
+    },
+    {
+      "sequence_id": "VmEqp4ICh18WKjQN2eZfP5",
+      "images": 221,
+      "km": 0.833,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807682800,
+      "end_captured_at": 1780807752000
     },
     {
       "sequence_id": "5U0SVIBOtXvPcF8kxZ3y14",
@@ -37982,6 +40962,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765223271000,
       "end_captured_at": 1765223311000
+    },
+    {
+      "sequence_id": "bGhUET9NvjW0yVgRFBZnL2",
+      "images": 239,
+      "km": 0.832,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780810071500,
+      "end_captured_at": 1780810176500
     },
     {
       "sequence_id": "Lso4cjt6PWbumw1yvU0gxp",
@@ -38052,6 +41042,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1768587861186,
       "end_captured_at": 1768588081974
+    },
+    {
+      "sequence_id": "0byHFLcZ1A7kE62CGOzvht",
+      "images": 224,
+      "km": 0.824,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781450809000,
+      "end_captured_at": 1781450864000
     },
     {
       "sequence_id": "2xsyvJ4CeRbr3DIk0mwOd8",
@@ -38224,6 +41224,16 @@
       "end_captured_at": 1760732282000
     },
     {
+      "sequence_id": "zOcLKPpUon2F3mRtuZQqfi",
+      "images": 220,
+      "km": 0.799,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782033177000,
+      "end_captured_at": 1782033253500
+    },
+    {
       "sequence_id": "LWZmclJy0hUGi4sre1N8vQ",
       "images": 101,
       "km": 0.799,
@@ -38364,6 +41374,16 @@
       "end_captured_at": 1775991012000
     },
     {
+      "sequence_id": "mtzjCQ6kyn7dg1suMqh0SN",
+      "images": 224,
+      "km": 0.785,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054006000,
+      "end_captured_at": 1782054131000
+    },
+    {
       "sequence_id": "zDZbtKdyuafESX1ilnx5UI",
       "images": 209,
       "km": 0.785,
@@ -38402,6 +41422,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1760224886000,
       "end_captured_at": 1760224953000
+    },
+    {
+      "sequence_id": "0lneDa9GM2ENcpQJjugfdK",
+      "images": 233,
+      "km": 0.784,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782032565500,
+      "end_captured_at": 1782032676666
     },
     {
       "sequence_id": "1KeTCb0suOtSpU2Im6dQyx",
@@ -38574,6 +41604,16 @@
       "end_captured_at": 1739544475995
     },
     {
+      "sequence_id": "VnSsorqxB4YkdO7CKthDy8",
+      "images": 238,
+      "km": 0.768,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059947300,
+      "end_captured_at": 1782059971000
+    },
+    {
       "sequence_id": "ZMdnP1VTA5H4SOsgXroCxt",
       "images": 97,
       "km": 0.768,
@@ -38672,6 +41712,16 @@
       "country": "India",
       "start_captured_at": 1772253436000,
       "end_captured_at": 1772253970000
+    },
+    {
+      "sequence_id": "R2a8UAHbf49JXIQiKzYwOe",
+      "images": 180,
+      "km": 0.761,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049485200,
+      "end_captured_at": 1782049521800
     },
     {
       "sequence_id": "4TI8Ynf7Lmk6Jso1Z35twH",
@@ -38804,6 +41854,16 @@
       "end_captured_at": 1762636662000
     },
     {
+      "sequence_id": "VWNG7tSqBCkKAIoiHTb8uc",
+      "images": 221,
+      "km": 0.74,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781436945000,
+      "end_captured_at": 1781437053000
+    },
+    {
       "sequence_id": "hsiMIm2VLBPJ5oEY9j80fU",
       "images": 221,
       "km": 0.738,
@@ -38874,6 +41934,16 @@
       "end_captured_at": 1765248429000
     },
     {
+      "sequence_id": "IFO4dh9ZwvQrbKR7tgH3i5",
+      "images": 149,
+      "km": 0.73,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057112000,
+      "end_captured_at": 1782057142500
+    },
+    {
       "sequence_id": "O1eoFwCtyKjE3xlbkRULHp",
       "images": 232,
       "km": 0.73,
@@ -38894,6 +41964,16 @@
       "end_captured_at": 1764961187500
     },
     {
+      "sequence_id": "OExoKqNwQ7YLWBriy8bjhP",
+      "images": 205,
+      "km": 0.729,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781438824666,
+      "end_captured_at": 1781438912500
+    },
+    {
       "sequence_id": "aYTjI8BKcp5oyOhvs0MXlA",
       "images": 203,
       "km": 0.729,
@@ -38902,6 +41982,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776591959000,
       "end_captured_at": 1776592011000
+    },
+    {
+      "sequence_id": "N1z0pAJdX6lHEGIa2uWS4i",
+      "images": 222,
+      "km": 0.729,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782041203000,
+      "end_captured_at": 1782041352000
     },
     {
       "sequence_id": "pwlFg92L63bTAS7zfveYBE",
@@ -39024,6 +42114,16 @@
       "end_captured_at": 1739357810899
     },
     {
+      "sequence_id": "itQ6KbyC4TEzlFvfS2Iw8J",
+      "images": 127,
+      "km": 0.713,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057034000,
+      "end_captured_at": 1782057059500
+    },
+    {
       "sequence_id": "a4oTXDeU37g58PBJiAZqwu",
       "images": 216,
       "km": 0.712,
@@ -39094,6 +42194,16 @@
       "end_captured_at": 1739518045231
     },
     {
+      "sequence_id": "kDnYFf70Zghxcrp95d1wOi",
+      "images": 170,
+      "km": 0.709,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780820984400,
+      "end_captured_at": 1780821018500
+    },
+    {
       "sequence_id": "KZNp9QrUOubH7WmIwsA2Xt",
       "images": 89,
       "km": 0.704,
@@ -39134,6 +42244,16 @@
       "end_captured_at": 1779960849800
     },
     {
+      "sequence_id": "z0A5CtNOifQjY4sXvJMH7e",
+      "images": 190,
+      "km": 0.697,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782039380000,
+      "end_captured_at": 1782039447000
+    },
+    {
       "sequence_id": "0adlq2rHmBuUKA8I7pnTLh",
       "images": 88,
       "km": 0.696,
@@ -39172,6 +42292,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1773081391000,
       "end_captured_at": 1773081501000
+    },
+    {
+      "sequence_id": "dtfLBh3nSjEFTpYrUbR4qo",
+      "images": 187,
+      "km": 0.691,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780819611000,
+      "end_captured_at": 1780819649500
     },
     {
       "sequence_id": "8aj9pC35IbBzwDKcOPFvoS",
@@ -39384,6 +42514,16 @@
       "end_captured_at": 1772362483671
     },
     {
+      "sequence_id": "Gml7bLxhg0zu2SfwYCsyaR",
+      "images": 194,
+      "km": 0.671,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782047527000,
+      "end_captured_at": 1782047590500
+    },
+    {
       "sequence_id": "lWvGF9paQJ6cUi1452BXtj",
       "images": 84,
       "km": 0.669,
@@ -39412,6 +42552,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1771710520000,
       "end_captured_at": 1771710590000
+    },
+    {
+      "sequence_id": "v730OLjmqfa2DoJCAU9l8z",
+      "images": 200,
+      "km": 0.665,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782044518000,
+      "end_captured_at": 1782044604500
     },
     {
       "sequence_id": "jzduHo4QpPNvL6hT0S12q7",
@@ -39542,6 +42692,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769294199000,
       "end_captured_at": 1769294261000
+    },
+    {
+      "sequence_id": "0QrEHxlGCgZoacpPtWkuvY",
+      "images": 152,
+      "km": 0.656,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782049939000,
+      "end_captured_at": 1782049970000
     },
     {
       "sequence_id": "pLAUZe6fHkY2Jh14CvEsrD",
@@ -39754,6 +42914,16 @@
       "end_captured_at": 1765759071000
     },
     {
+      "sequence_id": "PbhvGeSlXUDf6mZrapR28i",
+      "images": 117,
+      "km": 0.64,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514431346,
+      "end_captured_at": 1781514552133
+    },
+    {
       "sequence_id": "f4MtKPASzC9qGLda2vDjVX",
       "images": 81,
       "km": 0.64,
@@ -39842,6 +43012,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1778401219000,
       "end_captured_at": 1778401322000
+    },
+    {
+      "sequence_id": "aBnNOdUfw7T92IZ3DkcWgK",
+      "images": 185,
+      "km": 0.637,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782053419250,
+      "end_captured_at": 1782053480000
     },
     {
       "sequence_id": "P73gtxfbR6B4aiQdy8qsWp",
@@ -40032,6 +43212,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1756685668000,
       "end_captured_at": 1756685778000
+    },
+    {
+      "sequence_id": "PlhoJbm2aH9V67zne5FjCW",
+      "images": 130,
+      "km": 0.619,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780817644600,
+      "end_captured_at": 1780817670666
     },
     {
       "sequence_id": "FZ6CaGuPNRh0cKnit7Ifxj",
@@ -40274,6 +43464,16 @@
       "end_captured_at": 1764769320665
     },
     {
+      "sequence_id": "ZTlHpckQsbrOmFgJq96My3",
+      "images": 184,
+      "km": 0.591,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780814536000,
+      "end_captured_at": 1780814725750
+    },
+    {
       "sequence_id": "nriESKpC721GTMdoR8bJ5y",
       "images": 80,
       "km": 0.588,
@@ -40322,6 +43522,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1773536500000,
       "end_captured_at": 1773536621000
+    },
+    {
+      "sequence_id": "wMIeCixZsS3l6FGnrcgW9K",
+      "images": 151,
+      "km": 0.579,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782029246400,
+      "end_captured_at": 1782029286000
     },
     {
       "sequence_id": "oUVj0wSJpFXNQKmPYnt16l",
@@ -40432,6 +43642,16 @@
       "country": "India",
       "start_captured_at": 1773127982419,
       "end_captured_at": 1773128048037
+    },
+    {
+      "sequence_id": "l7fDoG0aQPZ3TjLJXhsdbv",
+      "images": 140,
+      "km": 0.568,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782050418000,
+      "end_captured_at": 1782050448000
     },
     {
       "sequence_id": "A9gdIEanzWcKNlJspBOXL7",
@@ -40602,6 +43822,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1780071907333,
       "end_captured_at": 1780071968500
+    },
+    {
+      "sequence_id": "qrfA0R38axZI5EMoWwl1zy",
+      "images": 71,
+      "km": 0.558,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780784284831,
+      "end_captured_at": 1780784380997
     },
     {
       "sequence_id": "QPkHzOD7uRrxTltmLfVwjJ",
@@ -40864,6 +44094,16 @@
       "end_captured_at": 1759608908000
     },
     {
+      "sequence_id": "52KAgjVMiw9XnmPouYWxpJ",
+      "images": 161,
+      "km": 0.535,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780811526000,
+      "end_captured_at": 1780811599000
+    },
+    {
       "sequence_id": "yB3vpnIPEbiLMcKjS0ofNO",
       "images": 68,
       "km": 0.535,
@@ -40954,6 +44194,16 @@
       "end_captured_at": 1765522762002
     },
     {
+      "sequence_id": "lE0pjCNYIOgLeTK3fPv7Vn",
+      "images": 156,
+      "km": 0.525,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782035115400,
+      "end_captured_at": 1782035187500
+    },
+    {
       "sequence_id": "UzwX1mZ8IHyiqpAg7QvYtO",
       "images": 57,
       "km": 0.523,
@@ -40972,6 +44222,16 @@
       "country": "India",
       "start_captured_at": 1773060298350,
       "end_captured_at": 1773060377120
+    },
+    {
+      "sequence_id": "8takRxP0Jmj1SKVTzGEi9X",
+      "images": 151,
+      "km": 0.521,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026688000,
+      "end_captured_at": 1782026804000
     },
     {
       "sequence_id": "95cZ1n3I8oYlfuQWshGX7S",
@@ -41062,6 +44322,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769720591000,
       "end_captured_at": 1769720665000
+    },
+    {
+      "sequence_id": "ngXYNF807Zy9m4hjKrBLti",
+      "images": 154,
+      "km": 0.517,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782054131000,
+      "end_captured_at": 1782054263333
     },
     {
       "sequence_id": "iVT2pqDleLkyU7v1SzbxHg",
@@ -41192,6 +44462,16 @@
       "country": "India",
       "start_captured_at": 1773122701100,
       "end_captured_at": 1773122965100
+    },
+    {
+      "sequence_id": "nl1CBSaKzAh7J36IeVW4Qi",
+      "images": 145,
+      "km": 0.511,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782061088400,
+      "end_captured_at": 1782061117500
     },
     {
       "sequence_id": "DqwBfp2AgLdFjJ1WuPNOol",
@@ -41374,6 +44654,16 @@
       "end_captured_at": 1778788717000
     },
     {
+      "sequence_id": "QylKUJ5HLpCPrZGXukAnvx",
+      "images": 145,
+      "km": 0.493,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780810176000,
+      "end_captured_at": 1780810247000
+    },
+    {
       "sequence_id": "RaAZW31PLSTewcfrDquEh8",
       "images": 63,
       "km": 0.493,
@@ -41382,6 +44672,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778788584000,
       "end_captured_at": 1778788717000
+    },
+    {
+      "sequence_id": "H01diDTV75SMxqfLWQKGN6",
+      "images": 38,
+      "km": 0.493,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434991877,
+      "end_captured_at": 1782435078441
     },
     {
       "sequence_id": "stJ6GQoMp5AzmN2P3ikcnZ",
@@ -41514,6 +44814,26 @@
       "end_captured_at": 1763242760000
     },
     {
+      "sequence_id": "9GHc8A4TCFPxiQeKogMsIm",
+      "images": 146,
+      "km": 0.482,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781439322000,
+      "end_captured_at": 1781439400000
+    },
+    {
+      "sequence_id": "l3Ir6Xkzt0NPSbY5MLo4dJ",
+      "images": 131,
+      "km": 0.481,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780813883000,
+      "end_captured_at": 1780813923500
+    },
+    {
       "sequence_id": "2XVUhE7mqjakdGNfZCWDsI",
       "images": 58,
       "km": 0.481,
@@ -41574,6 +44894,16 @@
       "end_captured_at": 1776435623865
     },
     {
+      "sequence_id": "fGiWwQd9ujn6tp7yPxM2va",
+      "images": 73,
+      "km": 0.477,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514723048,
+      "end_captured_at": 1781514810965
+    },
+    {
       "sequence_id": "ri8ogPYcvLD3askSU7MO0B",
       "images": 74,
       "km": 0.476,
@@ -41592,6 +44922,16 @@
       "country": "India",
       "start_captured_at": 1772282842000,
       "end_captured_at": 1772283002000
+    },
+    {
+      "sequence_id": "KS0qLsRX5FlEa4xTkbz8wo",
+      "images": 144,
+      "km": 0.474,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782045030000,
+      "end_captured_at": 1782045100500
     },
     {
       "sequence_id": "PjKU2vaInXB14pLltxsbmc",
@@ -41772,6 +45112,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1759705542000,
       "end_captured_at": 1759705571500
+    },
+    {
+      "sequence_id": "KGmci67hdHIYEPUWF0apDg",
+      "images": 58,
+      "km": 0.464,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781309608000,
+      "end_captured_at": 1781309690915
     },
     {
       "sequence_id": "PdMLcBGsoH2b1WFu78mSxy",
@@ -42034,6 +45384,16 @@
       "end_captured_at": 1758324885000
     },
     {
+      "sequence_id": "0QLuhlPyXdeGCwAv8bUDsT",
+      "images": 132,
+      "km": 0.435,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781437567000,
+      "end_captured_at": 1781437632000
+    },
+    {
       "sequence_id": "lkxUf9eqATEHXCc5ioDQ4W",
       "images": 140,
       "km": 0.435,
@@ -42094,6 +45454,16 @@
       "end_captured_at": 1776574276000
     },
     {
+      "sequence_id": "cYwxdhlLCb0KP2634SQZVr",
+      "images": 126,
+      "km": 0.427,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782033253000,
+      "end_captured_at": 1782033297000
+    },
+    {
       "sequence_id": "mrxFuEcg9TG8kIiRqHXaNw",
       "images": 135,
       "km": 0.426,
@@ -42122,6 +45492,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778461907000,
       "end_captured_at": 1778462018000
+    },
+    {
+      "sequence_id": "OBuXs8MQovyADYf2xcKinN",
+      "images": 111,
+      "km": 0.424,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781443721400,
+      "end_captured_at": 1781443744500
     },
     {
       "sequence_id": "CiwSmvVJcEHtnoFzaUe5gq",
@@ -42182,6 +45562,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765815074000,
       "end_captured_at": 1765815119000
+    },
+    {
+      "sequence_id": "gsuCLOKN670oTpHUaxRS1V",
+      "images": 121,
+      "km": 0.42,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782052916000,
+      "end_captured_at": 1782052946500
     },
     {
       "sequence_id": "tJlRvdMx3c2nGm0sezHaIW",
@@ -42274,6 +45664,16 @@
       "end_captured_at": 1778697955000
     },
     {
+      "sequence_id": "m91Yjwvl8MVabgs0Jz7KQ6",
+      "images": 51,
+      "km": 0.413,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781313299345,
+      "end_captured_at": 1781313355925
+    },
+    {
       "sequence_id": "1Nl6RFCUVTdojXpigE4G8v",
       "images": 46,
       "km": 0.412,
@@ -42332,6 +45732,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778602159000,
       "end_captured_at": 1778602314000
+    },
+    {
+      "sequence_id": "UleAHSRDycT9Pq6hxBGE1Z",
+      "images": 130,
+      "km": 0.405,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782059381600,
+      "end_captured_at": 1782059394833
     },
     {
       "sequence_id": "FTMYBCHtqi7ZSI6lK30sDn",
@@ -42434,6 +45844,16 @@
       "end_captured_at": 1739337777933
     },
     {
+      "sequence_id": "pHdzlQCB0xOa7TYM12kXKc",
+      "images": 120,
+      "km": 0.393,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807779000,
+      "end_captured_at": 1780807830500
+    },
+    {
       "sequence_id": "gSVXfn5QtdL4rbMWv9CGmw",
       "images": 50,
       "km": 0.392,
@@ -42522,6 +45942,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1775970433000,
       "end_captured_at": 1775970544000
+    },
+    {
+      "sequence_id": "2ErsF5yHJbS1pR4dWhnAe3",
+      "images": 123,
+      "km": 0.384,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782029706259,
+      "end_captured_at": 1782030049077
     },
     {
       "sequence_id": "iUqyEnIe52SWxPm7pa6DKv",
@@ -42714,6 +46144,16 @@
       "end_captured_at": 1761417953000
     },
     {
+      "sequence_id": "Bv5i8H6q1pPDXclUShQyE0",
+      "images": 106,
+      "km": 0.376,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780821234000,
+      "end_captured_at": 1780821275500
+    },
+    {
       "sequence_id": "78jtLISiDbkJyfFVAUOeu4",
       "images": 48,
       "km": 0.375,
@@ -42772,6 +46212,26 @@
       "country": "India",
       "start_captured_at": 1772848498100,
       "end_captured_at": 1772848548100
+    },
+    {
+      "sequence_id": "oMwaWeSI9jX3DCnrPvVm8z",
+      "images": 103,
+      "km": 0.373,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780807459600,
+      "end_captured_at": 1780807480000
+    },
+    {
+      "sequence_id": "mV0hKRj5gNUHQevWFszpOX",
+      "images": 112,
+      "km": 0.372,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781445420000,
+      "end_captured_at": 1781445484000
     },
     {
       "sequence_id": "trSoxM46mGLQsPIi15kY7q",
@@ -42842,6 +46302,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1769715449000,
       "end_captured_at": 1769715510000
+    },
+    {
+      "sequence_id": "vs6pnicfdx7k2ZJ8LaArzE",
+      "images": 113,
+      "km": 0.365,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780814350666,
+      "end_captured_at": 1780814458000
     },
     {
       "sequence_id": "1flDZ08xYirdWCJEp6jvXg",
@@ -42922,6 +46392,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1761700806000,
       "end_captured_at": 1761700879000
+    },
+    {
+      "sequence_id": "5oKn0hZcgqPCIMdvAeDtNV",
+      "images": 40,
+      "km": 0.359,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514170585,
+      "end_captured_at": 1781514210414
     },
     {
       "sequence_id": "1tj3H0iF7eKxBfTrgOhV9G",
@@ -43164,6 +46644,16 @@
       "end_captured_at": 1773098371000
     },
     {
+      "sequence_id": "g7nXFus0NJAwzGhajOiRxH",
+      "images": 78,
+      "km": 0.337,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057399600,
+      "end_captured_at": 1782057410857
+    },
+    {
       "sequence_id": "giNpSAfGQuOrHcohBaDqUW",
       "images": 100,
       "km": 0.337,
@@ -43202,6 +46692,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739337537012,
       "end_captured_at": 1739337655666
+    },
+    {
+      "sequence_id": "7yBuRm5Xnfd6qzQexELb9w",
+      "images": 29,
+      "km": 0.332,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435206959,
+      "end_captured_at": 1782435263889
     },
     {
       "sequence_id": "vfo8kNd9h2brFIKizWa6JR",
@@ -43352,6 +46852,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739517458013,
       "end_captured_at": 1739517552829
+    },
+    {
+      "sequence_id": "Kgk1YmnDRiIuwqCrZceTd8",
+      "images": 31,
+      "km": 0.316,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514042935,
+      "end_captured_at": 1781514075376
     },
     {
       "sequence_id": "aSJsclDmkePIUYf4Qw1vCr",
@@ -43554,6 +47064,16 @@
       "end_captured_at": 1757457198000
     },
     {
+      "sequence_id": "vQiSFe84tPDLA6cKWTGuyY",
+      "images": 33,
+      "km": 0.297,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514005541,
+      "end_captured_at": 1781514037233
+    },
+    {
       "sequence_id": "Bpr85zKXGkesj9hAonqaCO",
       "images": 34,
       "km": 0.297,
@@ -43704,6 +47224,26 @@
       "end_captured_at": 1760745613000
     },
     {
+      "sequence_id": "0ZamSlG6BMQW15XvqnP4O8",
+      "images": 37,
+      "km": 0.288,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780784118357,
+      "end_captured_at": 1780784191842
+    },
+    {
+      "sequence_id": "fqyYrLe9RbhvoP4SVEOZUn",
+      "images": 87,
+      "km": 0.288,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781436071750,
+      "end_captured_at": 1781436106500
+    },
+    {
       "sequence_id": "9yzBAXHP0E7vmZUJiobfMS",
       "images": 36,
       "km": 0.287,
@@ -43712,6 +47252,16 @@
       "country": "Macao",
       "start_captured_at": 1757458219000,
       "end_captured_at": 1757458247000
+    },
+    {
+      "sequence_id": "UXcv0sRG7LyftjbpKiP63M",
+      "images": 12,
+      "km": 0.286,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434872511,
+      "end_captured_at": 1782434889312
     },
     {
       "sequence_id": "Fez6clLEWvQDHGdUoXAux1",
@@ -43984,6 +47534,16 @@
       "end_captured_at": 1778691720000
     },
     {
+      "sequence_id": "DUWL5ghJEjGx06VsZK3ocl",
+      "images": 34,
+      "km": 0.264,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781310716749,
+      "end_captured_at": 1781310744782
+    },
+    {
       "sequence_id": "9uNU2jTl4J0Ra7rok6WEmB",
       "images": 34,
       "km": 0.262,
@@ -44242,6 +47802,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778377819000,
       "end_captured_at": 1778377850000
+    },
+    {
+      "sequence_id": "ca06ujdxqWXn5DbkIP7pJr",
+      "images": 69,
+      "km": 0.239,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782053913333,
+      "end_captured_at": 1782053945000
     },
     {
       "sequence_id": "9cNk8tTY7X42mydL5pzOBS",
@@ -44734,6 +48304,26 @@
       "end_captured_at": 1773079818000
     },
     {
+      "sequence_id": "OgcEwT8k9r023l7IjWFiUf",
+      "images": 9,
+      "km": 0.199,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435295043,
+      "end_captured_at": 1782435304783
+    },
+    {
+      "sequence_id": "JbSnTDvAc7eNKth361ZxFP",
+      "images": 7,
+      "km": 0.197,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434917529,
+      "end_captured_at": 1782434928545
+    },
+    {
       "sequence_id": "yXPKJoAET3cYuwbFH9nCev",
       "images": 26,
       "km": 0.197,
@@ -44802,6 +48392,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1761426760000,
       "end_captured_at": 1761426786000
+    },
+    {
+      "sequence_id": "9kl0iHAte4BuyTaNjJLXZQ",
+      "images": 18,
+      "km": 0.19,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781513976494,
+      "end_captured_at": 1781513995267
     },
     {
       "sequence_id": "r4pivEtVomN6jF1W0gHDe2",
@@ -44922,6 +48522,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765097283489,
       "end_captured_at": 1765097341867
+    },
+    {
+      "sequence_id": "wYVJ12o3tMXvcBxshyjlFn",
+      "images": 50,
+      "km": 0.179,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782039358000,
+      "end_captured_at": 1782039376000
     },
     {
       "sequence_id": "95Qalm7wx2jDOnUWhRzAB3",
@@ -45092,6 +48702,16 @@
       "country": "India",
       "start_captured_at": 1774523352028,
       "end_captured_at": 1774523371041
+    },
+    {
+      "sequence_id": "UrqWeyFOcRsQb01nLkGaMu",
+      "images": 7,
+      "km": 0.169,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435280733,
+      "end_captured_at": 1782435288913
     },
     {
       "sequence_id": "djWrYhyNzmx6QuU7b4EZek",
@@ -45364,6 +48984,16 @@
       "end_captured_at": 1772274666063
     },
     {
+      "sequence_id": "24AXlUdiPhatufkyWJDgV5",
+      "images": 46,
+      "km": 0.154,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781446935000,
+      "end_captured_at": 1781446960000
+    },
+    {
       "sequence_id": "7qorGONjDV3LBTlUZ8zHi0",
       "images": 20,
       "km": 0.152,
@@ -45484,6 +49114,26 @@
       "end_captured_at": 1772802027310
     },
     {
+      "sequence_id": "JtS0z8TYvcRCWeq94m7KsZ",
+      "images": 46,
+      "km": 0.147,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780812148666,
+      "end_captured_at": 1780812175000
+    },
+    {
+      "sequence_id": "cHXapCrQi7GMbFdyOwPjUs",
+      "images": 23,
+      "km": 0.146,
+      "username": "VVM15",
+      "user_id": "1701022144100237",
+      "country": "India",
+      "start_captured_at": 1781514559668,
+      "end_captured_at": 1781514581563
+    },
+    {
       "sequence_id": "3rcp24VbCvPLRZOGfUQBgs",
       "images": 19,
       "km": 0.144,
@@ -45594,6 +49244,16 @@
       "end_captured_at": 1773090196000
     },
     {
+      "sequence_id": "C4RZI1vhi0uYJ5g98k2yrj",
+      "images": 18,
+      "km": 0.138,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780783978497,
+      "end_captured_at": 1780784038000
+    },
+    {
       "sequence_id": "IJgfvCdeqm7kSpwryHVi4c",
       "images": 18,
       "km": 0.136,
@@ -45612,6 +49272,16 @@
       "country": "India",
       "start_captured_at": 1772713645124,
       "end_captured_at": 1772713666412
+    },
+    {
+      "sequence_id": "9ZYKuLmGQhD4ws1aAPMvbB",
+      "images": 44,
+      "km": 0.134,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782027201000,
+      "end_captured_at": 1782027264000
     },
     {
       "sequence_id": "hp67CZdKEvHrt8a52sGzlU",
@@ -45672,6 +49342,16 @@
       "country": "India",
       "start_captured_at": 1765619089115,
       "end_captured_at": 1765619112050
+    },
+    {
+      "sequence_id": "PijTFG5Ml7AreNhwR6WqBY",
+      "images": 42,
+      "km": 0.127,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782030071796,
+      "end_captured_at": 1782030178892
     },
     {
       "sequence_id": "z0JAFHpIDLY7keirtg6hQl",
@@ -45802,6 +49482,16 @@
       "country": "India",
       "start_captured_at": 1771928189751,
       "end_captured_at": 1771928211445
+    },
+    {
+      "sequence_id": "qtL8giD6a4jsUErBR1MKwA",
+      "images": 35,
+      "km": 0.115,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782055510000,
+      "end_captured_at": 1782055521500
     },
     {
       "sequence_id": "VBc0q3baUo7lRGyJnzZumj",
@@ -45972,6 +49662,16 @@
       "country": "India",
       "start_captured_at": 1772716251079,
       "end_captured_at": 1772716360773
+    },
+    {
+      "sequence_id": "PRL1ZT4br8C6O9zusUAQfW",
+      "images": 5,
+      "km": 0.105,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434949498,
+      "end_captured_at": 1782434954258
     },
     {
       "sequence_id": "qdrme3L0BY4vQbJ7PIncFO",
@@ -46284,6 +49984,16 @@
       "end_captured_at": 1778657889775
     },
     {
+      "sequence_id": "HK8NlzxmywfFvB7SnGVjk5",
+      "images": 8,
+      "km": 0.088,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781311829000,
+      "end_captured_at": 1781311834529
+    },
+    {
       "sequence_id": "kQixDUT2A0lVnopbB4R8ug",
       "images": 12,
       "km": 0.088,
@@ -46402,6 +50112,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1765768087000,
       "end_captured_at": 1765768116000
+    },
+    {
+      "sequence_id": "XgYWhRarNtd1mJ3VxZl7Q4",
+      "images": 26,
+      "km": 0.087,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781447430500,
+      "end_captured_at": 1781447443500
     },
     {
       "sequence_id": "UofF8SDJtkuj4T2m6LAhXB",
@@ -46614,6 +50334,16 @@
       "end_captured_at": 1772171278000
     },
     {
+      "sequence_id": "KAfL5RZ0muvUjM1VWhDPd6",
+      "images": 20,
+      "km": 0.073,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026684600,
+      "end_captured_at": 1782026688666
+    },
+    {
       "sequence_id": "vpkHm5zRirGjCJUd07AF2X",
       "images": 25,
       "km": 0.073,
@@ -46742,6 +50472,16 @@
       "country": "Rwanda",
       "start_captured_at": 1778660549000,
       "end_captured_at": 1778660723884
+    },
+    {
+      "sequence_id": "SNOUdxeGwYntDBukQR1rIg",
+      "images": 3,
+      "km": 0.066,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782435309972,
+      "end_captured_at": 1782435312169
     },
     {
       "sequence_id": "NbV1zSERjvsMOgwHLmx2no",
@@ -46964,6 +50704,16 @@
       "end_captured_at": 1772801900260
     },
     {
+      "sequence_id": "cBC1On7U4VhQwx2lpoFXEr",
+      "images": 20,
+      "km": 0.058,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780814458000,
+      "end_captured_at": 1780814492000
+    },
+    {
       "sequence_id": "JX9lRQEtF8UW7ojCc3PwkY",
       "images": 14,
       "km": 0.057,
@@ -47022,6 +50772,16 @@
       "country": "India",
       "start_captured_at": 1772716157150,
       "end_captured_at": 1772716203915
+    },
+    {
+      "sequence_id": "In9GRwLxScTmiCKQZorj16",
+      "images": 8,
+      "km": 0.056,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780784747521,
+      "end_captured_at": 1780784755685
     },
     {
       "sequence_id": "piCQbWeqg2NhUnPYBXvxFZ",
@@ -47154,6 +50914,16 @@
       "end_captured_at": 1777529564786
     },
     {
+      "sequence_id": "mMNRd0AZaubgcTVWwUtrJ6",
+      "images": 15,
+      "km": 0.049,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782026339750,
+      "end_captured_at": 1782026346000
+    },
+    {
       "sequence_id": "d7gRY9qP6XHLzGbiNQKvD2",
       "images": 17,
       "km": 0.048,
@@ -47182,6 +50952,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778900387000,
       "end_captured_at": 1778900401000
+    },
+    {
+      "sequence_id": "si0aEWyGzqoBYOk4SI1XuQ",
+      "images": 7,
+      "km": 0.048,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780775929771,
+      "end_captured_at": 1780775939917
     },
     {
       "sequence_id": "iGW0UHQtBkMoS1VPhujdeR",
@@ -47244,6 +51024,36 @@
       "end_captured_at": 1778889037000
     },
     {
+      "sequence_id": "13WjnfZz084D7Uh2bQciOy",
+      "images": 4,
+      "km": 0.048,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434783972,
+      "end_captured_at": 1782434787268
+    },
+    {
+      "sequence_id": "Io2dzsLftR5HV3CEDS4le9",
+      "images": 14,
+      "km": 0.047,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781446930000,
+      "end_captured_at": 1781446935500
+    },
+    {
+      "sequence_id": "lUgkmQYEz6f4b8JpVCsDIw",
+      "images": 7,
+      "km": 0.045,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1780776024678,
+      "end_captured_at": 1780776064000
+    },
+    {
       "sequence_id": "eysGmplA5dIiqQoJ8BT9gP",
       "images": 8,
       "km": 0.045,
@@ -47282,6 +51092,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778428757000,
       "end_captured_at": 1778428798000
+    },
+    {
+      "sequence_id": "Ve8YD5MdRcyHobkhE7wQxr",
+      "images": 15,
+      "km": 0.044,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1780811005000,
+      "end_captured_at": 1780811022000
     },
     {
       "sequence_id": "xcd0LV5vStos2AIzT1POE3",
@@ -47384,6 +51204,16 @@
       "end_captured_at": 1778899971000
     },
     {
+      "sequence_id": "hX1jU7i4mrSqYQAaCMst85",
+      "images": 14,
+      "km": 0.041,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782037757000,
+      "end_captured_at": 1782037771000
+    },
+    {
       "sequence_id": "EaxH8VTJcrDtkXKZUCPB9f",
       "images": 6,
       "km": 0.04,
@@ -47444,6 +51274,16 @@
       "end_captured_at": 1772154132000
     },
     {
+      "sequence_id": "XL8mSaeFpACI5Huszrwj46",
+      "images": 13,
+      "km": 0.038,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781450002000,
+      "end_captured_at": 1781450039000
+    },
+    {
       "sequence_id": "IELYbtkG1ON2sdvHpCxcAP",
       "images": 12,
       "km": 0.038,
@@ -47492,6 +51332,16 @@
       "country": "Rwanda",
       "start_captured_at": 1778658841000,
       "end_captured_at": 1778658872019
+    },
+    {
+      "sequence_id": "qHWutJaFwhenoEkgABjy4L",
+      "images": 11,
+      "km": 0.034,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782039376333,
+      "end_captured_at": 1782039380000
     },
     {
       "sequence_id": "cZ6iBED4enCr03VWySojFL",
@@ -47632,6 +51482,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1762295862000,
       "end_captured_at": 1762295871000
+    },
+    {
+      "sequence_id": "2juAVSniPNkRelTEIxyGWC",
+      "images": 5,
+      "km": 0.032,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1781311409000,
+      "end_captured_at": 1781311471612
     },
     {
       "sequence_id": "lV6PTLRXjBDadKpnocA5qh",
@@ -48322,6 +52182,16 @@
       "country": "India",
       "start_captured_at": 1772274412551,
       "end_captured_at": 1772274414034
+    },
+    {
+      "sequence_id": "gcpIhrxCXMZGfjvJN5Y4oH",
+      "images": 2,
+      "km": 0.014,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Japan",
+      "start_captured_at": 1782434830907,
+      "end_captured_at": 1782434831296
     },
     {
       "sequence_id": "3MDO08GI6mJ25UVeN9n4Qu",
@@ -50232,6 +54102,26 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779938998000,
       "end_captured_at": 1779938998000
+    },
+    {
+      "sequence_id": "HZGTkQ8er4lhbyiCmXDNq0",
+      "images": 1,
+      "km": 0.0,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1781450679000,
+      "end_captured_at": 1781450679000
+    },
+    {
+      "sequence_id": "TGVu6Hax735e4CyrSKFLOb",
+      "images": 1,
+      "km": 0.0,
+      "username": "burakonder",
+      "user_id": "107778611458272",
+      "country": "T\u00fcrkiye",
+      "start_captured_at": 1782057151000,
+      "end_captured_at": 1782057151000
     }
   ]
 }

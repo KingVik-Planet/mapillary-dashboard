@@ -2,7 +2,7 @@ name: Mapillary Organization Imagery Collector
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # every day at 02:00 UTC
+    - cron: "0 0 * * *"   # every day at 00:00 UTC
   workflow_dispatch: {}
 
 permissions:

@@ -2,11 +2,37 @@ name: Mapillary Organization Imagery Collector
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # every day at 00:00 UTC
-  workflow_dispatch: {}
+    # 1) Normal daily scan - every day at 00:00 UTC.
+    - cron: "0 0 * * *"
+    # 2) Late-upload reconcile - 12:00 UTC on the 21st, 22nd and 23rd of every
+    #    month. Runs 12 hours after the daily scan so the two never overlap.
+    #      21st -> re-check the month 3 months back
+    #      22nd -> re-check the month 2 months back
+    #      23rd -> re-check the month 1 month back
+    - cron: "0 12 21,22,23 * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "daily = normal scan, reconcile = re-check a closed month for late uploads"
+        type: choice
+        options:
+          - daily
+          - reconcile
+        default: daily
+      month:
+        description: "Reconcile only: month to re-check as YYYY-MM (leave empty to use the date rule: 21st=M-3, 22nd=M-2, 23rd=M-1)"
+        type: string
+        required: false
+        default: ""
 
 permissions:
   contents: write
+
+# Never let two collector runs overlap (they share the Actions cache and push to
+# the same branch). A second run waits for the first instead of racing it.
+concurrency:
+  group: mapillary-collector
+  cancel-in-progress: false
 
 jobs:
   collect:
@@ -31,6 +57,11 @@ jobs:
       # start over each day. Cache keys include the run id (always unique, so a
       # fresh cache is always saved), with restore-keys falling back to the most
       # recent matching entry.
+      #
+      # If the cache is ever evicted (GitHub drops entries unused for 7 days), the
+      # collector notices months that have a .done marker but no cached data and
+      # re-fetches them one per run. The published CSV chunks are append-only, so
+      # they never shrink while that happens.
       - name: Restore raw data cache
         uses: actions/cache@v4
         with:
@@ -47,28 +78,45 @@ jobs:
         env:
           MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
           MAPILLARY_ORG_ID: ${{ secrets.MAPILLARY_ORG_ID }}
+          # Manual run -> use the chosen mode; scheduled run -> reconcile only when the
+          # 12:00 cron fired, otherwise the normal daily scan.
+          MAPILLARY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '0 12 21,22,23 * *' && 'reconcile' || 'daily') }}
+          MAPILLARY_RECONCILE_MONTH: ${{ inputs.month }}
+          # Optional repo variables (Settings -> Secrets and variables -> Actions -> Variables).
+          # Empty values fall back to the defaults in collect.py.
+          MAPILLARY_START_MONTH: ${{ vars.MAPILLARY_START_MONTH }}
+          MAPILLARY_MIN_SPLIT_MINUTES: ${{ vars.MAPILLARY_MIN_SPLIT_MINUTES }}
+          MAPILLARY_CURRENT_OVERLAP_DAYS: ${{ vars.MAPILLARY_CURRENT_OVERLAP_DAYS }}
+          MAPILLARY_MAX_SPEED_KMH: ${{ vars.MAPILLARY_MAX_SPEED_KMH }}
         run: python src/collect.py
 
-      # Split the raw CSVs into GitHub-safe chunks (each part capped well under
-      # GitHub's 50MB warning / 100MB hard limit) so the actual data is visible
-      # and browsable in the repo, e.g. data/monthly_chunks/2026-05_1.csv,
-      # 2026-05_2.csv, 2026-05_3.csv... Regenerated fresh every run - stale parts
-      # from a previous run are automatically cleaned up.
-      - name: Export CSV data as GitHub-safe chunks
+      # OPTIONAL / LEGACY: per-month CSV chunks, regenerated each run. Power BI does
+      # not read these - they duplicate the same rows that are in latest_images_chunks.
+      # If you no longer want them, delete this step and the data/monthly_chunks folder
+      # (also remove data/monthly_chunks/ from the `git add` below).
+      - name: Export per-month CSV chunks (optional, legacy)
         run: |
           python src/export_chunks.py --src data/monthly --out data/monthly_chunks --max-mb 40
+
+      # data/latest_images_chunks is what the Power BI report reads. APPEND-ONLY:
+      # rows already in a chunk stay exactly where they are; new rows (including
+      # late-uploaded images from older months) are added to the newest chunk until
+      # it hits 40MB, then a new numbered chunk is started. Columns/header never change
+      # (the script aborts if they would).
+      - name: Export Power BI chunks (append-only)
+        run: |
           if [ -f data/latest_images.csv ]; then
-            python src/export_chunks.py --src data/latest_images.csv --out data/latest_images_chunks --max-mb 40
+            python src/export_chunks.py --src data/latest_images.csv --out data/latest_images_chunks --max-mb 40 --append
           fi
 
       # Small aggregate outputs (data/latest.json, data/history/*.json,
-      # data/monthly/*.done checkpoint markers) plus the chunked CSV exports -
-      # these all stay under GitHub's size limits, so they're safe to commit.
+      # data/reconcile_log.json, data/monthly/*.done checkpoint markers) plus the
+      # chunked CSV exports - these all stay under GitHub's size limits.
       - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history/ data/monthly/*.done \
+          git add data/latest.json data/history/ data/reconcile_log.json data/monthly/*.done \
                   data/monthly_chunks/ data/latest_images_chunks/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Update Mapillary imagery data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git push

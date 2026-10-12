@@ -109,17 +109,41 @@ jobs:
             python src/export_chunks.py --src data/latest_images.csv --out data/latest_images_chunks --max-mb 40 --append
           fi
 
+      # Shows in the run log how fresh the data is, so a stale dashboard is obvious.
+      - name: Log data freshness
+        run: |
+          python - <<'EOF'
+          import json
+          d = json.load(open("data/latest.json"))
+          days = d.get("by_day", [])
+          print("Newest capture day in latest.json:", days[-1]["date"] if days else "n/a")
+          print("Total images:", d.get("total_images"), "| generated_at:", d.get("generated_at"))
+          EOF
+
       # Small aggregate outputs (data/latest.json, data/history/*.json,
       # data/reconcile_log.json, data/monthly/*.done checkpoint markers) plus the
       # chunked CSV exports - these all stay under GitHub's size limits.
+      #
+      # IMPORTANT: stage only paths that exist. `git add a b c` fails as a whole -
+      # staging NOTHING - if any one path (e.g. data/reconcile_log.json before the
+      # first reconcile has run) does not exist, so each path is added on its own and
+      # errors are no longer hidden.
       - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history/ data/reconcile_log.json data/monthly/*.done \
-                  data/monthly_chunks/ data/latest_images_chunks/ 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Update Mapillary imagery data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push
+          for p in data/latest.json data/history data/reconcile_log.json \
+                   data/monthly_chunks data/latest_images_chunks; do
+            if [ -e "$p" ]; then git add "$p"; fi
+          done
+          find data/monthly -maxdepth 1 -name '*.done' -exec git add {} +
+          echo "Staged files:"; git diff --staged --name-only | sed 's/^/  /'
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Update Mapillary imagery data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi
 
       # Optional: publish the full raw dataset (the CSV your data/latest_images.csv
       # holds) as a downloadable Release asset. Release assets allow files up to 2GB

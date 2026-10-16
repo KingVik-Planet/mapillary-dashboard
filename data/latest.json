@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-10-15T04:23:55.091847+00:00",
+  "generated_at": "2026-10-16T04:18:57.113182+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -26,11 +26,11 @@
     "2026-10"
   ],
   "months_pending_backfill": [],
-  "total_images": 2867876,
-  "total_sequences": 7072,
+  "total_images": 2867911,
+  "total_sequences": 7074,
   "total_users": 54,
   "total_countries": 16,
-  "total_km_covered": 21921.299,
+  "total_km_covered": 21924.441,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
@@ -70,10 +70,10 @@
     },
     {
       "country": "Ghana",
-      "images": 23236,
-      "sequences": 663,
+      "images": 23271,
+      "sequences": 665,
       "users": 1,
-      "km": 266.548
+      "km": 269.69
     },
     {
       "country": "Hong Kong",
@@ -255,13 +255,13 @@
     {
       "username": "cmenttor",
       "user_id": "108933258580999",
-      "images": 24700,
-      "sequences": 730,
+      "images": 24735,
+      "sequences": 732,
       "countries": [
         "Ghana",
         "Togo"
       ],
-      "km": 273.638
+      "km": 276.78
     },
     {
       "username": "MangeshK955",
@@ -2272,6 +2272,12 @@
       "images": 29,
       "sequences": 5,
       "km": 2.938
+    },
+    {
+      "date": "2026-10-15",
+      "images": 35,
+      "sequences": 2,
+      "km": 3.142
     }
   ],
   "by_sequence": [
@@ -28004,6 +28010,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1785713817000,
       "end_captured_at": 1785713940589
+    },
+    {
+      "sequence_id": "mIQ0Jho9SOGBls1H5KqgzC",
+      "images": 22,
+      "km": 3.136,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1792050779833,
+      "end_captured_at": 1792051784895
     },
     {
       "sequence_id": "2e0MzcpqGTJF7VrCoO6iKX",
@@ -65184,6 +65200,16 @@
       "country": "Togo",
       "start_captured_at": 1785861293198,
       "end_captured_at": 1785861298058
+    },
+    {
+      "sequence_id": "pEsq6BPSz0X1fxRnv7haHZ",
+      "images": 13,
+      "km": 0.006,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1792060359317,
+      "end_captured_at": 1792060369959
     },
     {
       "sequence_id": "5RUFznh3EYI1abPCtqfocO",

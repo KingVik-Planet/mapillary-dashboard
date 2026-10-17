@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-10-16T04:18:57.113182+00:00",
+  "generated_at": "2026-10-17T04:09:48.936589+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -26,11 +26,11 @@
     "2026-10"
   ],
   "months_pending_backfill": [],
-  "total_images": 2867911,
-  "total_sequences": 7074,
+  "total_images": 2867948,
+  "total_sequences": 7075,
   "total_users": 54,
   "total_countries": 16,
-  "total_km_covered": 21924.441,
+  "total_km_covered": 21924.702,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
@@ -56,10 +56,10 @@
     },
     {
       "country": "Rwanda",
-      "images": 98143,
-      "sequences": 93,
+      "images": 98180,
+      "sequences": 94,
       "users": 3,
-      "km": 383.763
+      "km": 384.024
     },
     {
       "country": "Netherlands",
@@ -224,12 +224,12 @@
     {
       "username": "kingvik",
       "user_id": "103644195212255",
-      "images": 36239,
-      "sequences": 41,
+      "images": 36276,
+      "sequences": 42,
       "countries": [
         "Rwanda"
       ],
-      "km": 186.9
+      "km": 187.16
     },
     {
       "username": "WankhedeR",
@@ -2278,6 +2278,12 @@
       "images": 35,
       "sequences": 2,
       "km": 3.142
+    },
+    {
+      "date": "2026-10-16",
+      "images": 37,
+      "sequences": 1,
+      "km": 0.261
     }
   ],
   "by_sequence": [
@@ -54420,6 +54426,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1776517210315,
       "end_captured_at": 1776517265957
+    },
+    {
+      "sequence_id": "iKgCXpPoRMrhvwVOmnySHE",
+      "images": 37,
+      "km": 0.261,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1792142381903,
+      "end_captured_at": 1792142415136
     },
     {
       "sequence_id": "qAkKt0ofwn2jQXDv1LYHyS",

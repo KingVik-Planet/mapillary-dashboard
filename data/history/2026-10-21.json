@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-10-21T04:32:37.867631+00:00",
+  "generated_at": "2026-10-21T17:01:48.117258+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -26,10 +26,10 @@
     "2026-10"
   ],
   "months_pending_backfill": [],
-  "total_images": 2880872,
-  "total_sequences": 7131,
+  "total_images": 2880875,
+  "total_sequences": 7134,
   "total_users": 54,
-  "total_countries": 16,
+  "total_countries": 17,
   "total_km_covered": 22093.686,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
@@ -144,6 +144,13 @@
       "sequences": 1,
       "users": 1,
       "km": 0.239
+    },
+    {
+      "country": "Spain",
+      "images": 3,
+      "sequences": 3,
+      "users": 1,
+      "km": 0.0
     }
   ],
   "by_user": [
@@ -164,9 +171,10 @@
     {
       "username": "unen",
       "user_id": "101261185454084",
-      "images": 640963,
-      "sequences": 898,
+      "images": 640966,
+      "sequences": 901,
       "countries": [
+        "Spain",
         "T\u00fcrkiye"
       ],
       "km": 2333.173
@@ -1986,6 +1994,12 @@
       "km": 8.293
     },
     {
+      "date": "2026-07-19",
+      "images": 2,
+      "sequences": 2,
+      "km": 0.0
+    },
+    {
       "date": "2026-07-20",
       "images": 224,
       "sequences": 7,
@@ -2002,6 +2016,12 @@
       "images": 1766,
       "sequences": 2,
       "km": 20.143
+    },
+    {
+      "date": "2026-07-24",
+      "images": 1,
+      "sequences": 1,
+      "km": 0.0
     },
     {
       "date": "2026-07-25",
@@ -69864,6 +69884,36 @@
       "country": "Ghana",
       "start_captured_at": 1785519276816,
       "end_captured_at": 1785519276816
+    },
+    {
+      "sequence_id": "nKSd8lYyo2hVU4B9bkLZwx",
+      "images": 1,
+      "km": 0.0,
+      "username": "unen",
+      "user_id": "101261185454084",
+      "country": "Spain",
+      "start_captured_at": 1784460161000,
+      "end_captured_at": 1784460161000
+    },
+    {
+      "sequence_id": "kCRjudfAc9tlPJgXEzTD3O",
+      "images": 1,
+      "km": 0.0,
+      "username": "unen",
+      "user_id": "101261185454084",
+      "country": "Spain",
+      "start_captured_at": 1784460654000,
+      "end_captured_at": 1784460654000
+    },
+    {
+      "sequence_id": "rHu8LsA5oiMjOtZbKq6akB",
+      "images": 1,
+      "km": 0.0,
+      "username": "unen",
+      "user_id": "101261185454084",
+      "country": "Spain",
+      "start_captured_at": 1784907186000,
+      "end_captured_at": 1784907186000
     },
     {
       "sequence_id": "hczePA5SiyoFg2vnKH0DEp",

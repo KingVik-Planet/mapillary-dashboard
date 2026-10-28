@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-10-27T04:54:25.686675+00:00",
+  "generated_at": "2026-10-28T05:27:24.566726+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -26,16 +26,16 @@
     "2026-10"
   ],
   "months_pending_backfill": [],
-  "total_images": 2915309,
-  "total_sequences": 7247,
+  "total_images": 2924548,
+  "total_sequences": 7296,
   "total_users": 55,
   "total_countries": 17,
-  "total_km_covered": 22352.064,
+  "total_km_covered": 22435.631,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 1255420,
+      "images": 1255463,
       "sequences": 3649,
       "users": 1,
       "km": 11929.122
@@ -49,24 +49,24 @@
     },
     {
       "country": "India",
-      "images": 348298,
-      "sequences": 914,
+      "images": 348782,
+      "sequences": 917,
       "users": 42,
-      "km": 5113.498
+      "km": 5115.014
     },
     {
       "country": "Rwanda",
-      "images": 100789,
-      "sequences": 98,
+      "images": 107379,
+      "sequences": 104,
       "users": 4,
-      "km": 396.884
+      "km": 445.662
     },
     {
       "country": "Ghana",
-      "images": 24272,
-      "sequences": 703,
+      "images": 25250,
+      "sequences": 740,
       "users": 1,
-      "km": 278.458
+      "km": 300.097
     },
     {
       "country": "Netherlands",
@@ -97,18 +97,18 @@
       "km": 25.014
     },
     {
+      "country": "Togo",
+      "images": 2627,
+      "sequences": 73,
+      "users": 1,
+      "km": 19.681
+    },
+    {
       "country": "Macao",
       "images": 2128,
       "sequences": 14,
       "users": 1,
       "km": 17.065
-    },
-    {
-      "country": "Togo",
-      "images": 1483,
-      "sequences": 69,
-      "users": 1,
-      "km": 8.049
     },
     {
       "country": "Chile",
@@ -157,7 +157,7 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 1276705,
+      "images": 1276748,
       "sequences": 3704,
       "countries": [
         "China",
@@ -166,7 +166,7 @@
         "Macao",
         "Taiwan, Province of China"
       ],
-      "km": 12103.288
+      "km": 12103.289
     },
     {
       "username": "unen",
@@ -232,12 +232,12 @@
     {
       "username": "kingvik",
       "user_id": "103644195212255",
-      "images": 38395,
-      "sequences": 45,
+      "images": 44440,
+      "sequences": 48,
       "countries": [
         "Rwanda"
       ],
-      "km": 199.315
+      "km": 247.162
     },
     {
       "username": "WankhedeR",
@@ -252,13 +252,13 @@
     {
       "username": "cmenttor",
       "user_id": "108933258580999",
-      "images": 25755,
-      "sequences": 772,
+      "images": 27877,
+      "sequences": 812,
       "countries": [
         "Ghana",
         "Togo"
       ],
-      "km": 286.506
+      "km": 319.779
     },
     {
       "username": "CasGroenigen",
@@ -462,6 +462,16 @@
       "km": 14.41
     },
     {
+      "username": "Jaspe_Gentille",
+      "user_id": "919612484568113",
+      "images": 1035,
+      "sequences": 4,
+      "countries": [
+        "Rwanda"
+      ],
+      "km": 1.636
+    },
+    {
       "username": "ShreyasBhogte26",
       "user_id": "991886389674362",
       "images": 966,
@@ -502,6 +512,16 @@
       "km": 15.891
     },
     {
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "images": 541,
+      "sequences": 4,
+      "countries": [
+        "India"
+      ],
+      "km": 1.982
+    },
+    {
       "username": "gulnaazshaikh",
       "user_id": "1344486567407155",
       "images": 522,
@@ -510,16 +530,6 @@
         "India"
       ],
       "km": 3.764
-    },
-    {
-      "username": "Jaspe_Gentille",
-      "user_id": "919612484568113",
-      "images": 490,
-      "sequences": 1,
-      "countries": [
-        "Rwanda"
-      ],
-      "km": 0.705
     },
     {
       "username": "mamtapatel",
@@ -660,16 +670,6 @@
         "India"
       ],
       "km": 2.723
-    },
-    {
-      "username": "Amol_Pawar",
-      "user_id": "2045782772719776",
-      "images": 57,
-      "sequences": 1,
-      "countries": [
-        "India"
-      ],
-      "km": 0.465
     },
     {
       "username": "Samikshasidha12",
@@ -2341,9 +2341,9 @@
     },
     {
       "date": "2026-10-19",
-      "images": 3760,
-      "sequences": 26,
-      "km": 53.748
+      "images": 4244,
+      "sequences": 29,
+      "km": 55.265
     },
     {
       "date": "2026-10-20",
@@ -2371,9 +2371,15 @@
     },
     {
       "date": "2026-10-26",
-      "images": 9925,
-      "sequences": 42,
-      "km": 92.747
+      "images": 12011,
+      "sequences": 50,
+      "km": 125.882
+    },
+    {
+      "date": "2026-10-27",
+      "images": 6669,
+      "sequences": 38,
+      "km": 48.915
     }
   ],
   "by_sequence": [
@@ -2386,6 +2392,16 @@
       "country": "India",
       "start_captured_at": 1772325139249,
       "end_captured_at": 1772326820717
+    },
+    {
+      "sequence_id": "ur49Jfam6MCSIehOs7Y8vB",
+      "images": 5912,
+      "km": 46.781,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1793075087111,
+      "end_captured_at": 1793079902754
     },
     {
       "sequence_id": "9a18Lk0syWrKc4QzFv7VNT",
@@ -4619,7 +4635,7 @@
     },
     {
       "sequence_id": "B8dtalYzEO6quJvcwp4IAj",
-      "images": 995,
+      "images": 1000,
       "km": 13.546,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -4898,6 +4914,16 @@
       "end_captured_at": 1773822368830
     },
     {
+      "sequence_id": "KwN1aXglbTnURLCik8yZ25",
+      "images": 589,
+      "km": 12.561,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793033027526,
+      "end_captured_at": 1793033648890
+    },
+    {
       "sequence_id": "C3XzIGjeVu6BKwkp1Fqvd4",
       "images": 997,
       "km": 12.535,
@@ -5039,7 +5065,7 @@
     },
     {
       "sequence_id": "zGlLhN16O08aJ5XsArfyID",
-      "images": 995,
+      "images": 1000,
       "km": 12.121,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -5396,6 +5422,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1788574381743,
       "end_captured_at": 1788575440629
+    },
+    {
+      "sequence_id": "OKiSmndZEl7eNGCDq24Bo8",
+      "images": 452,
+      "km": 11.682,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793009543575,
+      "end_captured_at": 1793010020333
     },
     {
       "sequence_id": "5gInwYBT7XOvtlz1CEhRoD",
@@ -6619,7 +6655,7 @@
     },
     {
       "sequence_id": "ALNgE1i0YcnXSalKG7weO4",
-      "images": 648,
+      "images": 650,
       "km": 8.812,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -6759,7 +6795,7 @@
     },
     {
       "sequence_id": "kE5opm8Bb1jqJNUDfAvcYK",
-      "images": 792,
+      "images": 795,
       "km": 8.553,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -11539,7 +11575,7 @@
     },
     {
       "sequence_id": "xJ0ZwezDO76GM4IbXgcoqi",
-      "images": 993,
+      "images": 1000,
       "km": 8.009,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -13549,7 +13585,7 @@
     },
     {
       "sequence_id": "2hFZLaqkcbCVA1nGomeJt7",
-      "images": 829,
+      "images": 834,
       "km": 6.688,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -14606,6 +14642,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1783127581741,
       "end_captured_at": 1783128299355
+    },
+    {
+      "sequence_id": "rgfuIKU9he7YCpmZnkR8a6",
+      "images": 616,
+      "km": 5.879,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Togo",
+      "start_captured_at": 1793010026440,
+      "end_captured_at": 1793010627870
     },
     {
       "sequence_id": "aN2oD8bYqEAvge5cLT6uBV",
@@ -19559,7 +19605,7 @@
     },
     {
       "sequence_id": "YPTRIHLXscQ5nya1qruoJG",
-      "images": 501,
+      "images": 504,
       "km": 4.043,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -19899,7 +19945,7 @@
     },
     {
       "sequence_id": "1yXFpcjAQNOJsU2W9daoYn",
-      "images": 492,
+      "images": 496,
       "km": 3.959,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -27209,7 +27255,7 @@
     },
     {
       "sequence_id": "u2JV7RoB845CSnGhDMkPqX",
-      "images": 404,
+      "images": 406,
       "km": 3.256,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -28059,7 +28105,7 @@
     },
     {
       "sequence_id": "ankJyQbvq9KcUMPINLesZo",
-      "images": 395,
+      "images": 397,
       "km": 3.187,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -29216,6 +29262,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1739717642012,
       "end_captured_at": 1739717760932
+    },
+    {
+      "sequence_id": "DYHxAoPb2IZUBl40eRgyC8",
+      "images": 379,
+      "km": 3.012,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Togo",
+      "start_captured_at": 1793010794704,
+      "end_captured_at": 1793011142310
     },
     {
       "sequence_id": "50zlfOFCvB7cA6Z8dJGIns",
@@ -31099,7 +31155,7 @@
     },
     {
       "sequence_id": "UxNlI4WsfcBCPb2JOTVquj",
-      "images": 340,
+      "images": 342,
       "km": 2.743,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -35629,7 +35685,7 @@
     },
     {
       "sequence_id": "wFeojKlnICJsdiyacmrMST",
-      "images": 256,
+      "images": 258,
       "km": 2.078,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -45418,6 +45474,16 @@
       "end_captured_at": 1761681088000
     },
     {
+      "sequence_id": "kGETzvsAKl95JUpaR4ZxVd",
+      "images": 316,
+      "km": 0.987,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1792435971000,
+      "end_captured_at": 1792436148880
+    },
+    {
       "sequence_id": "pejFUbLq237MNxmnSZd4KW",
       "images": 124,
       "km": 0.987,
@@ -46336,6 +46402,16 @@
       "country": "Ghana",
       "start_captured_at": 1750682413879,
       "end_captured_at": 1750682554375
+    },
+    {
+      "sequence_id": "TFB1ekgaGyMqhY3bcEA6m4",
+      "images": 92,
+      "km": 0.913,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1793074541775,
+      "end_captured_at": 1793074633223
     },
     {
       "sequence_id": "xwMAOU02nRzqiHhWBPmrIu",
@@ -48459,7 +48535,7 @@
     },
     {
       "sequence_id": "mHAkqhi64KRlOuvM9Gtd0E",
-      "images": 93,
+      "images": 94,
       "km": 0.744,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -48939,7 +49015,7 @@
     },
     {
       "sequence_id": "krBqKy6sV2jCOeXoGZIlvQ",
-      "images": 490,
+      "images": 491,
       "km": 0.705,
       "username": "Jaspe_Gentille",
       "user_id": "919612484568113",
@@ -53588,6 +53664,16 @@
       "end_captured_at": 1765755177000
     },
     {
+      "sequence_id": "4KA9sxaOSjRIqlZNC1tiEQ",
+      "images": 194,
+      "km": 0.387,
+      "username": "Jaspe_Gentille",
+      "user_id": "919612484568113",
+      "country": "Rwanda",
+      "start_captured_at": 1793114361841,
+      "end_captured_at": 1793114653967
+    },
+    {
       "sequence_id": "VjwbdRpkFgAShyiKJQC5XW",
       "images": 37,
       "km": 0.387,
@@ -54288,6 +54374,16 @@
       "end_captured_at": 1776590632000
     },
     {
+      "sequence_id": "3rDSuUz14oHjn5cBLFN8YJ",
+      "images": 244,
+      "km": 0.356,
+      "username": "Jaspe_Gentille",
+      "user_id": "919612484568113",
+      "country": "Rwanda",
+      "start_captured_at": 1793114662966,
+      "end_captured_at": 1793114968368
+    },
+    {
       "sequence_id": "iv9nYkrINUbyzcs4ftRKZX",
       "images": 42,
       "km": 0.355,
@@ -54856,6 +54952,16 @@
       "country": "India",
       "start_captured_at": 1781514042935,
       "end_captured_at": 1781514075376
+    },
+    {
+      "sequence_id": "zTXiw1YAqbWpc6uj9Cr3DN",
+      "images": 100,
+      "km": 0.316,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1792429784000,
+      "end_captured_at": 1792429870766
     },
     {
       "sequence_id": "aSJsclDmkePIUYf4Qw1vCr",
@@ -56548,6 +56654,16 @@
       "end_captured_at": 1772274578050
     },
     {
+      "sequence_id": "H0rdRkcCsMALFImJi6ySW2",
+      "images": 68,
+      "km": 0.214,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1792436151000,
+      "end_captured_at": 1792436213000
+    },
+    {
       "sequence_id": "kcgLMt1uOsfmeIWA3pqhrj",
       "images": 14,
       "km": 0.213,
@@ -57026,6 +57142,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1788506141828,
       "end_captured_at": 1788506162988
+    },
+    {
+      "sequence_id": "NV7SJFWhQ9m6KPRuY2AgZ0",
+      "images": 106,
+      "km": 0.187,
+      "username": "Jaspe_Gentille",
+      "user_id": "919612484568113",
+      "country": "Rwanda",
+      "start_captured_at": 1793114103318,
+      "end_captured_at": 1793114288803
     },
     {
       "sequence_id": "ZMCoGVOluf3HYk45Nh0bcQ",
@@ -57846,6 +57972,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1781446935000,
       "end_captured_at": 1781446960000
+    },
+    {
+      "sequence_id": "bSv7DFE0gGw3AyOstlZzLu",
+      "images": 41,
+      "km": 0.153,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1793079912000,
+      "end_captured_at": 1793079991103
     },
     {
       "sequence_id": "Ea8tHLTZAXmUi3qxnJMRoz",
@@ -60108,6 +60244,16 @@
       "end_captured_at": 1784558386723
     },
     {
+      "sequence_id": "FvlIiECeSQMm9r47BYZoVX",
+      "images": 14,
+      "km": 0.087,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793120753486,
+      "end_captured_at": 1793120854797
+    },
+    {
       "sequence_id": "XgYWhRarNtd1mJ3VxZl7Q4",
       "images": 26,
       "km": 0.087,
@@ -62316,6 +62462,16 @@
       "country": "India",
       "start_captured_at": 1771923011640,
       "end_captured_at": 1771923018276
+    },
+    {
+      "sequence_id": "cLOIoypwFsYT8CrSJkf7bm",
+      "images": 3,
+      "km": 0.043,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793096663958,
+      "end_captured_at": 1793096683728
     },
     {
       "sequence_id": "hl1DH7kV9CgLNXz5cixJPG",
@@ -66506,6 +66662,16 @@
       "country": "Ghana",
       "start_captured_at": 1793024021808,
       "end_captured_at": 1793024024772
+    },
+    {
+      "sequence_id": "4LIzO67j1KipcDlvsRrxtG",
+      "images": 2,
+      "km": 0.007,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793121077734,
+      "end_captured_at": 1793121078880
     },
     {
       "sequence_id": "0ruGI9pSMtLjgHzOdnlTs7",
@@ -74846,6 +75012,336 @@
       "country": "Ghana",
       "start_captured_at": 1793023963179,
       "end_captured_at": 1793023963179
+    },
+    {
+      "sequence_id": "rK5GTcMxtPZW6Cl2eHLaEk",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Togo",
+      "start_captured_at": 1793013620147,
+      "end_captured_at": 1793013620147
+    },
+    {
+      "sequence_id": "z7jYwoeO5DHl3saWFAP9CT",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793016885455,
+      "end_captured_at": 1793016885455
+    },
+    {
+      "sequence_id": "l8VbuzMX6AgTLGtpcsjWQv",
+      "images": 3,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793016637105,
+      "end_captured_at": 1793016637996
+    },
+    {
+      "sequence_id": "P2mdBknRv5XZJSKbMijYlD",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793032509010,
+      "end_captured_at": 1793032509010
+    },
+    {
+      "sequence_id": "w1aehkCK9uzb7QN0VpqOTx",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793093414107,
+      "end_captured_at": 1793093414107
+    },
+    {
+      "sequence_id": "oHDntfX6TxLCkv3zYwS287",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793093529485,
+      "end_captured_at": 1793093529485
+    },
+    {
+      "sequence_id": "Eced41HMZl08h3DvFp5PaR",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793092173184,
+      "end_captured_at": 1793092173184
+    },
+    {
+      "sequence_id": "rd5JkfElxgmTbAXMvSDGiq",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793096808639,
+      "end_captured_at": 1793096808639
+    },
+    {
+      "sequence_id": "6lfQeZVN51FM0UgBTExakj",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793104396266,
+      "end_captured_at": 1793104396266
+    },
+    {
+      "sequence_id": "U8VrXMvYShq7sbiQLmAKFf",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099876099,
+      "end_captured_at": 1793099876099
+    },
+    {
+      "sequence_id": "y9GPFbhsikJqvOrfnaIp5j",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793098714183,
+      "end_captured_at": 1793098714183
+    },
+    {
+      "sequence_id": "4InlxSH2fsVRkOzXq3ubPG",
+      "images": 4,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793104386115,
+      "end_captured_at": 1793104386324
+    },
+    {
+      "sequence_id": "NIbXpw6VmfFMa0He1OcQTZ",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793101101330,
+      "end_captured_at": 1793101101330
+    },
+    {
+      "sequence_id": "jNl2GB3sbgmuz6hkOTX7SA",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793100381175,
+      "end_captured_at": 1793100381499
+    },
+    {
+      "sequence_id": "Or1DvIQY0BpPNjydWnVA4u",
+      "images": 4,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793101101037,
+      "end_captured_at": 1793101101824
+    },
+    {
+      "sequence_id": "U7p4jFMrQEnueABYhmdlb5",
+      "images": 4,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099461228,
+      "end_captured_at": 1793099461905
+    },
+    {
+      "sequence_id": "8ObpmvkfFAel2tq354ByTV",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793098778603,
+      "end_captured_at": 1793098778882
+    },
+    {
+      "sequence_id": "8diOnflevTXqczZ3uwYoGy",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793100116144,
+      "end_captured_at": 1793100116448
+    },
+    {
+      "sequence_id": "l4bvRUToYQjn3WXKzpD9Zx",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793101101456,
+      "end_captured_at": 1793101101456
+    },
+    {
+      "sequence_id": "HNWuKwAJsUX1eQCpTGcY9r",
+      "images": 5,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099236213,
+      "end_captured_at": 1793099236959
+    },
+    {
+      "sequence_id": "ZJ1QhOrUdoBjwFxtvD3aLe",
+      "images": 3,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793097073335,
+      "end_captured_at": 1793097073893
+    },
+    {
+      "sequence_id": "Bqw9XQ3jy4bfzgOUoHE6G7",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793095925420,
+      "end_captured_at": 1793095925879
+    },
+    {
+      "sequence_id": "8LZbA4n9YEkRvwa3goWFjP",
+      "images": 8,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099876159,
+      "end_captured_at": 1793099876953
+    },
+    {
+      "sequence_id": "WY6Q8azld3goxVKCTbFy4B",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793097126587,
+      "end_captured_at": 1793097126587
+    },
+    {
+      "sequence_id": "dAVaE9qWbh61m3H8gNzMLZ",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793095648084,
+      "end_captured_at": 1793095648929
+    },
+    {
+      "sequence_id": "itzPD65qMFpKwh1beksYHW",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099395109,
+      "end_captured_at": 1793099395214
+    },
+    {
+      "sequence_id": "3edhopxaHXwWjL6kNYqDsQ",
+      "images": 2,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793098856412,
+      "end_captured_at": 1793098856647
+    },
+    {
+      "sequence_id": "uCoqajysnKmcD6wdV9MzSb",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793099461193,
+      "end_captured_at": 1793099461193
+    },
+    {
+      "sequence_id": "ql8mhiQXD64cuHRfP5ECNJ",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793102016835,
+      "end_captured_at": 1793102016835
+    },
+    {
+      "sequence_id": "TR2EgdPft4Sn5W8vQFMDwX",
+      "images": 3,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793100116312,
+      "end_captured_at": 1793100116858
+    },
+    {
+      "sequence_id": "0pvKgtZUxV32esncG5SYM7",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793101101010,
+      "end_captured_at": 1793101101010
+    },
+    {
+      "sequence_id": "yISwnj8YxJeBHcfqi67uUT",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793098935074,
+      "end_captured_at": 1793098935074
+    },
+    {
+      "sequence_id": "1aq4SB8cfl3NKWx6kJMoT5",
+      "images": 1,
+      "km": 0.0,
+      "username": "cmenttor",
+      "user_id": "108933258580999",
+      "country": "Ghana",
+      "start_captured_at": 1793120855148,
+      "end_captured_at": 1793120855148
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-02T05:46:29.861574+00:00",
+  "generated_at": "2026-11-03T06:28:00.526191+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,19 +27,19 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 2938990,
-  "total_sequences": 7390,
+  "total_images": 2939377,
+  "total_sequences": 7391,
   "total_users": 55,
   "total_countries": 17,
-  "total_km_covered": 22726.808,
+  "total_km_covered": 22730.73,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 1257403,
-      "sequences": 3652,
+      "images": 1257790,
+      "sequences": 3653,
       "users": 1,
-      "km": 11970.29
+      "km": 11974.212
     },
     {
       "country": "T\u00fcrkiye",
@@ -158,8 +158,8 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 1278688,
-      "sequences": 3707,
+      "images": 1279075,
+      "sequences": 3708,
       "countries": [
         "China",
         "Hong Kong",
@@ -167,7 +167,7 @@
         "Macao",
         "Taiwan, Province of China"
       ],
-      "km": 12144.457
+      "km": 12148.378
     },
     {
       "username": "unen",
@@ -2402,9 +2402,15 @@
     },
     {
       "date": "2026-11-01",
-      "images": 1940,
+      "images": 1942,
       "sequences": 3,
       "km": 41.168
+    },
+    {
+      "date": "2026-11-02",
+      "images": 385,
+      "sequences": 1,
+      "km": 3.921
     }
   ],
   "by_sequence": [
@@ -3870,7 +3876,7 @@
     },
     {
       "sequence_id": "TiNtwDuaJEjbqnXUZG1Hrf",
-      "images": 872,
+      "images": 874,
       "km": 16.279,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -20377,6 +20383,16 @@
       "country": "India",
       "start_captured_at": 1763274675720,
       "end_captured_at": 1763275116900
+    },
+    {
+      "sequence_id": "wAt3bjBVcGrXYSdNQ4EL5v",
+      "images": 385,
+      "km": 3.921,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1793606340070,
+      "end_captured_at": 1793606988979
     },
     {
       "sequence_id": "VR08H5MrIP1iLXWp7xYvak",

@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-09T06:08:01.740409+00:00",
+  "generated_at": "2026-11-10T07:14:45.891919+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,11 +27,11 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 2978560,
-  "total_sequences": 7526,
+  "total_images": 2984410,
+  "total_sequences": 7542,
   "total_users": 55,
   "total_countries": 17,
-  "total_km_covered": 22999.043,
+  "total_km_covered": 23025.373,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
@@ -43,28 +43,28 @@
     },
     {
       "country": "T\u00fcrkiye",
-      "images": 1137995,
+      "images": 1137998,
       "sequences": 1674,
       "users": 2,
       "km": 4349.486
     },
     {
       "country": "India",
-      "images": 353807,
-      "sequences": 932,
+      "images": 358616,
+      "sequences": 945,
       "users": 42,
-      "km": 5130.943
+      "km": 5146.277
     },
     {
       "country": "Rwanda",
-      "images": 109354,
-      "sequences": 109,
+      "images": 110390,
+      "sequences": 112,
       "users": 4,
-      "km": 461.142
+      "km": 472.138
     },
     {
       "country": "Ghana",
-      "images": 39156,
+      "images": 39158,
       "sequences": 867,
       "users": 1,
       "km": 558.97
@@ -183,7 +183,7 @@
     {
       "username": "burakonder",
       "user_id": "107778611458272",
-      "images": 497032,
+      "images": 497035,
       "sequences": 776,
       "countries": [
         "T\u00fcrkiye"
@@ -233,17 +233,17 @@
     {
       "username": "kingvik",
       "user_id": "103644195212255",
-      "images": 46028,
-      "sequences": 52,
+      "images": 47064,
+      "sequences": 55,
       "countries": [
         "Rwanda"
       ],
-      "km": 259.019
+      "km": 270.015
     },
     {
       "username": "cmenttor",
       "user_id": "108933258580999",
-      "images": 41789,
+      "images": 41791,
       "sequences": 942,
       "countries": [
         "Ghana",
@@ -283,6 +283,16 @@
       "km": 128.912
     },
     {
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "images": 10375,
+      "sequences": 32,
+      "countries": [
+        "India"
+      ],
+      "km": 33.245
+    },
+    {
       "username": "Milind_Gaikwad",
       "user_id": "1458609044902090",
       "images": 8819,
@@ -311,16 +321,6 @@
         "India"
       ],
       "km": 65.485
-    },
-    {
-      "username": "Amol_Pawar",
-      "user_id": "2045782772719776",
-      "images": 5566,
-      "sequences": 19,
-      "countries": [
-        "India"
-      ],
-      "km": 17.911
     },
     {
       "username": "patilni",
@@ -2414,9 +2414,9 @@
     },
     {
       "date": "2026-11-03",
-      "images": 4772,
-      "sequences": 14,
-      "km": 15.123
+      "images": 9581,
+      "sequences": 27,
+      "km": 30.457
     },
     {
       "date": "2026-11-04",
@@ -2438,13 +2438,13 @@
     },
     {
       "date": "2026-11-07",
-      "images": 3077,
-      "sequences": 11,
-      "km": 33.689
+      "images": 4113,
+      "sequences": 14,
+      "km": 44.685
     },
     {
       "date": "2026-11-08",
-      "images": 5626,
+      "images": 5631,
       "sequences": 28,
       "km": 20.864
     }
@@ -12581,6 +12581,16 @@
       "end_captured_at": 1778625697000
     },
     {
+      "sequence_id": "pAKZDXQykqc7gPuxN3Y6Jj",
+      "images": 709,
+      "km": 7.627,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1794060792099,
+      "end_captured_at": 1794061543427
+    },
+    {
       "sequence_id": "NeWtTaKrS43Qqg79ORnY8h",
       "images": 945,
       "km": 7.615,
@@ -15692,7 +15702,7 @@
     },
     {
       "sequence_id": "BgrJIPqGcTMuOSEFt3UveL",
-      "images": 707,
+      "images": 709,
       "km": 5.442,
       "username": "kingvik",
       "user_id": "103644195212255",
@@ -20982,7 +20992,7 @@
     },
     {
       "sequence_id": "xGIb18hdZCDgmlpYTFz2sS",
-      "images": 602,
+      "images": 604,
       "km": 3.86,
       "username": "cmenttor",
       "user_id": "108933258580999",
@@ -29761,6 +29771,16 @@
       "end_captured_at": 1793593166638
     },
     {
+      "sequence_id": "OAwF3pJSrj0B6DiGgNmcHL",
+      "images": 287,
+      "km": 3.033,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1794064152851,
+      "end_captured_at": 1794064472467
+    },
+    {
       "sequence_id": "QRTc36yWKp2PZfaklxL0Jd",
       "images": 849,
       "km": 3.033,
@@ -32392,7 +32412,7 @@
     },
     {
       "sequence_id": "wmgnQXA2MsItxoSbeTUEa0",
-      "images": 811,
+      "images": 812,
       "km": 2.647,
       "username": "burakonder",
       "user_id": "107778611458272",
@@ -34722,7 +34742,7 @@
     },
     {
       "sequence_id": "KVRCSydf3tqkj8x1UJH2XO",
-      "images": 724,
+      "images": 725,
       "km": 2.337,
       "username": "burakonder",
       "user_id": "107778611458272",
@@ -34792,7 +34812,7 @@
     },
     {
       "sequence_id": "A4ufSyNOwdWx0QvD9phmLG",
-      "images": 719,
+      "images": 720,
       "km": 2.324,
       "username": "burakonder",
       "user_id": "107778611458272",
@@ -37922,7 +37942,7 @@
     },
     {
       "sequence_id": "xPLeAtSI3bhcrzQwK61EX5",
-      "images": 569,
+      "images": 574,
       "km": 1.857,
       "username": "Amol_Pawar",
       "user_id": "2045782772719776",
@@ -38411,6 +38431,16 @@
       "end_captured_at": 1780787872846
     },
     {
+      "sequence_id": "SqUvyWpQde8Gfa5AM2oYFZ",
+      "images": 551,
+      "km": 1.777,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793741455000,
+      "end_captured_at": 1793741633966
+    },
+    {
       "sequence_id": "hjb5eVPxquzpAXWYBvMN0w",
       "images": 467,
       "km": 1.777,
@@ -38509,6 +38539,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1787329507440,
       "end_captured_at": 1787329641587
+    },
+    {
+      "sequence_id": "kBAl18HZ2mQ5XxstiK6I0C",
+      "images": 546,
+      "km": 1.762,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793740914000,
+      "end_captured_at": 1793741093833
     },
     {
       "sequence_id": "W4rLiTZcbFJD6Ru3gfMHOK",
@@ -39069,6 +39109,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765273407013,
       "end_captured_at": 1765273526866
+    },
+    {
+      "sequence_id": "BdqAgenjWklDUrVYJ5QfO3",
+      "images": 520,
+      "km": 1.688,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793740047000,
+      "end_captured_at": 1793740225933
     },
     {
       "sequence_id": "5YT2SHMeZkV4EPwaJI0KGW",
@@ -39721,6 +39771,16 @@
       "end_captured_at": 1779941517500
     },
     {
+      "sequence_id": "4DZirEj9pghC7HQavfd5TI",
+      "images": 504,
+      "km": 1.63,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793741275000,
+      "end_captured_at": 1793741452933
+    },
+    {
       "sequence_id": "t3Cdvy8N5RMQPcYO9WeUlH",
       "images": 172,
       "km": 1.626,
@@ -39889,6 +39949,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1780821857400,
       "end_captured_at": 1780822006500
+    },
+    {
+      "sequence_id": "t8nZINYkwCHlJGheOgPQ9p",
+      "images": 501,
+      "km": 1.607,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793741094000,
+      "end_captured_at": 1793741272966
     },
     {
       "sequence_id": "PedM2RCwhHcQyLFrSoqE1v",
@@ -42191,6 +42261,16 @@
       "end_captured_at": 1771297465698
     },
     {
+      "sequence_id": "KtYOPkHRlms1nvzaxQ032r",
+      "images": 439,
+      "km": 1.383,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793740406000,
+      "end_captured_at": 1793740584700
+    },
+    {
       "sequence_id": "lYV36FwTiQEbdOJNHDZ8jg",
       "images": 425,
       "km": 1.383,
@@ -42902,7 +42982,7 @@
     },
     {
       "sequence_id": "ZV4mzFJBLRCQGg6bjS93ip",
-      "images": 406,
+      "images": 407,
       "km": 1.304,
       "username": "Amol_Pawar",
       "user_id": "2045782772719776",
@@ -42932,7 +43012,7 @@
     },
     {
       "sequence_id": "GAosy6LeDH9k5dbl1NptXq",
-      "images": 408,
+      "images": 411,
       "km": 1.296,
       "username": "Amol_Pawar",
       "user_id": "2045782772719776",
@@ -44941,6 +45021,16 @@
       "end_captured_at": 1756680958000
     },
     {
+      "sequence_id": "CPEUNihHkWdo69nG1Mu7AT",
+      "images": 351,
+      "km": 1.133,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793739525000,
+      "end_captured_at": 1793739685933
+    },
+    {
       "sequence_id": "8cJY93SxrEdljMIgVUt5Xf",
       "images": 135,
       "km": 1.13,
@@ -44969,6 +45059,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1779566779000,
       "end_captured_at": 1779566907000
+    },
+    {
+      "sequence_id": "RVDPO9ml5edjCBSnq24JyG",
+      "images": 356,
+      "km": 1.127,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793739686000,
+      "end_captured_at": 1793739865900
     },
     {
       "sequence_id": "2q7npHLfESvTQXYlCg1kAt",
@@ -46581,6 +46681,16 @@
       "end_captured_at": 1778557835000
     },
     {
+      "sequence_id": "1j2zROHJhXKvUkCILoNF5f",
+      "images": 311,
+      "km": 0.983,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793739866000,
+      "end_captured_at": 1793740030133
+    },
+    {
       "sequence_id": "vY1hB652D73QiXeuaKlfbt",
       "images": 83,
       "km": 0.981,
@@ -47961,6 +48071,16 @@
       "end_captured_at": 1757814627000
     },
     {
+      "sequence_id": "UPRz29d1eDOKClZs0SgQxW",
+      "images": 278,
+      "km": 0.878,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793740587000,
+      "end_captured_at": 1793740764633
+    },
+    {
       "sequence_id": "B8bGk147p5TDr6VSfEtKaL",
       "images": 74,
       "km": 0.875,
@@ -48842,7 +48962,7 @@
     },
     {
       "sequence_id": "9TrIbOd2Nn0McWR7SKD8s5",
-      "images": 258,
+      "images": 259,
       "km": 0.809,
       "username": "Amol_Pawar",
       "user_id": "2045782772719776",
@@ -50662,7 +50782,7 @@
     },
     {
       "sequence_id": "Cbnox764yTOstDAfezrEJF",
-      "images": 213,
+      "images": 214,
       "km": 0.664,
       "username": "Amol_Pawar",
       "user_id": "2045782772719776",
@@ -50829,6 +50949,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1787351090286,
       "end_captured_at": 1787351175656
+    },
+    {
+      "sequence_id": "H40OBYV15nbufUAZCPscFJ",
+      "images": 210,
+      "km": 0.657,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793741634000,
+      "end_captured_at": 1793741786766
     },
     {
       "sequence_id": "0QrEHxlGCgZoacpPtWkuvY",
@@ -55351,6 +55481,16 @@
       "end_captured_at": 1747459146981
     },
     {
+      "sequence_id": "TJSnHC5oWky0cXrida9Euf",
+      "images": 121,
+      "km": 0.368,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793705648000,
+      "end_captured_at": 1793705826566
+    },
+    {
       "sequence_id": "Nh6jLtqKyFBuvH59V0p8w1",
       "images": 66,
       "km": 0.368,
@@ -55891,6 +56031,16 @@
       "end_captured_at": 1771928402518
     },
     {
+      "sequence_id": "W0Pn7Y9r4lxJdzDfVKHhOC",
+      "images": 110,
+      "km": 0.341,
+      "username": "Amol_Pawar",
+      "user_id": "2045782772719776",
+      "country": "India",
+      "start_captured_at": 1793740226000,
+      "end_captured_at": 1793740405766
+    },
+    {
       "sequence_id": "kHqlMctTJZPD7eUVFL3mux",
       "images": 43,
       "km": 0.34,
@@ -55919,6 +56069,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1779635233000,
       "end_captured_at": 1779635278000
+    },
+    {
+      "sequence_id": "ICpvwSstBub4omU0Rg1W8f",
+      "images": 38,
+      "km": 0.336,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1794064496671,
+      "end_captured_at": 1794064546228
     },
     {
       "sequence_id": "biQo89gZ40DStl1PeCp3wJ",

@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-13T06:30:47.965670+00:00",
+  "generated_at": "2026-11-14T06:12:59.246773+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,19 +27,19 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 2992437,
-  "total_sequences": 7562,
+  "total_images": 2999227,
+  "total_sequences": 7573,
   "total_users": 55,
   "total_countries": 17,
-  "total_km_covered": 23106.211,
+  "total_km_covered": 23157.412,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 1287633,
-      "sequences": 3735,
+      "images": 1292026,
+      "sequences": 3741,
       "users": 1,
-      "km": 12224.118
+      "km": 12260.738
     },
     {
       "country": "T\u00fcrkiye",
@@ -50,10 +50,10 @@
     },
     {
       "country": "India",
-      "images": 359842,
-      "sequences": 949,
+      "images": 360507,
+      "sequences": 951,
       "users": 42,
-      "km": 5172.267
+      "km": 5178.497
     },
     {
       "country": "Rwanda",
@@ -85,10 +85,10 @@
     },
     {
       "country": "Albania",
-      "images": 6570,
-      "sequences": 8,
+      "images": 8302,
+      "sequences": 11,
       "users": 1,
-      "km": 32.605
+      "km": 40.955
     },
     {
       "country": "China",
@@ -158,8 +158,8 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 1308918,
-      "sequences": 3790,
+      "images": 1313311,
+      "sequences": 3796,
       "countries": [
         "China",
         "Hong Kong",
@@ -167,7 +167,7 @@
         "Macao",
         "Taiwan, Province of China"
       ],
-      "km": 12398.285
+      "km": 12434.905
     },
     {
       "username": "unen",
@@ -275,12 +275,12 @@
     {
       "username": "MangeshK955",
       "user_id": "1298352351455135",
-      "images": 11711,
-      "sequences": 26,
+      "images": 12376,
+      "sequences": 28,
       "countries": [
         "India"
       ],
-      "km": 154.902
+      "km": 161.131
     },
     {
       "username": "Amol_Pawar",
@@ -305,12 +305,12 @@
     {
       "username": "Irdi",
       "user_id": "103083766026977",
-      "images": 6570,
-      "sequences": 8,
+      "images": 8302,
+      "sequences": 11,
       "countries": [
         "Albania"
       ],
-      "km": 32.605
+      "km": 40.955
     },
     {
       "username": "kiranahire",
@@ -2450,15 +2450,21 @@
     },
     {
       "date": "2026-11-11",
-      "images": 1184,
+      "images": 1185,
       "sequences": 4,
       "km": 25.99
     },
     {
       "date": "2026-11-12",
-      "images": 6798,
-      "sequences": 16,
-      "km": 54.848
+      "images": 7816,
+      "sequences": 17,
+      "km": 64.268
+    },
+    {
+      "date": "2026-11-13",
+      "images": 5771,
+      "sequences": 10,
+      "km": 41.781
     }
   ],
   "by_sequence": [
@@ -5034,7 +5040,7 @@
     },
     {
       "sequence_id": "6K2QIqYnZ0tra1JTEBkvOG",
-      "images": 579,
+      "images": 580,
       "km": 12.78,
       "username": "MangeshK955",
       "user_id": "1298352351455135",
@@ -6631,6 +6637,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1787386185261,
       "end_captured_at": 1787387536891
+    },
+    {
+      "sequence_id": "auzVZI5lMiWO0UDL86oP72",
+      "images": 997,
+      "km": 9.419,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794458163697,
+      "end_captured_at": 1794460231933
     },
     {
       "sequence_id": "OXtNvIESbm3cDiHe9lT7Go",
@@ -11533,6 +11549,16 @@
       "end_captured_at": 1768075171250
     },
     {
+      "sequence_id": "vmaqNkP7Wz5ZK1eYLbdBVp",
+      "images": 994,
+      "km": 8.016,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794545141000,
+      "end_captured_at": 1794545473448
+    },
+    {
       "sequence_id": "3Ql4XfbH1MCrgJ9I8dw0xY",
       "images": 998,
       "km": 8.016,
@@ -11913,6 +11939,16 @@
       "end_captured_at": 1780781674239
     },
     {
+      "sequence_id": "9KgGbYyCtP754q8siA2lDw",
+      "images": 990,
+      "km": 8.007,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794545473746,
+      "end_captured_at": 1794545887872
+    },
+    {
       "sequence_id": "D8HlV7uY4IGF5S3gKeQU9B",
       "images": 999,
       "km": 8.006,
@@ -12064,7 +12100,7 @@
     },
     {
       "sequence_id": "FKWU3V4kwJBmangoYj71AE",
-      "images": 989,
+      "images": 993,
       "km": 7.997,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -14914,7 +14950,7 @@
     },
     {
       "sequence_id": "pgyPKs2MQrUi3L0ZDNtEo4",
-      "images": 741,
+      "images": 743,
       "km": 5.98,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -15051,6 +15087,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1787247648000,
       "end_captured_at": 1787248522636
+    },
+    {
+      "sequence_id": "L9nEVpUJo4gKPFjyfmDwZi",
+      "images": 731,
+      "km": 5.884,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794546102679,
+      "end_captured_at": 1794546496918
     },
     {
       "sequence_id": "2MtT5yF9Sd6wEuLvJIciWl",
@@ -16051,6 +16097,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1757105908500,
       "end_captured_at": 1757106138666
+    },
+    {
+      "sequence_id": "BazuhFwtEUDdYC2Ols1r4i",
+      "images": 555,
+      "km": 5.295,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1794549061054,
+      "end_captured_at": 1794549668180
     },
     {
       "sequence_id": "4dtfMUJOuDZcNF8hXC6oSp",
@@ -17924,7 +17980,7 @@
     },
     {
       "sequence_id": "htGg84ZwzUbqEyN1nAed5p",
-      "images": 568,
+      "images": 570,
       "km": 4.574,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -19174,7 +19230,7 @@
     },
     {
       "sequence_id": "Znqw6JegotpIHlmN8xkL4z",
-      "images": 529,
+      "images": 531,
       "km": 4.269,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -19264,7 +19320,7 @@
     },
     {
       "sequence_id": "5I7ToVnKHPZAeyOGciDltU",
-      "images": 523,
+      "images": 525,
       "km": 4.251,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -19291,6 +19347,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778461230500,
       "end_captured_at": 1778461459000
+    },
+    {
+      "sequence_id": "I1be3ZhLtY04g9UjiT6yCd",
+      "images": 893,
+      "km": 4.247,
+      "username": "Irdi",
+      "user_id": "103083766026977",
+      "country": "Albania",
+      "start_captured_at": 1794564234524,
+      "end_captured_at": 1794564715885
     },
     {
       "sequence_id": "ZzfVWDg4H9PkmY5u1RJFNL",
@@ -19944,7 +20010,7 @@
     },
     {
       "sequence_id": "aryMqukNoUpDndf37VGJXs",
-      "images": 500,
+      "images": 503,
       "km": 4.096,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -21534,7 +21600,7 @@
     },
     {
       "sequence_id": "ckqasP1SpmiyghFZXBKWrt",
-      "images": 467,
+      "images": 469,
       "km": 3.77,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -26664,7 +26730,7 @@
     },
     {
       "sequence_id": "gFNCKmExRHodZOferq4DA9",
-      "images": 418,
+      "images": 420,
       "km": 3.365,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -27371,6 +27437,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1762557406000,
       "end_captured_at": 1762557755500
+    },
+    {
+      "sequence_id": "PvlbOySpXLQZaqJ81HrMIR",
+      "images": 670,
+      "km": 3.321,
+      "username": "Irdi",
+      "user_id": "103083766026977",
+      "country": "Albania",
+      "start_captured_at": 1794563808110,
+      "end_captured_at": 1794564130409
     },
     {
       "sequence_id": "G3gFO4u1bN2pHiU5IM6E0T",
@@ -28991,6 +29067,16 @@
       "country": "Albania",
       "start_captured_at": 1783152153565,
       "end_captured_at": 1783152580914
+    },
+    {
+      "sequence_id": "VgsRCcdLUD9IaGYMpbiXKZ",
+      "images": 394,
+      "km": 3.168,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794546497304,
+      "end_captured_at": 1794546640639
     },
     {
       "sequence_id": "v1DhzrgZx5Pq9fcsFji8eW",
@@ -33164,7 +33250,7 @@
     },
     {
       "sequence_id": "wgHYPUDIQ5G4iobyJOmfL0",
-      "images": 319,
+      "images": 320,
       "km": 2.572,
       "username": "hcyen",
       "user_id": "101914818722206",
@@ -36301,6 +36387,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1760729660333,
       "end_captured_at": 1760729804000
+    },
+    {
+      "sequence_id": "f29e85m3xTSsaB6NnowRJM",
+      "images": 266,
+      "km": 2.126,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1794545888308,
+      "end_captured_at": 1794546041000
     },
     {
       "sequence_id": "TiaN8IKmxRnhS4GYvD9yPz",
@@ -47443,6 +47539,16 @@
       "end_captured_at": 1765845179666
     },
     {
+      "sequence_id": "2UqcPzNmd5CYfTZD130KOJ",
+      "images": 109,
+      "km": 0.934,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1794558511161,
+      "end_captured_at": 1794558629155
+    },
+    {
       "sequence_id": "eJDwOLkphxUa1jS6M3Bt0y",
       "images": 41,
       "km": 0.933,
@@ -49521,6 +49627,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1764447094000,
       "end_captured_at": 1764447256000
+    },
+    {
+      "sequence_id": "PqLRJcuyrMzh79wt4Z0Gv1",
+      "images": 169,
+      "km": 0.782,
+      "username": "Irdi",
+      "user_id": "103083766026977",
+      "country": "Albania",
+      "start_captured_at": 1794564716930,
+      "end_captured_at": 1794564823025
     },
     {
       "sequence_id": "sX4fR5FAdpgYPUOHTWNiDx",
@@ -62624,7 +62740,7 @@
     },
     {
       "sequence_id": "U5pqN3Ly8itRWco9wObBHZ",
-      "images": 9,
+      "images": 10,
       "km": 0.072,
       "username": "hcyen",
       "user_id": "101914818722206",

@@ -13,6 +13,12 @@
       "fetched": 266325,
       "new_records": 5595,
       "total_after": 266325
+    },
+    {
+      "run_at": "2026-11-21T18:28:12.648299+00:00",
+      "fetched": 266325,
+      "new_records": 0,
+      "total_after": 266325
     }
   ],
   "2026-09": [

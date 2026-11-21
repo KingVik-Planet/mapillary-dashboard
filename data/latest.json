@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-20T07:31:13.457699+00:00",
+  "generated_at": "2026-11-21T07:24:32.029020+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,19 +27,19 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 3110104,
-  "total_sequences": 7801,
+  "total_images": 3112520,
+  "total_sequences": 7812,
   "total_users": 56,
   "total_countries": 17,
-  "total_km_covered": 24494.959,
+  "total_km_covered": 24535.116,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
       "country": "Taiwan, Province of China",
-      "images": 1382811,
-      "sequences": 3912,
+      "images": 1383074,
+      "sequences": 3913,
       "users": 1,
-      "km": 13359.132
+      "km": 13361.147
     },
     {
       "country": "T\u00fcrkiye",
@@ -50,10 +50,10 @@
     },
     {
       "country": "India",
-      "images": 377073,
-      "sequences": 997,
+      "images": 379226,
+      "sequences": 1007,
       "users": 43,
-      "km": 5402.112
+      "km": 5440.254
     },
     {
       "country": "Rwanda",
@@ -158,8 +158,8 @@
     {
       "username": "hcyen",
       "user_id": "101914818722206",
-      "images": 1404096,
-      "sequences": 3967,
+      "images": 1404359,
+      "sequences": 3968,
       "countries": [
         "China",
         "Hong Kong",
@@ -167,7 +167,7 @@
         "Macao",
         "Taiwan, Province of China"
       ],
-      "km": 13533.299
+      "km": 13535.314
     },
     {
       "username": "unen",
@@ -264,12 +264,12 @@
     {
       "username": "MangeshK955",
       "user_id": "1298352351455135",
-      "images": 28816,
-      "sequences": 67,
+      "images": 30969,
+      "sequences": 77,
       "countries": [
         "India"
       ],
-      "km": 384.415
+      "km": 422.557
     },
     {
       "username": "CasGroenigen",
@@ -2502,15 +2502,27 @@
     },
     {
       "date": "2026-11-18",
-      "images": 654,
+      "images": 655,
       "sequences": 4,
       "km": 3.459
     },
     {
       "date": "2026-11-19",
-      "images": 1929,
-      "sequences": 6,
-      "km": 24.751
+      "images": 2798,
+      "sequences": 9,
+      "km": 43.001
+    },
+    {
+      "date": "2026-11-20",
+      "images": 1544,
+      "sequences": 8,
+      "km": 21.893
+    },
+    {
+      "date": "2026-11-21",
+      "images": 2,
+      "sequences": 1,
+      "km": 0.014
     }
   ],
   "by_sequence": [
@@ -5896,7 +5908,7 @@
     },
     {
       "sequence_id": "sl04hjJvEFmdOV9Q8SG6X1",
-      "images": 999,
+      "images": 1000,
       "km": 11.796,
       "username": "MangeshK955",
       "user_id": "1298352351455135",
@@ -6873,6 +6885,16 @@
       "country": "Rwanda",
       "start_captured_at": 1786204501000,
       "end_captured_at": 1786205269476
+    },
+    {
+      "sequence_id": "wORJcjH1IbCszKhD5oBFev",
+      "images": 417,
+      "km": 9.795,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795074105326,
+      "end_captured_at": 1795074643977
     },
     {
       "sequence_id": "TnrZtb2WqVLUMYXRzSeP8h",
@@ -15375,6 +15397,16 @@
       "end_captured_at": 1761428000500
     },
     {
+      "sequence_id": "Ec9dxrU2mBHLbpGJKkhMZF",
+      "images": 344,
+      "km": 6.36,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795075576826,
+      "end_captured_at": 1795076025082
+    },
+    {
       "sequence_id": "e8h6JdomMScvV5fWZxNLTt",
       "images": 796,
       "km": 6.358,
@@ -17195,6 +17227,16 @@
       "end_captured_at": 1778789886000
     },
     {
+      "sequence_id": "FVZanGerhPTx0C5JB4kl6Q",
+      "images": 335,
+      "km": 5.281,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795153332558,
+      "end_captured_at": 1795153752965
+    },
+    {
       "sequence_id": "Ylsczyo8pd2SLaCbmeIgU7",
       "images": 657,
       "km": 5.28,
@@ -18833,6 +18875,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1782052498000,
       "end_captured_at": 1782052698400
+    },
+    {
+      "sequence_id": "VjpeSrJWmBz48KE13ksu9t",
+      "images": 205,
+      "km": 4.677,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795152614773,
+      "end_captured_at": 1795152876942
     },
     {
       "sequence_id": "iNFcBGHZPxL5AtfIneR3W1",
@@ -30335,6 +30387,16 @@
       "end_captured_at": 1774322625032
     },
     {
+      "sequence_id": "TfK4JDkHrvBIVyp02FbMRj",
+      "images": 314,
+      "km": 3.172,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795149174151,
+      "end_captured_at": 1795149533018
+    },
+    {
       "sequence_id": "k0Q6tFudoe7SaGvRpg5hUc",
       "images": 115,
       "km": 3.171,
@@ -32265,6 +32327,16 @@
       "end_captured_at": 1761463845459
     },
     {
+      "sequence_id": "mjdRUufrIJkzWwL9CPODs2",
+      "images": 216,
+      "km": 2.913,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795151160153,
+      "end_captured_at": 1795151409962
+    },
+    {
       "sequence_id": "paTqujdL1f43lRQe2o9cZD",
       "images": 181,
       "km": 2.913,
@@ -33535,6 +33607,16 @@
       "end_captured_at": 1739355950967
     },
     {
+      "sequence_id": "e4nP9fcQaJFKWbI3oUrtEG",
+      "images": 168,
+      "km": 2.72,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795149688176,
+      "end_captured_at": 1795149874255
+    },
+    {
       "sequence_id": "FcXlaOTBjCiqHAuKM123Wh",
       "images": 339,
       "km": 2.715,
@@ -33606,7 +33688,7 @@
     },
     {
       "sequence_id": "Maf5U7Zelx4nKLYiQOgkzS",
-      "images": 320,
+      "images": 321,
       "km": 2.707,
       "username": "MangeshK955",
       "user_id": "1298352351455135",
@@ -38085,6 +38167,16 @@
       "end_captured_at": 1793606542969
     },
     {
+      "sequence_id": "HsrcipNeGB1Lq4TMIaYE9P",
+      "images": 105,
+      "km": 2.095,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795077114485,
+      "end_captured_at": 1795077269000
+    },
+    {
       "sequence_id": "c63rs4WuhoPS7dfN2pnjtU",
       "images": 514,
       "km": 2.095,
@@ -38603,6 +38695,16 @@
       "country": "T\u00fcrkiye",
       "start_captured_at": 1765282916013,
       "end_captured_at": 1765283035933
+    },
+    {
+      "sequence_id": "WmeuU2gZz0D9rENkqsYHf8",
+      "images": 263,
+      "km": 2.015,
+      "username": "hcyen",
+      "user_id": "101914818722206",
+      "country": "Taiwan, Province of China",
+      "start_captured_at": 1795218565624,
+      "end_captured_at": 1795219202450
     },
     {
       "sequence_id": "v8mdUJsMKhgijIPcF4ynr7",
@@ -44016,7 +44118,7 @@
     },
     {
       "sequence_id": "3JzYDqkSmpo8uLn269TvMA",
-      "images": 213,
+      "images": 214,
       "km": 1.392,
       "username": "MangeshK955",
       "user_id": "1298352351455135",
@@ -46933,6 +47035,16 @@
       "country": "India",
       "start_captured_at": 1793739525000,
       "end_captured_at": 1793739685933
+    },
+    {
+      "sequence_id": "NgyDVeuoSkGxzadqBrM6IU",
+      "images": 44,
+      "km": 1.13,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795152355506,
+      "end_captured_at": 1795152415779
     },
     {
       "sequence_id": "8cJY93SxrEdljMIgVUt5Xf",
@@ -54726,7 +54838,7 @@
     },
     {
       "sequence_id": "Zvf19Ig5tEHpMcehbm7wxr",
-      "images": 30,
+      "images": 31,
       "km": 0.54,
       "username": "MangeshK955",
       "user_id": "1298352351455135",
@@ -80523,6 +80635,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1794641008000,
       "end_captured_at": 1794641008000
+    },
+    {
+      "sequence_id": "jBxKHJv053wsNqmGOcAQtW",
+      "images": 1,
+      "km": 0.0,
+      "username": "MangeshK955",
+      "user_id": "1298352351455135",
+      "country": "India",
+      "start_captured_at": 1795152877890,
+      "end_captured_at": 1795152877890
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-22T06:51:12.719909+00:00",
+  "generated_at": "2026-11-22T19:08:52.828531+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,11 +27,11 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 3122080,
-  "total_sequences": 7851,
+  "total_images": 3123366,
+  "total_sequences": 7852,
   "total_users": 56,
   "total_countries": 17,
-  "total_km_covered": 24635.359,
+  "total_km_covered": 24644.228,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
@@ -57,10 +57,10 @@
     },
     {
       "country": "Rwanda",
-      "images": 112177,
-      "sequences": 120,
+      "images": 113463,
+      "sequences": 121,
       "users": 4,
-      "km": 479.413
+      "km": 488.282
     },
     {
       "country": "Ghana",
@@ -233,12 +233,12 @@
     {
       "username": "kingvik",
       "user_id": "103644195212255",
-      "images": 48851,
-      "sequences": 63,
+      "images": 50137,
+      "sequences": 64,
       "countries": [
         "Rwanda"
       ],
-      "km": 277.29
+      "km": 286.16
     },
     {
       "username": "cmenttor",
@@ -2214,9 +2214,9 @@
     },
     {
       "date": "2026-09-04",
-      "images": 7303,
-      "sequences": 11,
-      "km": 139.5
+      "images": 8589,
+      "sequences": 12,
+      "km": 148.369
     },
     {
       "date": "2026-09-05",
@@ -7315,6 +7315,16 @@
       "country": "India",
       "start_captured_at": 1794387233852,
       "end_captured_at": 1794387649232
+    },
+    {
+      "sequence_id": "DnfIlA8S0HYKdkPGt2hBUa",
+      "images": 1286,
+      "km": 8.869,
+      "username": "kingvik",
+      "user_id": "103644195212255",
+      "country": "Rwanda",
+      "start_captured_at": 1788508260212,
+      "end_captured_at": 1788509346386
     },
     {
       "sequence_id": "GUdZK1gmfxy4VX5ipnRbuY",

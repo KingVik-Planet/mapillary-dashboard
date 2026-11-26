@@ -1,6 +1,6 @@
 {
   "organization_id": "333719471505834",
-  "generated_at": "2026-11-25T08:22:35.697582+00:00",
+  "generated_at": "2026-11-26T08:15:31.555163+00:00",
   "months_fetched": [
     "2025-01",
     "2025-02",
@@ -27,11 +27,11 @@
     "2026-11"
   ],
   "months_pending_backfill": [],
-  "total_images": 3138782,
-  "total_sequences": 7900,
+  "total_images": 3138843,
+  "total_sequences": 7901,
   "total_users": 56,
   "total_countries": 17,
-  "total_km_covered": 24837.405,
+  "total_km_covered": 24838.845,
   "km_covered_note": "Straight-line (haversine) distance between consecutive images in the same sequence, summed. Not road-network distance - undercounts actual route length, and accuracy depends on capture density.",
   "by_country": [
     {
@@ -141,10 +141,10 @@
     },
     {
       "country": "United States",
-      "images": 15,
-      "sequences": 1,
+      "images": 76,
+      "sequences": 2,
       "users": 1,
-      "km": 0.239
+      "km": 1.679
     },
     {
       "country": "Spain",
@@ -673,6 +673,16 @@
       "km": 0.292
     },
     {
+      "username": "thechad81578",
+      "user_id": "103167715970077",
+      "images": 76,
+      "sequences": 2,
+      "countries": [
+        "United States"
+      ],
+      "km": 1.679
+    },
+    {
       "username": "vidya2001",
       "user_id": "1272163511480652",
       "images": 64,
@@ -701,16 +711,6 @@
         "India"
       ],
       "km": 0.3
-    },
-    {
-      "username": "thechad81578",
-      "user_id": "103167715970077",
-      "images": 15,
-      "sequences": 1,
-      "countries": [
-        "United States"
-      ],
-      "km": 0.239
     },
     {
       "username": "govindkaure",
@@ -2502,9 +2502,9 @@
     },
     {
       "date": "2026-11-18",
-      "images": 655,
-      "sequences": 4,
-      "km": 3.459
+      "images": 716,
+      "sequences": 5,
+      "km": 4.899
     },
     {
       "date": "2026-11-19",
@@ -44087,6 +44087,16 @@
       "country": "Taiwan, Province of China",
       "start_captured_at": 1778357137000,
       "end_captured_at": 1778357184666
+    },
+    {
+      "sequence_id": "vU8PteFOg4GSzcbY6VhDNj",
+      "images": 61,
+      "km": 1.44,
+      "username": "thechad81578",
+      "user_id": "103167715970077",
+      "country": "United States",
+      "start_captured_at": 1795022251513,
+      "end_captured_at": 1795022334773
     },
     {
       "sequence_id": "v8W2gl5sChDUeEjin9zYmJ",
